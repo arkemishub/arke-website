@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout>
+	<main>
+		<!-- navbar gradients -->
+		<!-- <div class="circle-gradient-green" style="top: -400px; left: -4%; transform: rotate(0deg)"/> -->
+		<!-- <div class="circle-gradient-blue" style="top: -200px; left: 30%; transform: rotate(0deg)"/> -->
+		<!-- <div class="circle-gradient-rose" style="top: -200px; left: 70%; transform: rotate(0deg)"/> -->
+		<!-- background gradients -->
+		<div class="circle-gradient-green" style="top: 300px; left: -300px; transform: rotate(-15deg)"/>
+		<div class="circle-gradient-blue" style="top: 300px; right: -300px; transform: rotate(-20deg)"/>
+		<h1 class="title text-7xl text-center font-medium mt-20">The Low-Code Framework<br/> to <span>accelerate</span> your development</h1>
+		<h2 class="text-2xl mt-12">
+			Design your project from a ready-to-use foundation. Speed up your development<br/>
+			with our dedicated Console. Customize your code to suit your unique needs.
+		</h2>
+		<br/>
+		<br/>
+		<button class="btn-circle">Start now</button>
+		<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
+		<div class="relative choose-us-section">
+			<div class="flex justify-between items-end mx-12 mb-8">
+			<h3 class="text-5xl font-medium mt-12">Why choose us</h3>
+			<div class="border px-8 py-2">tabs space</div>
+			</div>
+		</div>
+		<div class="px-12 grid gap-x-4 gap-y-4 grid-cols-4">
+			<Card title="Powerful Elixir core" img="/features/feature_elixir.png" />
+			<Card title="Pluggable database" img="/features/feature_database.png" />
+			<Card title="Simple storage" img="/features/feature_storage.png" />
+			<Card title="Auto-generated REST APIs" img="/features/feature_api.png"/>
+		</div>
+
+		<div class="mb-40"/>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		text-align: center;
+	}
+
+	.title > span {
+		background: linear-gradient(90deg, #AFDEFA, #4ba6ec);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.choose-us-section {
+		background: linear-gradient(rgba(10, 11, 18, 0.0) 30%, #0A0B12);;
+		margin-top: -180px;
+		padding-top: 100px;
+	}
+
+	.circle-gradient-green {
+		position: absolute;
+		background: radial-gradient(rgba(72, 199, 142, 0.8) 25%, #0A0B12 75%);
+		width: 600px;
+		height: 700px;
+		opacity: 0.1;
+		z-index: -1;
+	}
+
+	.circle-gradient-blue {
+		position: absolute;
+		background: radial-gradient(rgba(84, 153, 204, 0.8) 30%, #0A0B12 75%);
+		width: 600px;
+		height: 700px;
+		opacity: 0.1;
+		z-index: -1;
+	}
+
+	.circle-gradient-rose {
+		position: absolute;
+		background: radial-gradient(rgba(210, 97, 179, 0.8) 30%, #0A0B12 75%);
+		width: 600px;
+		height: 700px;
+		opacity: 0.1;
+		z-index: -1;
+	}
+
+	.btn-circle {
+		width:148px;
+		height:148px;
+		border-radius: 100px;
+		background-color: rgba(255, 255, 255, 0.1);
+		color: #fff;
+		border: 1px solid rgba(255,255,255,0.1);
+		backdrop-filter: blur(66px);
+		text-transform: uppercase;
+		position: absolute;
+		left: calc(50% - 80px);
+		transition: background-color 1.2s ease-out 100ms;
+	}
+
+	.btn-circle:hover {
+		transition: background-color 1.2s ease-out 100ms;
+		background-color: #a7fbd7;
+		color: #000;
+	}
+</style>

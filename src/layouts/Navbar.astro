@@ -1,0 +1,55 @@
+---
+import Button from "../components/Button.astro";
+export interface Props {
+}
+---
+
+<nav>
+	<div class="flex items-center flex-auto">
+		<img src="/logos/arke_logo.png" class="w-28" alt="arke_logo" />
+		<span class="vl" />
+		<div class="menu flex justify-between">
+			<a class="active" href="#features">Features</a>
+			<a href="#solutions">Solutions</a>
+			<a href="#pricing">Pricing</a>
+			<a href="#docs">Documentation</a>
+			<a href="#company">Company</a>
+		</div>
+	</div>
+	<div class="flex" style="gap: 12px">
+		<Button icon="/icons/star.svg" title="Star" count="213"/>
+		<Button icon="/icons/github.svg" title="Join us"/>
+	</div>
+</nav>
+
+<style>
+	nav {
+		z-index: 9999;
+		display: flex;
+		position: sticky;
+		top: 32px;
+		margin: 32px 48px;
+		background: rgba(255,255,255,0.03);
+		backdrop-filter: blur(66px);
+		border: 1px solid rgba(255,255,255,0.1);
+		border-radius: 24px;
+		padding: 12px 32px;
+		color: #797D94;
+	}
+
+	nav a:hover {
+		transition: 0.6s ease-out 100ms;
+		cursor: pointer;
+		color: #ffffff;
+	}
+
+	.vl{
+		border-left: 1px solid rgba(255, 255, 255, 0.12);
+		height: 32px;
+		margin: 0 32px;
+	}
+
+	.menu {
+		gap: 32px
+	}
+</style>

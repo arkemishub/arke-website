@@ -1,0 +1,45 @@
+---
+export interface Props {
+    icon: Node;
+    title: string;
+    count: number;
+}
+
+const { icon, title,count } = Astro.props;
+---
+
+<button class="flex items-center">
+    <img src={icon} class="w-6 mr-3" alt="icon" />
+	<span>{title.toUpperCase()}</span>
+	{count &&
+        <>
+            <span class="vl"/>
+            <span class="text-xs">{count}</span>
+        </>
+    }
+</button>
+<style>
+	button {
+        min-width: 100px;
+		background: rgba(255,255,255,0.08);
+		border: 1px solid rgba(255,255,255,0.1);
+		border-radius: 12px;
+		padding: 12px 16px;
+		color: #fff;
+        transition: background-color 0.2s ease-out 100ms
+	}
+
+    button:hover {
+        background: rgba(255,255,255,0.2);
+    }
+
+    button > span {
+        @apply text-sm
+    }
+
+    .vl{
+        border-left: 1px solid #fff;
+        height: 16px;
+        margin: 0 12px;
+    }
+</style>
