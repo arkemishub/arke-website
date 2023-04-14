@@ -1,0 +1,26 @@
+---
+export interface Props {
+	title: string;
+	icon: string;
+	description: string;
+}
+
+const { title, icon, description } = Astro.props;
+---
+
+<div class="mt-12 text-left w-8/12">
+	<img class="w-10" src={icon} alt="workflow_feature" />
+	<h5 class="mt-4 text-3xl font-medium">{title}</h5>
+	<h6 class="mt-2 text-secondary">
+		{description}
+	</h6>
+</div>
+<style>
+	.card {
+		background: rgba(255,255,255,0.03);
+		backdrop-filter: blur(66px);
+		list-style: none;
+		border-radius: 24px;
+		border: 1px solid rgba(255,255,255,0.1);
+	}
+</style>

@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "astro": "^2.2.3",
-    "preact": "^10.13.2"
+    "preact": "^10.13.2",
+    "tailwind-merge": "^1.12.0"
   },
   "devDependencies": {
     "@astrojs/preact": "^2.1.0",

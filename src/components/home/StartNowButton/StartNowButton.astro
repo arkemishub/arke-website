@@ -1,0 +1,30 @@
+---
+export interface Props {
+}
+
+const { } = Astro.props;
+---
+
+<button class="btn-circle z-10 w-28 h-28 lg:w-40 lg:h-40">
+    Start now
+</button>
+
+<style>
+    .btn-circle {
+        transform: translate(-50%, 0%);
+        border-radius: 100px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.1);
+        backdrop-filter: blur(33px);
+        text-transform: uppercase;
+        position: absolute;
+        transition: background-color 1.2s ease-out 100ms;
+    }
+
+    .btn-circle:hover {
+        transition: background-color 1.2s ease-out 100ms;
+        background-color: #a7fbd7;
+        color: #000;
+    }
+</style>

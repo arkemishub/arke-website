@@ -1,19 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Button from "../components/Button.astro";
+import GradientCircle from '../components/ui/GradientCircle.astro';
+import FeatureCard from '../components/home/FeatureCard/FeatureCard.astro';
+import FeatureCircle from '../components/home/FeatureCircle/FeatureCircle.astro';
+import WorkflowFeature from '../components/home/WorkflowFeature/WorkflowFeature.astro';
+import StartNowButton from '../components/home/StartNowButton/StartNowButton.astro';
+import Card from '../components/ui/Card.astro';
+import Button from "../components/ui/Button.astro";
 ---
 
 <div class="relative overflow-hidden">
 	<Layout>
 		<main>
 			<!-- navbar gradients -->
-			 <div class="circle-gradient-green" style="top: -400px; left: -4%; transform: rotate(0deg)"/>
-			 <div class="circle-gradient-blue" style="top: -200px; left: 30%; transform: rotate(0deg)"/>
-			 <div class="circle-gradient-rose" style="top: -200px; left: 70%; transform: rotate(0deg)"/>
+			<GradientCircle color="green" style="top: -400px; left: -4%"/>
+			<GradientCircle color="blue" style="top: -200px; left: 30%"/>
+			<GradientCircle color="rose" style="top: -200px; left: 70%"/>
 			<!-- background gradients -->
-			<div class="circle-gradient-green hidden lg:block" style="top: 300px; left: -300px; transform: rotate(-15deg)"/>
-			<div class="circle-gradient-blue hidden lg:block" style="top: 300px; right: -300px; transform: rotate(-20deg)"/>
+			<GradientCircle color="green" style="top: 300px; left: -300px; transform: rotate(-15deg)"/>
+			<GradientCircle color="blue" style="top: 300px; right: -300px; transform: rotate(-20deg)"/>
 			<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-20">The Low-Code Framework<br/> to <span>accelerate</span> your development</h1>
 			<h2 class="text-sm lg:text-2xl mt-12">
 				Design your project from a ready-to-use foundation. Speed up your development<br/>
@@ -21,7 +26,7 @@ import Button from "../components/Button.astro";
 			</h2>
 			<br/>
 			<br/>
-			<button class="btn-circle z-10 w-28 h-28 lg:w-40 lg:h-40">Start now</button>
+			<StartNowButton />
 			<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
 			<div class="relative choose-us-section">
 				<div class="flex justify-between items-end mx-12 mb-8">
@@ -32,13 +37,141 @@ import Button from "../components/Button.astro";
 				</div>
 			</div>
 			<div class="px-12 grid gap-x-4 gap-y-4 md:grid-cols-2 lg:grid-cols-4">
-				<Card title="Powerful Elixir core" img="/features/feature_elixir.png" />
-				<Card title="Pluggable database" img="/features/feature_database.png" />
-				<Card title="Simple storage" img="/features/feature_storage.png" />
-				<Card title="Auto-generated REST APIs" img="/features/feature_api.png"/>
+				<FeatureCard title="Powerful Elixir core" img="/features/square/feature_elixir.png" />
+				<FeatureCard title="Pluggable database" img="/features/square/feature_database.png" />
+				<FeatureCard title="Simple storage" img="/features/square/feature_storage.png" />
+				<FeatureCard title="Auto-generated REST APIs" img="/features/square/feature_api.png"/>
 			</div>
 
-			<div class="mb-40"/>
+			<FeatureCircle />
+			<!-- SET UP  -->
+			<Card className="p-4 px-8 w-fit m-auto -mt-20">
+				SET UP
+			</Card>
+			<Card className="p-8 w-8/12 m-auto mt-4">
+				<h4 class="text-5xl font-medium">
+					Create and customize
+					<span class="text-green">your workspace</span>
+				</h4>
+				<p class="mt-4 text-lg text-secondary">
+				Begin your journey with our framework and simplify the<br/>way you develop and manage projects.
+				</p>
+			</Card>
+
+			<div class="mt-20 w-10/12 m-auto grid gap-x-32 lg:grid-cols-2 items-center">
+				<GradientCircle animate={true} color="green"/>
+				<div>
+					<WorkflowFeature
+						title="Integrated environment"
+						icon="/features/circle/feature_environment.png"
+						description="Start a robust, secure, and optimized integrated environment, ensuring a streamlined initialization of your development pipeline."
+					/>
+					<WorkflowFeature
+						title="Built-in elements & Features"
+						icon="/features/circle/feature_built_in.png"
+						description="Take advantage of customizable and ready-to-use elements & features to swiftly start your project, avoiding to write code from scratch."
+					/>
+					<WorkflowFeature
+						title="User-friendly console"
+						icon="/features/circle/feature_user_friendly.png"
+						description="Simplify your project management with our intuitive console, designed for smooth and fast control."
+					/>
+				</div>
+				<img class="w-full mt-24" src="/workflow/workflow_workspace.png" alt="feature"/>
+			</div>
+
+			<!-- BUILD  -->
+			<Card className="p-4 px-8 w-fit m-auto mt-20">
+				BUILD
+			</Card>
+			<Card className="p-8 w-8/12 m-auto mt-4">
+				<h4 class="text-5xl font-medium">
+					Design and develop
+					<span class="text-blue">your idea</span>
+				</h4>
+				<p class="mt-4 text-lg text-secondary">
+					Enhance your development experience simplifiying design,
+					accelerating prototyping and customizing your code.
+				</p>
+			</Card>
+			<div class="mt-20 w-10/12 m-auto grid gap-x-32 lg:grid-cols-2 items-center">
+				<GradientCircle animate={true} color="blue"/>
+				<img class="w-full mt-24" src="/workflow/workflow_workspace.png" alt="feature"/>
+				<div>
+					<WorkflowFeature
+						title="Effortless design"
+						icon="/features/circle/feature_effortless_design.png"
+						description="Easily design and instantly update your project through entities, units and relationships. Enjoy the power of automatic database and API generation."
+					/>
+					<WorkflowFeature
+						title="Dynamic prototyping"
+						icon="/features/circle/feature_dynamic_prototyping.png"
+						description="Accelerate your development with flexible prototyping, enabling faster concept and feature testing for efficient iterations."
+					/>
+					<WorkflowFeature
+						title="Multi-language coding"
+						icon="/features/circle/feature_multilanguage_coding.png"
+						description="Connect your favorite programming language with the Arke backend through our Client SDKs for a tailored experience."
+					/>
+				</div>
+			</div>
+
+			<!-- EMPOWER  -->
+			<Card className="p-4 px-8 w-fit m-auto mt-20">
+				EMPOWER
+			</Card>
+			<Card className="p-8 w-8/12 m-auto mt-4">
+				<h4 class="text-5xl font-medium">
+					Upgrade and scale
+					<span class="text-blue">your project</span>
+				</h4>
+				<p class="mt-4 text-lg text-secondary">
+					Experience the advantages of our next-gen technology that amplifies your product and elevates it to new dimensions.
+				</p>
+			</Card>
+			<div class="mt-20 w-9/12 m-auto grid gap-x-32 lg:grid-cols-2 items-center">
+				<GradientCircle animate={true} color="rose"/>
+				<div>
+					<WorkflowFeature
+						title="Ever-evolving technology"
+						icon="/features/circle/feature_evolving_technology.png"
+						description="Our dedicated team provides constant updates pushing the limits of innovation and delivering unmatched value for your projects."
+					/>
+					<WorkflowFeature
+						title="Universal products"
+						icon="/features/circle/feature_universal_products.png"
+						description="Leverage on Arke's unmatched adaptability to deploy your project on Docker, Kubernetes, AWS, Google Cloud Platform, Azure or any other cloud provider."
+					/>
+					<WorkflowFeature
+						title="Scalable solutions"
+						icon="/features/circle/feature_scalable_solutions.png"
+						description="Unleash the full potential of your product with our limitless scalability, driven by the high-performing Elixir core."
+					/>
+				</div>
+				<img class="w-full mt-24" src="/workflow/workflow_workspace.png" alt="feature"/>
+			</div>
+
+			<Card className="p-8 w-10/12 m-auto my-20">
+				<h4 class="text-5xl font-medium">
+					Trusted by
+				</h4>
+				<p class="mt-4 text-lg text-secondary">
+					Experience the advantages of our next-gen technology that amplifies your product and elevates it to new dimensions.
+				</p>
+			</Card>
+
+
+			<StartNowButton />
+			<div class="mt-40">
+				<Card className="p-8 pt-32 w-10/12 m-auto">
+					<h4 class="text-5xl font-medium">
+						Unleash your creativity and vision
+					</h4>
+				</Card>
+			</div>
+			<br/>
+			<br/>
+			<br/>
 		</main>
 	</Layout>
 </div>
@@ -56,53 +189,8 @@ import Button from "../components/Button.astro";
 	}
 
 	.choose-us-section {
-		background: linear-gradient(rgba(10, 11, 18, 0.0) 30%, #0A0B12);;
+		background: linear-gradient(rgba(10, 11, 18, 0.0) 30%, #0A0B12);
 		margin-top: -180px;
 		padding-top: 100px;
-	}
-
-	.circle-gradient-green {
-		position: absolute;
-		background: radial-gradient(rgba(72, 199, 142, 0.8) 25%, #0A0B12 75%);
-		width: 600px;
-		height: 700px;
-		z-index: -1;
-		opacity: 0.15;
-	}
-
-	.circle-gradient-blue {
-		position: absolute;
-		background: radial-gradient(rgba(84, 153, 204, 0.8) 30%, #0A0B12 75%);
-		width: 600px;
-		height: 700px;
-		z-index: -1;
-		opacity: 0.15;
-	}
-
-	.circle-gradient-rose {
-		position: absolute;
-		background: radial-gradient(rgba(210, 97, 179, 0.8) 30%, #0A0B12 75%);
-		width: 600px;
-		height: 700px;
-		z-index: -1;
-		opacity: 0.15;
-	}
-
-	.btn-circle {
-		transform: translate(-50%, 0%);
-		border-radius: 100px;
-		background-color: rgba(255, 255, 255, 0.1);
-		color: #fff;
-		border: 1px solid rgba(255,255,255,0.1);
-		backdrop-filter: blur(33px);
-		text-transform: uppercase;
-		position: absolute;
-		transition: background-color 1.2s ease-out 100ms;
-	}
-
-	.btn-circle:hover {
-		transition: background-color 1.2s ease-out 100ms;
-		background-color: #a7fbd7;
-		color: #000;
 	}
 </style>

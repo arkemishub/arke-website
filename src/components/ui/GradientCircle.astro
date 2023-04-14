@@ -1,0 +1,49 @@
+---
+import {twMerge} from "tailwind-merge";
+export interface Props {
+    style;
+    color: 'green' | 'blue' | 'rose';
+    animate: boolean;
+}
+
+const { style, color, animate } = Astro.props;
+---
+
+<div class={twMerge(`circle-gradient ${color}`, animate && 'animate')} style={style} />
+
+<style>
+    @keyframes run {
+        0% {
+            left: 0;
+        }
+        50% {
+            left: 60%;
+        }
+        100% {
+            left: 0;
+        }
+    }
+    .circle-gradient {
+        position: absolute;
+        width: 600px;
+        height: 700px;
+        z-index: -1;
+        opacity: 0.15;
+    }
+
+    .animate {
+        -webkit-animation: linear infinite;
+        -webkit-animation-name: run;
+        -webkit-animation-duration: 10s;
+    }
+
+    .green {
+        background: radial-gradient(rgba(72, 199, 142, 0.6) 25%, rgba(10, 11, 18, 0) 75%);
+    }
+    .blue {
+        background: radial-gradient(rgba(84, 153, 204, 0.6) 30%, rgba(10, 11, 18, 0) 75%);
+    }
+    .rose {
+        background: radial-gradient(rgba(210, 97, 179, 0.6) 30%, rgba(10, 11, 18, 0) 75%);
+    }
+</style>

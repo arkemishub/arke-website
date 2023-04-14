@@ -1,0 +1,32 @@
+---
+import { twMerge } from 'tailwind-merge'
+export interface Props {
+    className: string[]
+}
+
+const { className } = Astro.props;
+---
+
+<div class="outer_circle w-96 h-96 m-auto mt-40">
+    <div class="inner_circle"></div>
+</div>
+
+<style>
+    .outer_circle {
+        position: relative;
+        border-radius: 50%;
+        background: #0A0B12;
+    }
+
+    .inner_circle {
+        background-image: radial-gradient(rgba(168, 251, 215, 0.3) 20%, #FFFFFF01);
+        content: '';
+        position: absolute;
+        top: -92px;
+        bottom: -92px;
+        right: -92px;
+        left: -92px;
+        z-index: -1;
+        border-radius: inherit;
+    }
+</style>
