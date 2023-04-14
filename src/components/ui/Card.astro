@@ -7,9 +7,9 @@ export interface Props {
 const { className } = Astro.props;
 ---
 
-<li class={twMerge("card w-full", className)}>
+<div class={twMerge("card w-full", className)}>
     <slot />
-</li>
+</div>
 
 <style>
     .card {

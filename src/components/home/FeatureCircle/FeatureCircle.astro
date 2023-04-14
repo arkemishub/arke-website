@@ -7,8 +7,10 @@ export interface Props {
 const { className } = Astro.props;
 ---
 
-<div class="outer_circle w-96 h-96 m-auto mt-40">
-    <div class="inner_circle"></div>
+<div class="outer_circle w-96 h-96 m-auto">
+    <slot/>
+    <div class="inner_circle">
+    </div>
 </div>
 
 <style>

@@ -3,13 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import GradientCircle from '../components/ui/GradientCircle.astro';
 import FeatureCard from '../components/home/FeatureCard/FeatureCard.astro';
 import FeatureCircle from '../components/home/FeatureCircle/FeatureCircle.astro';
+import WorkflowStep from '../components/home/WorkflowStep/WorkflowStep.astro';
 import WorkflowFeature from '../components/home/WorkflowFeature/WorkflowFeature.astro';
 import StartNowButton from '../components/home/StartNowButton/StartNowButton.astro';
 import Card from '../components/ui/Card.astro';
-import Button from "../components/ui/Button.astro";
 ---
 
-<div class="relative overflow-hidden">
+<div class="relative overflow-clip">
 	<Layout>
 		<main>
 			<!-- navbar gradients -->
@@ -26,7 +26,7 @@ import Button from "../components/ui/Button.astro";
 			</h2>
 			<br/>
 			<br/>
-			<StartNowButton />
+			<StartNowButton color="green" />
 			<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
 			<div class="relative choose-us-section">
 				<div class="flex justify-between items-end mx-12 mb-8">
@@ -43,7 +43,13 @@ import Button from "../components/ui/Button.astro";
 				<FeatureCard title="Auto-generated REST APIs" img="/features/square/feature_api.png"/>
 			</div>
 
-			<FeatureCircle />
+			<div class="flex justify-center align-center mt-40">
+				<FeatureCircle>
+					<WorkflowStep step="01" className="mt-32"/>
+				</FeatureCircle>
+			</div>
+			<div class="vline -mt-40"/>
+
 			<!-- SET UP  -->
 			<Card className="p-4 px-8 w-fit m-auto -mt-20">
 				SET UP
@@ -151,22 +157,52 @@ import Button from "../components/ui/Button.astro";
 				<img class="w-full mt-24" src="/workflow/workflow_workspace.png" alt="feature"/>
 			</div>
 
-			<Card className="p-8 w-10/12 m-auto my-20">
+			<!--
+			<Card className="p-12 w-10/12 m-auto my-20">
 				<h4 class="text-5xl font-medium">
 					Trusted by
 				</h4>
-				<p class="mt-4 text-lg text-secondary">
-					Experience the advantages of our next-gen technology that amplifies your product and elevates it to new dimensions.
-				</p>
+				<div class="mt-20 grid lg:grid-cols-4">
+					<div class="w-full flex justify-center border-r opacity-40">
+						<img class="w-40" src="/logos/trusted/enersem.svg" alt="enersem" />
+					</div>
+					<div class="w-full flex justify-center border-r opacity-40">
+						<img class="w-40" src="/logos/trusted/cimberio.svg" alt="cimberio" />
+					</div>
+					<div class="w-full flex justify-center border-r opacity-40">
+						<img class="w-40" src="/logos/trusted/subito.svg" alt="subito" />
+					</div>
+					<div class="w-full flex justify-center opacity-40">
+						<img class="w-28" src="/logos/trusted/pagopa.svg" alt="pagopa" />
+					</div>
+				</div>
 			</Card>
+			-->
 
 
-			<StartNowButton />
 			<div class="mt-40">
+				<StartNowButton color="rose" className="-mt-20" />
 				<Card className="p-8 pt-32 w-10/12 m-auto">
-					<h4 class="text-5xl font-medium">
-						Unleash your creativity and vision
-					</h4>
+					<div class="grid gap-x-32 lg:grid-cols-3 items-center">
+						<div class="col-span-2">
+							<h4 class="text-5xl text-left font-medium">
+								Unleash your<br/>
+								<span class="text-blue">creativity</span>
+								and
+								<span class="text-rose">vision</span>
+							</h4>
+						</div>
+						<div>
+							<Card className="flex p-4 justify-between items-center">
+								<img class="w-8" src="/icons/discord.svg" alt="discord"/>
+								<p class="flex-auto text-left ml-4">arkehub.discord.com</p>
+							</Card>
+							<Card className="mt-4 flex p-4 justify-between items-center">
+								<img class="w-8" src="/icons/github.svg" alt="github"/>
+								<p class="flex-auto text-left ml-4">github.com/arkemishub</p>
+							</Card>
+						</div>
+					</div>
 				</Card>
 			</div>
 			<br/>
@@ -192,5 +228,13 @@ import Button from "../components/ui/Button.astro";
 		background: linear-gradient(rgba(10, 11, 18, 0.0) 30%, #0A0B12);
 		margin-top: -180px;
 		padding-top: 100px;
+	}
+
+	.vline {
+		position: absolute;
+		left: calc(50% - 3px);
+		height: 3400px;
+		width: 6px;
+		background: linear-gradient(#78E7C5 25%, #67BEFF 50%, #EFAEFF 100%);
 	}
 </style>
