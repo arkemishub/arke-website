@@ -36,8 +36,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<div class="relative overflow-clip -mt-2">
 		<Navbar />
-		<slot />
+			<main>
+				<slot />
+			</main>
+		</div>
 	</body>
 </html>
 <style is:global>
@@ -58,5 +62,10 @@ const { title } = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	main {
+		margin: auto;
+		margin-top: 60px;
+		text-align: center;
 	}
 </style>

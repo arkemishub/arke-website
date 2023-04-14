@@ -1,0 +1,20 @@
+---
+import { twMerge } from 'tailwind-merge'
+export interface Props {
+    className: string[]
+}
+
+const { className } = Astro.props;
+---
+
+<div class={twMerge("vline -mt-40", className)}/>
+
+<style>
+    .vline {
+        position: absolute;
+        left: calc(50% - 3px);
+        height: 3400px;
+        width: 6px;
+        background: linear-gradient(#78E7C5 25%, #67BEFF 50%, #EFAEFF 100%);
+    }
+</style>
