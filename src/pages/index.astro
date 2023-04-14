@@ -1,33 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Button from "../components/Button.astro";
 ---
 
 <Layout>
-	<main>
+	<main class="relative overflow-hidden">
 		<!-- navbar gradients -->
-		<!-- <div class="circle-gradient-green" style="top: -400px; left: -4%; transform: rotate(0deg)"/> -->
-		<!-- <div class="circle-gradient-blue" style="top: -200px; left: 30%; transform: rotate(0deg)"/> -->
-		<!-- <div class="circle-gradient-rose" style="top: -200px; left: 70%; transform: rotate(0deg)"/> -->
+		 <div class="circle-gradient-green" style="top: -400px; left: -4%; transform: rotate(0deg)"/>
+		 <div class="circle-gradient-blue" style="top: -200px; left: 30%; transform: rotate(0deg)"/>
+		 <div class="circle-gradient-rose" style="top: -200px; left: 70%; transform: rotate(0deg)"/>
 		<!-- background gradients -->
-		<div class="circle-gradient-green" style="top: 300px; left: -300px; transform: rotate(-15deg)"/>
-		<div class="circle-gradient-blue" style="top: 300px; right: -300px; transform: rotate(-20deg)"/>
-		<h1 class="title text-7xl text-center font-medium mt-20">The Low-Code Framework<br/> to <span>accelerate</span> your development</h1>
-		<h2 class="text-2xl mt-12">
+		<div class="circle-gradient-green hidden lg:block" style="top: 300px; left: -300px; transform: rotate(-15deg)"/>
+		<div class="circle-gradient-blue hidden lg:block" style="top: 300px; right: -300px; transform: rotate(-20deg)"/>
+		<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-20">The Low-Code Framework<br/> to <span>accelerate</span> your development</h1>
+		<h2 class="text-sm lg:text-2xl mt-12">
 			Design your project from a ready-to-use foundation. Speed up your development<br/>
 			with our dedicated Console. Customize your code to suit your unique needs.
 		</h2>
 		<br/>
 		<br/>
-		<button class="btn-circle">Start now</button>
+		<button class="btn-circle z-10 w-28 h-28 lg:w-40 lg:h-40">Start now</button>
 		<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
 		<div class="relative choose-us-section">
 			<div class="flex justify-between items-end mx-12 mb-8">
-			<h3 class="text-5xl font-medium mt-12">Why choose us</h3>
-			<div class="border px-8 py-2">tabs space</div>
+				<h3 class="lg:text-5xl font-medium mt-12">Why choose us</h3>
+				<div class="grid gap-x-2 grid-cols-3 px-8 py-2">
+					tab space
+				</div>
 			</div>
 		</div>
-		<div class="px-12 grid gap-x-4 gap-y-4 grid-cols-4">
+		<div class="px-12 grid gap-x-4 gap-y-4 md:grid-cols-2 lg:grid-cols-4">
 			<Card title="Powerful Elixir core" img="/features/feature_elixir.png" />
 			<Card title="Pluggable database" img="/features/feature_database.png" />
 			<Card title="Simple storage" img="/features/feature_storage.png" />
@@ -61,8 +64,8 @@ import Card from '../components/Card.astro';
 		background: radial-gradient(rgba(72, 199, 142, 0.8) 25%, #0A0B12 75%);
 		width: 600px;
 		height: 700px;
-		opacity: 0.1;
 		z-index: -1;
+		opacity: 0.2;
 	}
 
 	.circle-gradient-blue {
@@ -70,8 +73,8 @@ import Card from '../components/Card.astro';
 		background: radial-gradient(rgba(84, 153, 204, 0.8) 30%, #0A0B12 75%);
 		width: 600px;
 		height: 700px;
-		opacity: 0.1;
 		z-index: -1;
+		opacity: 0.2;
 	}
 
 	.circle-gradient-rose {
@@ -79,21 +82,19 @@ import Card from '../components/Card.astro';
 		background: radial-gradient(rgba(210, 97, 179, 0.8) 30%, #0A0B12 75%);
 		width: 600px;
 		height: 700px;
-		opacity: 0.1;
 		z-index: -1;
+		opacity: 0.2;
 	}
 
 	.btn-circle {
-		width:148px;
-		height:148px;
+		transform: translate(-50%, 0%);
 		border-radius: 100px;
 		background-color: rgba(255, 255, 255, 0.1);
 		color: #fff;
 		border: 1px solid rgba(255,255,255,0.1);
-		backdrop-filter: blur(66px);
+		backdrop-filter: blur(33px);
 		text-transform: uppercase;
 		position: absolute;
-		left: calc(50% - 80px);
 		transition: background-color 1.2s ease-out 100ms;
 	}
 

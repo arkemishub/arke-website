@@ -1,0 +1,12 @@
+@tailwind base;
+
+@layer base {
+    @font-face {
+        font-family: 'GeneralSans';
+        src: url('../fonts/GeneralSans-Variable.ttf') format('truetype')
+    }
+
+    h1, h2, h3, h4, h5, h6, span, p {
+        @apply font-GeneralSans
+    }
+}
