@@ -1,13 +1,174 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GradientBackground from "../components/ui/GradientBackground.astro";
+import FeaturesAnimatedBackground from "../components/features/FeaturesAnimatedBackground/FeaturesAnimatedBackground.astro";
+import StartNowButton from "../components/home/StartNowButton/StartNowButton.astro";
+import Section from "../components/ui/Section.astro";
+import Feature from "../components/features/Feature/Feature.astro";
+import Card from "../components/ui/Card.astro";
 ---
 
 <Layout>
 	<GradientBackground />
-	features
+	<FeaturesAnimatedBackground />
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-28">
+		The unified framework to shape<br/>
+		<span>next-gen</span> applications</h1>
+	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+		Swiftly create high-performing and scalable applications by<br/>
+		automatically managing the work behind the scenes.
+	</h2>
+	<br/>
+	<br/>
+	<StartNowButton color="green" />
+	<div class="mt-60">
+		<Section className="w-full p-12 m-auto rounded-none b-0" color="blue">
+			<h4 class="text-5xl font-medium">
+				High-performing backend
+			</h4>
+			<p class="mt-8 text-lg text-secondary">
+				Boost your applications with our state-of-the-art backend<br/>
+				infrastructure to optimize and scale performance.
+			</p>
+			<img src="/img/backend_galaxy.png" class="w-11/12 mt-12 m-auto" alt="backend" />
+
+			<div class="mt-12 px-4 md:px-12 grid gap-x-4 gap-y-4 md:grid-cols-3">
+				<Feature
+					title="Powerful Elixir core"
+					img="/features/square/feature_elixir.png"
+					className="flex-col"
+				>
+					Develop next-gen applications with the dynamic, scalable and fault-tolerant Elixir core.
+				</Feature>
+				<Feature title="Simple storage" img="/features/square/feature_storage.png">
+					Store and protect your media with flexible file, folder and bucket management.
+				</Feature>
+				<Feature title="Secure Authentication" img="/features/square/feature_authentication.png">
+					Make your apps safe with the JWT Standard and the refresh & verify token management.
+				</Feature>
+				<Feature title="Pluggable database" img="/features/square/feature_database.png">
+					You can either go for the PostgreSQL database we provide or choose one that meets your needs.
+				</Feature>
+				<Feature title="Auto-generated REST APIs" img="/features/square/feature_api.png">
+					Automatically interface with the database and use our search, sort and CRUD features.
+				</Feature>
+				<Feature title="Multi-tenant architecture" img="/features/square/feature_multitenant.png">
+					Share infrastructure & resources among multiple users making scaling and maintenance easier.
+				</Feature>
+			</div>
+		</Section>
+
+		<Section className="w-full p-12 m-auto rounded-none b-0" color="green">
+			<h4 class="text-5xl font-medium">
+				Extensive frontend libraries
+			</h4>
+			<p class="mt-8 text-lg text-secondary">
+				Boost your applications with our state-of-the-art frontend<br/>
+				infrastructure to optimize and scale performance.
+			</p>
+		</Section>
+
+		<Section className="w-full p-12 m-auto rounded-none b-0" color="orange">
+			<h4 class="text-5xl font-medium">
+				No-code console
+			</h4>
+			<p class="mt-8 text-lg text-secondary">
+				Harness the power of our user-friendly console to test and develop<br/>
+				your ideas without writing a single line of code.
+			</p>
+			<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
+			<Card className="p-8 m-auto mt-4 w-10/12 -mt-32 grid gap-x-4 grid-cols-2">
+				<Feature
+					title="Intuitive project management"
+					img="/features/square/feature_project_management.png"
+					className="flex-col text-center"
+				>
+					Create and modify your entities, parameters, and relations with guided, skill-free workflows.
+				</Feature>
+				<Feature
+					title="Dynamic prototyping"
+					img="/features/square/feature_prototyping.png"
+					className="flex-col text-center"
+				>
+					Accelerate your CRUD operations and iterate Agile for lightning-fast prototyping.
+				</Feature>
+				<Feature
+					title="Smart code sync"
+					img="/features/square/feature_smart_code_sync.png"
+					className="flex-col text-center"
+				>
+					Enjoy effortless code updates aligned with your console decisions.
+				</Feature>
+				<Feature
+					title="Add-ons & Integrations"
+					img="/features/square/feature_integrations.png"
+					className="flex-col text-center"
+				>
+					Expand your console experience with tailored add-ons and integrations.
+				</Feature>
+			</Card>
+		</Section>
+
+		<Section className="w-full p-12 m-auto rounded-none b-0" color="rose">
+			<h4 class="text-5xl font-medium">
+				Flexible tech stack
+			</h4>
+			<p class="mt-8 text-lg text-secondary">
+				Adapt your framework and deploy with maximum compatibility<br/>
+				for limitless growth potential.
+			</p>
+			<div class="w-10/12 m-auto mt-12 grid gap-x-4 grid-cols-2">
+				<Card className="p-8 m-auto mt-4 text-left">
+					<img src="/illustrations/sdk.png" class="w-1/2 h-24" alt="sdk"/>
+					<h2 class="text-xl mt-4 font-semibold">Multi-language SDKs</h2>
+					<p class="text-secondary">
+						Connect your favorite programming language
+						with our backend for a tailored experience.
+					</p>
+				</Card>
+				<Card className="p-8 m-auto mt-4 text-left">
+					<img src="/illustrations/technology_indipendency.png" class="w-1/2 h-24" alt="sdk"/>
+					<h2 class="text-xl mt-4 font-semibold">Technology independency</h2>
+					<p class="text-secondary">
+						Switch when you want the technologies
+						you use without any compatibility issues.
+					</p>
+				</Card>
+				<Card className="p-8 m-auto mt-4 text-left">
+					<img src="/illustrations/universal_deployment.png" class="w-1/2 h-24" alt="universal_deployment"/>
+					<h2 class="text-xl mt-4 font-semibold">Universal deployment</h2>
+					<p class="text-secondary">
+						Deploy on Docker, Kubernetes, AWS,
+						Google, Azure or any other cloud provider.
+					</p>
+				</Card>
+				<Card className="p-8 m-auto mt-4 text-left">
+					<img src="/illustrations/limitless_scaling.png" class="w-1/2 h-24" alt="limitless_scaling"/>
+					<h2 class="text-xl mt-4 font-semibold">Limitless scaling</h2>
+					<p class="text-secondary">
+						Take advantage of Elixir's low-latency
+						core to scale your product when needed.
+					</p>
+				</Card>
+			</div>
+		</Section>
+
+		<Section className="w-full p-12 m-auto rounded-none b-0" color="blue">
+			<h4 class="text-5xl font-medium">
+				Open-source culture
+			</h4>
+			<p class="mt-8 text-lg text-secondary">
+				Adapt your framework and deploy with maximum compatibility<br/>
+				for limitless growth potential.
+			</p>
+		</Section>
+	</div>
 </Layout>
 
 <style>
-
+	.title > span {
+		background: linear-gradient(90deg, #78E7C5, #9DFFAD);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 </style>

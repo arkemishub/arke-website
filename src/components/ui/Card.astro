@@ -7,7 +7,7 @@ export interface Props {
 const { className } = Astro.props;
 ---
 
-<div class={twMerge("card w-full", className)}>
+<div class={twMerge("card rounded-2xl w-full", className)}>
     <slot />
 </div>
 
@@ -16,7 +16,6 @@ const { className } = Astro.props;
         background: linear-gradient(179.86deg, rgba(255, 255, 255, 0.03) 0.12%, rgba(255, 255, 255, 0) 93.36%);
         backdrop-filter: blur(15px);
         list-style: none;
-        border-radius: 24px;
         border: 1px solid rgba(255,255,255,0.1);
     }
 </style>

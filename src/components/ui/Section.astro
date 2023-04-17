@@ -1,0 +1,65 @@
+---
+import { twMerge } from 'tailwind-merge'
+export interface Props {
+    className: string[];
+    color: 'green' | 'blue' | 'rose' | 'orange';
+}
+
+const { className, color = 'green' } = Astro.props;
+---
+
+<div class="relative overflow-hidden">
+    <div class={`border-gradient ${color}`}/>
+    <div class={`border-light light-${color}`}/>
+    <div class={twMerge("section", className)}>
+        <slot />
+    </div>
+</div>
+
+<style>
+    .section {
+        background: linear-gradient(rgba(255, 255, 255, 0.03) 0.12%, #0A0B12);
+        backdrop-filter: blur(15px);
+        list-style: none;
+    }
+    .border-gradient {
+        position: absolute;
+        top:-200px;
+        height:400px;
+        width: 70%;
+        margin-left: 15%;
+    }
+    .border-light {
+        height:1px;
+        width: 100%;
+    }
+    .blue {
+        background: radial-gradient(rgba(84, 153, 204, 0.6) 30%, rgba(10, 11, 18, 0) 75%);
+        opacity: 0.3;
+    }
+    .light-blue {
+        background: linear-gradient(0.25turn, rgba(10, 11, 18, 0.1) 10%, rgba(84, 153, 204, 0.6), rgba(10, 11, 18, 0.1) 90%);
+    }
+    .green {
+        background: radial-gradient(rgba(72, 199, 142, 0.6) 25%, rgba(10, 11, 18, 0) 75%);
+        opacity: 0.3;
+    }
+    .light-green {
+        background: linear-gradient(0.25turn, rgba(10, 11, 18, 0.1) 10%, rgba(72, 199, 142, 0.6), rgba(10, 11, 18, 0.1) 90%);
+    }
+
+    .rose {
+        background: radial-gradient(rgba(210, 97, 179, 0.6) 25%, rgba(10, 11, 18, 0) 75%);
+        opacity: 0.3;
+    }
+    .light-rose {
+        background: linear-gradient(0.25turn, rgba(10, 11, 18, 0.1) 10%, rgba(210, 97, 179, 0.6), rgba(10, 11, 18, 0.1) 90%);
+    }
+    .orange {
+        background: radial-gradient(rgba(204, 130, 84, 0.6) 30%, rgba(10, 11, 18, 0) 75%);
+        opacity: 0.3;
+    }
+    .light-orange {
+        background: linear-gradient(0.25turn, rgba(10, 11, 18, 0.1) 10%, rgba(204, 130, 84, 0.6), rgba(10, 11, 18, 0.1) 90%);
+    }
+</style>
