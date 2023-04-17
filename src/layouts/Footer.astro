@@ -1,0 +1,103 @@
+---
+import Button from "../components/ui/Button.astro";
+import GradientCircle from "../components/ui/GradientCircle.astro";
+export interface Props {
+}
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<div class="relative">
+	<footer class="flex flex-col mt-20 mb-8 mx-4 sm:mx-2 md:mx-12">
+		<div class="block text-center gap-x-2 lg:grid sm:text-left lg:grid-cols-12">
+			<div class="col-span-2 mb-8 text-center sm:mb-0">
+				<a class={currentPath === "" ? "active" : ""} href="/">
+					<img src="/logos/arke_logo.svg" class="w-20 md:w-28" alt="arke_logo" />
+				</a>
+			</div>
+			<div class="menu md:col-span-8 lg:px-12 sm:mt-6 lg:mt-0">
+				<div class="grid gap-x-1 grid-cols-2 sm:grid-cols-5">
+					<div>
+						<p class="uppercase mb-2">Product</p>
+						<a href="/features">Features</a>
+					</div>
+					<div class="flex flex-col">
+						<p class="uppercase mb-2">Solutions</p>
+						<a href="/features">Enterprise</a>
+						<a href="/developers">Developers</a>
+					</div>
+					<div class="flex flex-col">
+						<p class="uppercase mb-2">Resources</p>
+						<a href="https://arkemishub.github.io/docs" target="_blank" >Docs</a>
+						<a href="https://github.com/arkemishub" target="_blank" >Repositories</a>
+						<a href="#">Community</a>
+					</div>
+					<div class="flex flex-col">
+						<p class="uppercase mb-2">Company</p>
+						<a href="https://www.mokkastudios.com">Contact</a>
+					</div>
+					<div class="flex flex-col">
+						<p class="uppercase mb-2">Resources</p>
+						<a href="#">Terms</a>
+						<a href="#">Privacy</a>
+						<a href="#">Cookies</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-span-2 mt-12 lg:pl-12 lg:mt-0">
+				<div class="grid grid-cols-4 gap-x-1">
+					<img class="w-5 logo m-auto" src="/icons/linkedin.svg" alt="discord"/>
+					<img class="w-5 logo m-auto" src="/icons/discord.svg" alt="discord"/>
+					<img class="w-5 logo m-auto" src="/icons/github.svg" alt="discord"/>
+					<img class="w-5 logo m-auto" src="/icons/mokka.svg" alt="discord"/>
+				</div>
+			</div>
+		</div>
+		<hr class="my-8"/>
+		<div class="text-center flex-col sm:flex-row flex justify-between">
+			<p class="text-sm text-secondary">Copyright © {new Date().getFullYear()}  Mokka Studios S.r.l. All rights reserved.</p>
+			<p class="text-sm text-secondary mt-2 sm:mt-0">VAT 12283950967</p>
+		</div>
+	</footer>
+
+	<GradientCircle color="rose" style="top: -340px; right: -2%"/>
+	<GradientCircle className="hidden lg:block" color="green" style="top: -360px; left: -20%"/>
+	<GradientCircle className="hidden lg:block" color="blue" style="top: -100px; height: 400px; left: 30%"/>
+</div>
+
+<style>
+	footer {
+		z-index: 9999;
+		display: flex;
+		position: sticky;
+		background: rgba(255,255,255,0.03);
+		backdrop-filter: blur(33px);
+		border: 1px solid rgba(255,255,255,0.1);
+		border-radius: 24px;
+		padding: 32px;
+	}
+
+	footer a {
+		@apply text-secondary
+	}
+
+	footer a:hover {
+		transition: 0.6s ease-out 100ms;
+		cursor: pointer;
+		color: #ffffff;
+	}
+
+	.active {
+		color: #ffffff;
+	}
+
+	.logo {
+		filter: brightness(100);
+	}
+
+	.menu {
+		gap: 32px;
+		line-height: 42px;
+	}
+</style>

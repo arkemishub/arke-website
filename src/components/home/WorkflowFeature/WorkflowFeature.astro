@@ -8,7 +8,7 @@ export interface Props {
 const { title, icon, description } = Astro.props;
 ---
 
-<div class="mt-12 text-left w-8/12">
+<div class="mt-12 text-left w-full md:w-8/12">
 	<img class="w-10" src={icon} alt="workflow_feature" />
 	<h5 class="mt-4 text-3xl font-medium">{title}</h5>
 	<h6 class="mt-2 text-secondary">

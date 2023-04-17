@@ -4,12 +4,13 @@ export interface Props {
     style;
     color: 'green' | 'blue' | 'rose';
     animate: boolean;
+    className: string;
 }
 
-const { style, color, animate } = Astro.props;
+const { style, color, animate, className } = Astro.props;
 ---
 
-<div class={twMerge(`circle-gradient ${color}`, animate && 'animate')} style={style} />
+<div class={twMerge(`circle-gradient ${color}`, animate && 'animate', className)} style={style} />
 
 <style>
     @keyframes run {
@@ -34,7 +35,7 @@ const { style, color, animate } = Astro.props;
     .animate {
         -webkit-animation: linear infinite;
         -webkit-animation-name: run;
-        -webkit-animation-duration: 10s;
+        -webkit-animation-duration: 15s;
     }
 
     .green {
