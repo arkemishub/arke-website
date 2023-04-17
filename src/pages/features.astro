@@ -6,12 +6,13 @@ import StartNowButton from "../components/home/StartNowButton/StartNowButton.ast
 import Section from "../components/ui/Section.astro";
 import Feature from "../components/features/Feature/Feature.astro";
 import Card from "../components/ui/Card.astro";
+import FooterCta from "../components/ui/FooterCta.astro";
 ---
 
 <Layout>
 	<GradientBackground />
 	<FeaturesAnimatedBackground />
-	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-28">
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
 		The unified framework to shape<br/>
 		<span>next-gen</span> applications</h1>
 	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
@@ -21,7 +22,7 @@ import Card from "../components/ui/Card.astro";
 	<br/>
 	<br/>
 	<StartNowButton color="green" />
-	<div class="mt-60">
+	<div class="mt-80">
 		<Section className="w-full p-12 m-auto rounded-none b-0" color="blue">
 			<h4 class="text-5xl font-medium">
 				High-performing backend
@@ -162,6 +163,11 @@ import Card from "../components/ui/Card.astro";
 				for limitless growth potential.
 			</p>
 		</Section>
+
+		<div class="mt-40">
+			<StartNowButton color="green" className="-mt-4" />
+			<FooterCta />
+		</div>
 	</div>
 </Layout>
 

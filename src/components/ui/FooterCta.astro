@@ -1,0 +1,54 @@
+---
+import Card from "./Card.astro";
+import {twMerge} from "tailwind-merge";---
+
+<div>
+    <span class={twMerge("btn-circle z-10 w-48 h-48 lg:w-72 lg:h-72")}/>
+    <div class="w-6/12 m-auto grid grid-cols-3 mb-6">
+        <h6 class="text-4xl font-semibold">Design fast</h6>
+        <div/>
+        <h6 class="text-4xl font-semibold text-green">Code faster</h6>
+    </div>
+    <Card className="p-8 pt-32 w-11/12 m-auto">
+        <div class="lg:grid lg:gap-x-8 lg:grid-cols-3 items-center">
+            <div class="col-span-2">
+                <h4 class="text-5xl text-left font-medium mb-8" style="line-height: 78px">
+                    Unleash your<br/>
+                    <span class="text-blue">creativity</span>
+                    and
+                    <span class="text-rose">vision</span>
+                </h4>
+            </div>
+            <div>
+                <a href="#" target="_blank">
+                    <Card className="card-link flex p-4 px-6 justify-between items-center">
+                        <img class="w-8" src="/icons/discord.svg" alt="discord"/>
+                        <p class="flex-auto text-left ml-4">arkehub.discord.com</p>
+                        <img src="/icons/arrow_link.svg" class="w-3" alt="arrow_link" />
+                    </Card>
+                </a>
+                <a href="https://github.com/arkemishub" target="_blank">
+                    <Card className="card-link mt-4 flex p-4 px-6 justify-between items-center">
+                        <img class="w-8" src="/icons/github.svg" alt="github"/>
+                        <p class="flex-auto text-left ml-4">github.com/arkemishub</p>
+                        <img src="/icons/arrow_link.svg" class="w-3" alt="arrow_link" />
+                    </Card>
+                </a>
+            </div>
+        </div>
+    </Card>
+</div>
+
+<style>
+    .btn-circle {
+        transform: translate(-50%, 0%);
+        color: #fff;
+        border-radius: 100%;
+        margin-top: -80px;
+        border: 1px solid rgba(129, 155, 144, 0.2);
+        text-transform: uppercase;
+        position: absolute;
+        transition: background-color 1.2s ease-out 100ms;
+        z-index: -1;
+    }
+</style>
