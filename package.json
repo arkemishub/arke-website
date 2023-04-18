@@ -2,6 +2,12 @@
   "name": "arke-website",
   "type": "module",
   "version": "0.0.1",
+  "author": "Arkemis S.r.l.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "arke",
+    "website"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
