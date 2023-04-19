@@ -156,7 +156,7 @@ const openSourceFeatures = [
 	<br/>
 	<StartNowButton color="green" />
 	<div class="mt-80">
-		<Section className="w-full p-12 m-auto rounded-none b-0" color="blue">
+		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue">
 			<h4 class="text-5xl font-medium">
 				High-performing backend
 			</h4>
@@ -268,9 +268,9 @@ const openSourceFeatures = [
 			<div class="w-full sm:grid sm:grid-cols-3 mt-12">
 				<div>
 				{openSourceFeatures.slice(0,2).map(item =>
-					<li class="flex-row-reverse text-left sm:flex-row sm:text-right sm:text-right w-full flex items-center py-2 mb-4">
+					<li class="flex-row-reverse text-left sm:flex-row sm:text-right sm:text-right w-full flex items-center px-4 sm:px-0 py-2 mb-4">
 						<div>
-							<h2 class="font-semibold text-xl">
+							<h2 class="font-semibold text-md sm:text-xl">
 								{item.title}
 							</h2>
 							<p class="mt-2 text-md text-secondary">
@@ -289,7 +289,7 @@ const openSourceFeatures = [
 						<li class="text-left w-full flex items-center px-4 py-2 mb-4">
 							<img class="w-14 mr-4" src={item.img} alt={item.altImg}/>
 							<div>
-								<h2 class="font-semibold text-xl">
+								<h2 class="font-semibold text-md sm:text-xl">
 									{item.title}
 								</h2>
 								<p class="mt-2 text-md text-secondary">

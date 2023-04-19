@@ -1,0 +1,15 @@
+---
+import Button from "../components/ui/Button.astro";
+import Card from "../components/ui/Card.astro";
+export interface Props {
+}
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<a class={currentPath === "features" ? "active" : ""} href="/features">Features</a>
+<a class={currentPath === "enterprise" ? "active" : ""} href="/enterprise">Enterprise</a>
+<a class={currentPath === "developer" ? "active" : ""} href="/developer">Developer</a>
+<a href="https://arkemishub.github.io/docs" target="_blank">Documentation</a>
+<a href="https://www.mokkastudios.com" target="_blank">Company</a>
