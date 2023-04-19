@@ -1,0 +1,134 @@
+
+<div class="top-0 left-0 absolute w-full h-screen">
+    <div class="relative w-full h-full">
+        <img src="/collaboration/cursor_1.png" class="cursor1 w-36"/>
+        <img src="/collaboration/cursor_2.png" class="cursor2 w-40"/>
+        <img src="/collaboration/cursor_3.png" class="cursor3 w-36"/>
+        <img src="/collaboration/cursor_4.png" class="cursor4 w-32"/>
+    </div>
+</div>
+
+<style>
+
+    img {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    @keyframes animate-a {
+        0% {
+            top: 30%;
+            left: 20%;
+        }
+        25% {
+            top: 50%;
+            left: 18%;
+        }
+        50% {
+            top: 60%;
+            left: 52%;
+        }
+        75% {
+            top: 60%;
+            left: 72%;
+        }
+        100% {
+            top: 30%;
+            left: 20%;
+        }
+    }
+
+    @keyframes animate-b {
+        0% {
+            top: 30%;
+            left: 82%;
+        }
+        25% {
+            top: 80%;
+            left: 20%;
+        }
+        50% {
+            top: 30%;
+            left: 8%;
+        }
+        75% {
+            top: 60%;
+            left: 52%;
+        }
+        100% {
+            top: 30%;
+            left: 82%;
+        }
+    }
+    @keyframes animate-c {
+        0% {
+            top: 30%;
+            right: 20%;
+        }
+        25% {
+            top: 50%;
+            right: 18%;
+        }
+        50% {
+            top: 60%;
+            right: 52%;
+        }
+        75% {
+            top: 60%;
+            right: 72%;
+        }
+        100% {
+            top: 30%;
+            right: 20%;
+        }
+    }
+    @keyframes animate-d {
+        0% {
+            top: 30%;
+            right: 82%;
+        }
+        25% {
+            top: 80%;
+            right: 20%;
+        }
+        50% {
+            top: 30%;
+            right: 8%;
+        }
+        75% {
+            top: 60%;
+            right: 52%;
+        }
+        100% {
+            top: 30%;
+            right: 82%;
+        }
+    }
+
+    img.cursor1 {
+        -webkit-animation: linear infinite;
+        -webkit-animation-name: animate-a;
+        -webkit-animation-duration: 16s;
+        animation-timing-function: ease-out;
+    }
+
+    img.cursor2 {
+        -webkit-animation: linear infinite;
+        -webkit-animation-name: animate-b;
+        -webkit-animation-duration: 8s;
+        animation-timing-function: ease-out;
+    }
+    img.cursor3 {
+        -webkit-animation: linear infinite;
+        -webkit-animation-name: animate-c;
+        -webkit-animation-duration: 14s;
+        animation-timing-function: ease-out;
+    }
+    img.cursor4 {
+        -webkit-animation: linear infinite;
+        -webkit-animation-name: animate-d;
+        -webkit-animation-duration: 12s;
+        animation-timing-function: ease-out;
+    }
+</style>
