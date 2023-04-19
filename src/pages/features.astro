@@ -113,6 +113,33 @@ const techStackFeatures = [
 		description: 'Take advantage of Elixir\'s low-latency core to scale your product when needed.'
 	},
 ]
+
+const openSourceFeatures = [
+	{
+		title: 'Smoothly onboarding',
+		img: '/features/square/feature_onboarding.png',
+		altImg: 'smoothly_onboarding',
+		description: 'Begin your journey with Arke to shape the future of coding and become a driver of innovation.'
+	},
+	{
+		title: 'Ever-evolving technology',
+		img: '/features/square/feature_evolving_technology.png',
+		altImg: 'evolving_technology',
+		description: 'Join our team and GitHub community to shape the future of software development.'
+	},
+	{
+		title: 'Complete documentation',
+		img: '/features/square/feature_documentation.png',
+		altImg: 'complete_documentation',
+		description: 'Build a solid foundation and master all the secrets of Arke following the technical documentation.'
+	},
+	{
+		title: 'Friendly environment',
+		img: '/features/square/feature_friendly_environment.png',
+		altImg: 'friendly_environment',
+		description: 'Stay up-to-date, share your doubts and learn everyday from our vibrant Discord community.'
+	},
+]
 ---
 
 <Layout>
@@ -169,7 +196,7 @@ const techStackFeatures = [
 						<div class="p-8 py-4 text-left">
 							<div class="flex">
 								{item.packages.map(packageItem =>
-									<p class="mr-2 border rounded p-1 px-2 mb-2 w-fit">
+									<p class="mr-2 border border-[#ffffff20] rounded p-1 px-2 mb-2 w-fit">
 										{packageItem}
 									</p>
 								)}
@@ -237,6 +264,42 @@ const techStackFeatures = [
 				Adapt your framework and deploy with maximum compatibility<br/>
 				for limitless growth potential.
 			</p>
+
+			<div class="w-full sm:grid sm:grid-cols-3 mt-12">
+				<div>
+				{openSourceFeatures.slice(0,2).map(item =>
+					<li class="flex-row-reverse text-left sm:flex-row sm:text-right sm:text-right w-full flex items-center py-2 mb-4">
+						<div>
+							<h2 class="font-semibold text-xl">
+								{item.title}
+							</h2>
+							<p class="mt-2 text-md text-secondary">
+								{item.description}
+							</p>
+						</div>
+						<img class="w-14 mr-4 sm:ml-4" src={item.img} alt={item.altImg}/>
+					</li>
+				)}
+				</div>
+				<div class="flex justify-center my-6">
+					<img class="w-6/12" src="/icons/github.svg" alt="github"/>
+				</div>
+				<div>
+					{openSourceFeatures.slice(2,4).map(item =>
+						<li class="text-left w-full flex items-center px-4 py-2 mb-4">
+							<img class="w-14 mr-4" src={item.img} alt={item.altImg}/>
+							<div>
+								<h2 class="font-semibold text-xl">
+									{item.title}
+								</h2>
+								<p class="mt-2 text-md text-secondary">
+									{item.description}
+								</p>
+							</div>
+						</li>
+					)}
+				</div>
+			</div>
 		</Section>
 
 		<div class="mt-40">

@@ -43,7 +43,7 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 
 	<div class="flex justify-center align-center mt-40">
 		<FeatureCircle>
-			<WorkflowStep step="01" className="mt-20"/>
+			<WorkflowStep step="01" color="green" className="mt-20"/>
 		</FeatureCircle>
 	</div>
 	<VerticalLine className="hidden lg:block" />
@@ -85,7 +85,8 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 	</div>
 
 	<!-- BUILD  -->
-	<Card className="p-4 px-8 w-fit m-auto mt-20">
+	<WorkflowStep step="02" color="blue" className="mt-20"/>
+	<Card className="p-4 px-8 w-fit m-auto mt-8">
 		BUILD
 	</Card>
 	<Card className="p-8 m-auto mt-4 w-11/12 md:w-8/12">
@@ -121,7 +122,8 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 	</div>
 
 	<!-- EMPOWER  -->
-	<Card className="p-4 px-8 w-fit m-auto mt-20">
+	<WorkflowStep step="03" color="rose" className="mt-20"/>
+	<Card className="p-4 px-8 w-fit m-auto mt-8">
 		EMPOWER
 	</Card>
 	<Card className="p-8 m-auto mt-4 w-11/12 md:w-8/12">
