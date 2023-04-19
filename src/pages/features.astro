@@ -137,7 +137,7 @@ const techStackFeatures = [
 				Boost your applications with our state-of-the-art backend<br/>
 				infrastructure to optimize and scale performance.
 			</p>
-			<img src="/img/backend_galaxy.png" class="w-11/12 mt-12 m-auto" alt="backend" />
+			<!--<img src="/img/backend_galaxy.png" class="w-11/12 mt-12 m-auto" alt="backend" />-->
 
 			<div class="mt-12 px-4 md:px-12 grid gap-x-4 gap-y-4 md:grid-cols-3">
 				{backendFeatures.map(item =>
@@ -152,7 +152,7 @@ const techStackFeatures = [
 			</div>
 		</Section>
 
-		<Section className="w-full p-12 m-auto rounded-none b-0" color="green">
+		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="green">
 			<h4 class="text-5xl font-medium">
 				Extensive frontend libraries
 			</h4>
@@ -160,11 +160,11 @@ const techStackFeatures = [
 				Boost your applications with our state-of-the-art frontend<br/>
 				infrastructure to optimize and scale performance.
 			</p>
-			<Card className="w-10/12 m-auto grid grid-cols-12 mt-12">
-				<div class="col-span-7">
+			<Card className="w-10/12 m-auto sm:grid sm:grid-cols-12 mt-12">
+				<div class="sm:col-span-7">
 					<img class="w-full" src="/illustrations/placeholder_green.svg" alt="placeholder">
 				</div>
-				<div class="col-span-5 border-l">
+				<div class="sm:col-span-5 sm:border-l">
 					{frontendFeatures.map(item =>
 						<div class="p-8 py-4 text-left">
 							<div class="flex">
@@ -186,7 +186,7 @@ const techStackFeatures = [
 			</Card>
 		</Section>
 
-		<Section className="w-full p-12 m-auto rounded-none b-0" color="orange">
+		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="orange">
 			<h4 class="text-5xl font-medium">
 				No-code console
 			</h4>
@@ -195,7 +195,7 @@ const techStackFeatures = [
 				your ideas without writing a single line of code.
 			</p>
 			<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
-			<Card className="p-8 m-auto mt-4 w-10/12 -mt-32 grid gap-x-4 grid-cols-2">
+			<Card className="p-8 m-auto mt-4 w-10/12 -mt-4 sm:-mt-32 grid gap-x-4 sm:grid-cols-2">
 				{consoleFeatures.map(item =>
 					<Feature
 						title={item.title}
@@ -208,7 +208,7 @@ const techStackFeatures = [
 			</Card>
 		</Section>
 
-		<Section className="w-full p-12 m-auto rounded-none b-0" color="rose">
+		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="rose">
 			<h4 class="text-5xl font-medium">
 				Flexible tech stack
 			</h4>
@@ -216,7 +216,7 @@ const techStackFeatures = [
 				Adapt your framework and deploy with maximum compatibility<br/>
 				for limitless growth potential.
 			</p>
-			<div class="w-10/12 m-auto mt-12 grid gap-x-4 grid-cols-2">
+			<div class="w-10/12 m-auto mt-12 grid gap-x-4 sm:grid-cols-2">
 				{techStackFeatures.map(item =>
 					<Card className="p-8 m-auto mt-4 text-left">
 						<img src={item.img} class="h-24" alt={item.altImg}/>
@@ -229,7 +229,7 @@ const techStackFeatures = [
 			</div>
 		</Section>
 
-		<Section className="w-full p-12 m-auto rounded-none b-0" color="blue">
+		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue">
 			<h4 class="text-5xl font-medium">
 				Open-source culture
 			</h4>
