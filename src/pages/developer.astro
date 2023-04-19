@@ -1,15 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GradientBackground from "../components/ui/GradientBackground.astro";
+import StartNowButton from '../components/home/StartNowButton/StartNowButton.astro';
 
 
 ---
 
 <Layout>
 	<GradientBackground />
-	developer
+    <h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
+		The <span>collaborative</span> framework to <br/>
+		shape your future</h1>
+        <h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+            Boost your productivity and develop quality code with a<br/>
+            dynamic community you can rely on
+        </h2>
+        <br/>
+        <br/>
+        <StartNowButton color="green"/>
+        <div class="mt-80">
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex justify-center items-center">Choose <img src="./logos/logo_with_border.svg" class="mx-3 h-8 md:h-10 lg:h-12"> to deliver quality code</h3>
+            <h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+                The open-source Agile framework that automates repetitive tasks,<br/>
+                allowing you to focus on creating high-impact, valuable code. 
+            </h2>
+        </div>
 </Layout>
 
 <style>
-
+.title > span {
+    color: #78E7C5
+}
 </style>
