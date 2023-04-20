@@ -9,7 +9,7 @@ import Footer from "../layouts/Footer.astro";
 <Layout footer={false}>
   <GradientBackground />
   <h1
-    class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40"
+    class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40"
   >
     We couldn't find that page.
   </h1>
@@ -18,7 +18,7 @@ import Footer from "../layouts/Footer.astro";
     and find the desired information.
   </h2>
   <div class="mt-4 flex gap-3 justify-center items-center mt-8">
-    <a href=`${import.meta.env.BASE_URL}/`>
+    <a href={`${import.meta.env.BASE_URL}/`}>
       <Button icon={`${import.meta.env.BASE_URL}/icons/home.svg`} title="homepage" className="bg-black" />
     </a>
     <Button

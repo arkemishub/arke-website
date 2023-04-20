@@ -148,7 +148,7 @@ const openSourceFeatures = [
 >
 	<GradientBackground />
 	<FeaturesAnimatedBackground />
-	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40 animate__animated animate__fadeIn">
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 animate__animated animate__fadeIn">
 		The unified framework to shape<br/>
 		<span>next-gen</span> applications</h1>
 	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary animate__animated animate__fadeIn">
@@ -167,7 +167,7 @@ const openSourceFeatures = [
 				Boost your applications with our state-of-the-art backend<br/>
 				infrastructure to optimize and scale performance.
 			</p>
-			<!--<img src=`${import.meta.env.BASE_URL}/img/backend_galaxy.png` class="w-11/12 mt-12 m-auto" alt="backend" />-->
+			<!--<img src={`${import.meta.env.BASE_URL}/img/backend_galaxy.png`} class="w-11/12 mt-12 m-auto" alt="backend" />-->
 
 			<div class="mt-12 px-4 md:px-12 grid gap-x-4 gap-y-4 md:grid-cols-3">
 				{backendFeatures.map(item =>
@@ -192,7 +192,7 @@ const openSourceFeatures = [
 			</p>
 			<Card className="w-10/12 m-auto sm:grid sm:grid-cols-12 mt-12">
 				<div class="sm:col-span-7">
-					<img class="w-full" src=`${import.meta.env.BASE_URL}/illustrations/placeholder_green.svg` alt="placeholder">
+					<img class="w-full" src={`${import.meta.env.BASE_URL}/illustrations/placeholder_green.svg`} alt="placeholder">
 				</div>
 				<div class="sm:col-span-5 sm:border-l">
 					{frontendFeatures.map(item =>
@@ -285,7 +285,7 @@ const openSourceFeatures = [
 				)}
 				</div>
 				<div class="flex justify-center my-6">
-					<img class="w-6/12" src=`${import.meta.env.BASE_URL}//icons/github.svg` alt="github"/>
+					<img class="w-6/12" src={`${import.meta.env.BASE_URL}//icons/github.svg`} alt="github"/>
 				</div>
 				<div>
 					{openSourceFeatures.slice(2,4).map(item =>
