@@ -61,8 +61,8 @@ const features = [
   }
 
   svg {
-    margin-left: -33%;
-    margin-top: -24%;
+    margin-left: -32%;
+    margin-top: -25%;
     width: 164%;
     height: 147%;
     position: absolute;
@@ -86,7 +86,7 @@ const features = [
   .outer-circle-border {
     position: relative;
     border-radius: 50%;
-    background: #78E7B0;
+    background: #78e7b0;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -100,5 +100,27 @@ const features = [
     left: -94px;
     z-index: -2;
     border-radius: inherit;
+  }
+
+  @media only screen and (max-width: 600px) {
+    svg {
+      margin-left: -32%;
+      margin-top: -22%;
+      width: 164%;
+      height: 147%;
+    }
+
+    .outer-circle {
+      width: 420px;
+      height: 420px;
+    }
+
+    .inner-circle {
+      position: absolute;
+      top: -60px;
+      bottom: -60px;
+      right: -60px;
+      left: -60px;
+    }
   }
 </style>

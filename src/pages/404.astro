@@ -11,7 +11,9 @@ import Footer from "../layouts/Footer.astro";
 
 <Layout footer={false}>
   <GradientBackground />
-  <h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
+  <h1
+    class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40"
+  >
     We couldn't find that page.
   </h1>
   <h2 class="px-12 text-sm lg:text-2xl mt-8 text-secondary">
@@ -20,22 +22,24 @@ import Footer from "../layouts/Footer.astro";
   </h2>
   <div class="mt-4 flex gap-3 justify-center items-center mt-8">
     <a href="/">
-      <Button icon={home} title="homepage" />
+      <Button icon={home} title="homepage" className="bg-black" />
     </a>
-    <Button icon={back_arrow} title="previous page" />
+    <Button icon={back_arrow} title="previous page" id="previousBtn" />
   </div>
   <div class="flex justify-center align-center mt-40">
     <FeatureCircle404 />
   </div>
-  <Footer className="-mt-80"/>
+  <Footer className="-mt-80" />
 </Layout>
 
-<style>
-  .back {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
+<script>
+  const button = document.getElementById("previousBtn");
 
-  .border-btn-404 {
-    border-color: rgb(82 82 91);
-  }
+  button.addEventListener("click", () => {
+    window.history.back();
+  });
+</script>
+
+<style>
+
 </style>
