@@ -1,13 +1,41 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
+import home from "../../icons/home.svg";
+import back_arrow from "../../icons/back_arrow.svg";
+import Button from "../components/ui/Button.astro";
+import FeatureCircle from "../components/home/FeatureCircle/FeatureCircle.astro";
+import WorkflowStep from "../components/home/WorkflowStep/WorkflowStep.astro";
 ---
 
 <Layout>
-	<GradientBackground />
-	404
+  <GradientBackground />
+  <h1
+    class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40"
+  >
+    We couldn't find that page.
+  </h1>
+  <h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+    Check the URL for errors and try again. Otherwise you can return back<br />
+    and find the desired information.
+  </h2>
+  <div class="mt-4 flex gap-3 justify-center items-center">
+    <a href="/"><Button icon={home} title="homepage" /></a>
+    <Button icon={back_arrow} title="previous page" />
+  </div>
+  <div class="flex justify-center align-center mt-40">
+    <FeatureCircle feature={false}>
+      <WorkflowStep step={} className="w-full h-full" />
+    </FeatureCircle>
+  </div>
 </Layout>
 
 <style>
+  .back {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
 
+  .border-btn-404 {
+    border-color: rgb(82 82 91);
+  }
 </style>

@@ -1,26 +1,41 @@
 ---
-import { twMerge } from 'tailwind-merge'
+import { twMerge } from "tailwind-merge";
 export interface Props {
-    className: string[]
+  className: string[];
+  feature: boolean;
 }
 
-const { className } = Astro.props;
+const { className, feature = true } = Astro.props;
+const notFound = [
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+];
 const features = [
-    'Innovative',
-    'Efficient',
-    'Transparent',
-    'Open-source',
-    'Flexible',
-    'User-friendly',
-    'Fast',
-    'Customizable',
-    'Scalable',
-    'Dynamic',
-    'Reactive',
-    'Intuitive',
-    'Adaptable',
-    'Responsive',
-    /*'Reliable',
+  "Innovative",
+  "Efficient",
+  "Transparent",
+  "Open-source",
+  "Flexible",
+  "User-friendly",
+  "Fast",
+  "Customizable",
+  "Scalable",
+  "Dynamic",
+  "Reactive",
+  "Intuitive",
+  "Adaptable",
+  "Responsive",
+  /*'Reliable',
     'Robust',
     'Secure',
     'Evolving',
@@ -37,79 +52,95 @@ const features = [
     'Optimized',
     'Automated',
     'Cutting-edge',*/
-]
+];
 ---
 
 <div class="relative">
-    <svg viewBox="0 0 100 100" width="100" height="100">
-        <defs>
-            <path id="circle"
-                  d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
-        </defs>
-        <text font-size="17">
-            <textPath xlink:href="#circle" class="font-semibold" style="font-size: 3px">
-                {features.join(' - ')} -
-            </textPath>
-        </text>
-    </svg>
-    <div class="outer-circle m-auto">
-        <div class="outer-circle-border mt-20 w-64 h-64 m-auto">
-            <slot/>
-        </div>
-        <div class="inner-circle"/>
+  <svg viewBox="0 0 100 100" width="100" height="100">
+    <defs>
+      <path
+        id="circle"
+        d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path>
+    </defs>
+    <text font-size="17">
+      {
+        feature ? (
+          <textPath
+            xlink:href="#circle"
+            class="font-semibold"
+            style="font-size: 3px"
+          >
+            {features.join(" - ")} -
+          </textPath>
+        ) : (
+          <textPath
+            xlink:href="#circle"
+            class="font-normal"
+            style="font-size: 8px"
+          >
+            {notFound.join(" - ")} -
+          </textPath>
+        )
+      }
+    </text>
+  </svg>
+  <div class="outer-circle m-auto">
+    <div class="outer-circle-border mt-20 w-64 h-64 m-auto">
+      <slot />
     </div>
+    <div class="inner-circle"></div>
+  </div>
 </div>
 
 <style>
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
     }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
-    svg {
-        margin-left: -28%;
-        margin-top: -28%;
-        width: 156%;
-        height: 156%;
-        position: absolute;
-        color: #fff;
-        fill: currentColor;
-        transform-origin: center;
-        transform: rotate(45deg);
-        -webkit-animation: linear infinite;
-        -webkit-animation-name: rotate;
-        -webkit-animation-duration: 100s;
-    }
+  svg {
+    margin-left: -28%;
+    margin-top: -28%;
+    width: 156%;
+    height: 156%;
+    position: absolute;
+    color: #fff;
+    fill: currentColor;
+    transform-origin: center;
+    transform: rotate(45deg);
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 100s;
+  }
 
+  .outer-circle {
+    width: 420px;
+    height: 420px;
+    position: relative;
+    border-radius: 50%;
+    background: #0a0b12;
+    border: 1px solid #345147;
+  }
+  .outer-circle-border {
+    position: relative;
+    border-radius: 50%;
+    background: #0a0b12;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-    .outer-circle {
-        width: 420px;
-        height: 420px;
-        position: relative;
-        border-radius: 50%;
-        background: #0A0B12;
-        border: 1px solid #345147;
-    }
-    .outer-circle-border {
-        position: relative;
-        border-radius: 50%;
-        background: #0A0B12;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .inner-circle {
-        background-image: radial-gradient(rgba(168, 251, 215, 0.3) 20%, #FFFFFF01);
-        content: '';
-        position: absolute;
-        top: -80px;
-        bottom: -80px;
-        right: -80px;
-        left: -80px;
-        z-index: -1;
-        border-radius: inherit;
-    }
+  .inner-circle {
+    background-image: radial-gradient(rgba(168, 251, 215, 0.3) 20%, #ffffff01);
+    content: "";
+    position: absolute;
+    top: -80px;
+    bottom: -80px;
+    right: -80px;
+    left: -80px;
+    z-index: -1;
+    border-radius: inherit;
+  }
 </style>
