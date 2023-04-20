@@ -1,8 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
-import home from "../../icons/home.svg";
-import back_arrow from "../../icons/back_arrow.svg";
 import FeatureCircle404 from "../components/404/FeatureCircle404/FeatureCircle404.astro";
 import Button from "../components/ui/Button.astro";
 import Footer from "../layouts/Footer.astro";
@@ -21,9 +19,13 @@ import Footer from "../layouts/Footer.astro";
   </h2>
   <div class="mt-4 flex gap-3 justify-center items-center mt-8">
     <a href="/">
-      <Button icon={home} title="homepage" className="bg-black" />
+      <Button icon="icons/home.svg" title="homepage" className="bg-black" />
     </a>
-    <Button icon={back_arrow} title="previous page" id="previousBtn" />
+    <Button
+      icon="icons/back_arrow.svg"
+      title="previous page"
+      id="previousBtn"
+    />
   </div>
   <div class="flex justify-center align-center mt-40">
     <FeatureCircle404 />
