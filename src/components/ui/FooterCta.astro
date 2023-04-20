@@ -3,11 +3,12 @@ import Card from "./Card.astro";
 import {twMerge} from "tailwind-merge";---
 
 <div>
-    <span class={twMerge("btn-circle z-10 w-48 h-48 lg:w-72 lg:h-72")}/>
-    <div class="w-6/12 m-auto grid grid-cols-3 mb-6">
-        <h6 class="text-4xl font-semibold">Design fast</h6>
+    <span class={twMerge("btn-circle -mt-14 sm:-mt-20 z-10 w-48 h-48 lg:w-72 lg:h-72")}/>
+
+    <div class="w-full sm:w-6/12 m-auto grid grid-cols-3 mb-6">
+        <h6 class="text-2xl sm:text-4xl font-semibold">Design fast</h6>
         <div/>
-        <h6 class="text-4xl font-semibold text-green">Code faster</h6>
+        <h6 class="text-2xl sm:text-4xl font-semibold text-green">Code faster</h6>
     </div>
     <Card className="p-8 pt-32 w-11/12 m-auto">
         <div class="lg:grid lg:gap-x-8 lg:grid-cols-3 items-center">
@@ -44,7 +45,6 @@ import {twMerge} from "tailwind-merge";---
         transform: translate(-50%, 0%);
         color: #fff;
         border-radius: 100%;
-        margin-top: -80px;
         border: 1px solid rgba(129, 155, 144, 0.2);
         text-transform: uppercase;
         position: absolute;

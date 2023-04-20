@@ -1,13 +1,14 @@
 ---
 import { twMerge } from 'tailwind-merge'
 export interface Props {
+    id?: string
     className: string[]
 }
 
-const { className } = Astro.props;
+const { id, className, style } = Astro.props;
 ---
 
-<div class={twMerge("card rounded-2xl w-full", className)}>
+<div id={id} class={twMerge("card rounded-2xl w-full", className)} style={style}>
     <slot />
 </div>
 

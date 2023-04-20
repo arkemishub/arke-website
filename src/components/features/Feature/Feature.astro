@@ -10,7 +10,7 @@ const { title, img, className, align = 'left' } = Astro.props;
 ---
 
 <li class={twMerge("w-full flex items-center flex-col px-4 py-2", className)}>
-	<img class="w-16 mr-4" src={img} alt="feature"/>
+	<img class="w-14 mr-4 mb-2" src={img} alt="feature"/>
 	<div>
 		<h2 class="font-semibold text-xl">
 			{title}
