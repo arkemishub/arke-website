@@ -7,37 +7,21 @@ export interface Props {
 const { className } = Astro.props;
 
 const features = [
-  "Innovative",
-  "Efficient",
-  "Transparent",
-  "Open-source",
-  "Flexible",
-  "User-friendly",
-  "Fast",
-  "Customizable",
-  "Scalable",
-  "Dynamic",
-  "Reactive",
-  "Intuitive",
-  "Adaptable",
-  "Responsive",
-  /*'Reliable',
-    'Robust',
-    'Secure',
-    'Evolving',
-    'Modular',
-    'Cross-platform',
-    'High-performance',
-    'Collaborative',
-    'Versatile',
-    'Maintainable',
-    'Advanced',
-    'Revolutionary',
-    'Agile',
-    'Integrated',
-    'Optimized',
-    'Automated',
-    'Cutting-edge',*/
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
 ];
 ---
 
@@ -52,14 +36,14 @@ const features = [
       <textPath
         xlink:href="#circle"
         class="font-semibold"
-        style="font-size: 3px"
+        style="font-size: 6px;"
       >
-        {features.join(" - ")} -
+        {features.join(" — ")} -
       </textPath>
     </text>
   </svg>
   <div class="outer-circle m-auto">
-    <div class="outer-circle-border mt-20 w-64 h-64 m-auto">
+    <div class="outer-circle-border mt-20 w-3/4 h-3/4 m-auto">
       <slot />
     </div>
     <div class="inner-circle"></div>
@@ -77,10 +61,10 @@ const features = [
   }
 
   svg {
-    margin-left: -28%;
-    margin-top: -28%;
-    width: 156%;
-    height: 156%;
+    margin-left: -29%;
+    margin-top: -23%;
+    width: 159%;
+    height: 147%;
     position: absolute;
     color: #fff;
     fill: currentColor;
@@ -92,8 +76,8 @@ const features = [
   }
 
   .outer-circle {
-    width: 420px;
-    height: 420px;
+    width: 723px;
+    height: 723px;
     position: relative;
     border-radius: 50%;
     background: #0a0b12;
@@ -110,10 +94,10 @@ const features = [
     background-image: radial-gradient(rgba(168, 251, 215, 0.3) 20%, #ffffff01);
     content: "";
     position: absolute;
-    top: -80px;
-    bottom: -80px;
-    right: -80px;
-    left: -80px;
+    top: -94px;
+    bottom: -94px;
+    right: -94px;
+    left: -94px;
     z-index: -2;
     border-radius: inherit;
   }

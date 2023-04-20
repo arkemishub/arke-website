@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
 import home from "../../icons/home.svg";
 import back_arrow from "../../icons/back_arrow.svg";
-import Button from "../components/ui/Button.astro";
-import FeatureCircle from "../components/home/FeatureCircle/FeatureCircle.astro";
 import WorkflowStep from "../components/home/WorkflowStep/WorkflowStep.astro";
+import FeatureCircle404 from "../components/home/FeatureCircle404/FeatureCircle404.astro";
+import Button from "../components/ui/Button.astro";
 ---
 
 <Layout>
@@ -24,9 +24,9 @@ import WorkflowStep from "../components/home/WorkflowStep/WorkflowStep.astro";
     <Button icon={back_arrow} title="previous page" />
   </div>
   <div class="flex justify-center align-center mt-40">
-    <FeatureCircle feature={false}>
+    <FeatureCircle404>
       <WorkflowStep step={} className="w-full h-full" />
-    </FeatureCircle>
+    </FeatureCircle404>
   </div>
 </Layout>
 
