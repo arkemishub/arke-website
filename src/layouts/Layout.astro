@@ -1,36 +1,39 @@
 ---
 import Navbar from "./Navbar.astro";
 import Footer from "./Footer.astro";
+import 'animate.css';
 export interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
-<script is:inline>
-	const theme = (() => {
-		if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-			return localStorage.getItem("theme");
-		}
-		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-			return "dark";
-		}
-		return "light";
-	})();
-
-	if (theme === "light") {
-		document.documentElement.classList.remove("dark");
-	} else {
-		document.documentElement.classList.add("dark");
-	}
-	window.localStorage.setItem("theme", theme);
-</script>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="animated fadeIn">
 	<head>
+		<!-- Google Tag Manager -->
+		<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WC94GBC"></script>
+		<script>
+			(function(w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					'gtm.start': new Date().getTime(),
+					event: 'gtm.js'
+				});
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-WC94GBC');
+		</script>
+		<!-- End Google Tag Manager -->
 		<meta charset="UTF-8" />
+		<meta description={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
