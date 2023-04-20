@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="501" height="501" viewBox="0 0 501 501">
+  <defs>
+    <clipPath id="clip-Arkemis_-_Mokka_2">
+      <rect width="501" height="501"/>
+    </clipPath>
+  </defs>
+  <g id="Arkemis_-_Mokka_2" data-name="Arkemis - Mokka – 2" clip-path="url(#clip-Arkemis_-_Mokka_2)">
+    <path id="iconmonstr-linkedin-3" d="M396.625,0H104.375A104.386,104.386,0,0,0,0,104.375v292.25A104.386,104.386,0,0,0,104.375,501h292.25A104.373,104.373,0,0,0,501,396.625V104.375A104.373,104.373,0,0,0,396.625,0ZM167,396.625H104.375V167H167ZM135.688,140.531a36.825,36.825,0,1,1,36.531-36.823A36.688,36.688,0,0,1,135.688,140.531ZM417.5,396.625H354.875V279.642c0-70.307-83.5-64.984-83.5,0V396.625H208.75V167h62.625v36.844c29.142-53.983,146.125-57.97,146.125,51.687Z" fill="#fff"/>
+  </g>
+</svg>
