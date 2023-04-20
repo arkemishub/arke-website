@@ -3,7 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import GradientBackground from "../components/ui/GradientBackground.astro";
 import StartNowButton from '../components/home/StartNowButton/StartNowButton.astro';
 import DeveloperIntroBackground from '../components/developer/developerIntroBackground/DeveloperIntroBackground.astro';
-import DeliverQualityCodeBackground from '../components/developer/developerIntroBackground/DeliverQualityCodeBackground.astro';
+import RectanglesBackground from '../components/developer/developerIntroBackground/RectanglesBackground.astro';
+import Card from '../components/ui/Card.astro';
 
 const programmingIcons = [
     {title: 'Elixir icon', img: '/developer/icons/elixir.svg'}, 
@@ -16,7 +17,15 @@ const programmingIcons = [
     {title: 'Azure icon', img: '/developer/icons/azure.svg'},  
     {title: 'Next-js icon', img:'/developer/icons/next-js.svg'}
 ]
+
+const trustCards = [
+    {title: 'Smart development', img: '/developer/icons/peopleIcon.svg', description: 'Stop wasting your skills on repetitive tasks and focus on innovation and value generation.'},
+    {title: 'Knowledge share', img: '/developer/icons/puzzleIcon.svg', description: 'Promote a culture og transparency and growth through shared awareness enrichment and knowledge transfer.'},
+    {title: 'Code quality', img: '/developer/icons/spinIcon.svg', description: 'Develop reliable, maintainable, and efficient software to improve the user experience and have a posive impact on the world.'}
+]
+
 import Cursors from "../components/developers/Cursors/Cursors.astro";
+import Section from '../components/ui/Section.astro';
 ---
 
 <Layout>
@@ -32,17 +41,36 @@ import Cursors from "../components/developers/Cursors/Cursors.astro";
         <br/>
         <br/>
         <StartNowButton color="green"/>
-        <div class="relative mt-48 py-24">
-            <DeliverQualityCodeBackground />
-            <h3 class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"><div class="flex items-center">Choose <img src="./logos/logo_with_border.svg" class="mx-3 h-8 md:h-10 lg:h-12"> </div>to deliver quality code</h3>
+        <div class="relative mt-48 pt-24 pb-44">
+            <RectanglesBackground />
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"><div class="flex items-center mx-3">Choose <img src="./logos/logo_with_border.svg" class="mx-3 h-8 md:h-10 lg:h-12"> to deliver</div> quality code</h3>
             <h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
                 The open-source Agile framework that automates repetitive tasks,<br/>
                 allowing you to focus on creating high-impact, valuable code. 
             </h2>
-            <div class="icon-box__container flex flex-row justify-center mt-10 w-full">
-                {programmingIcons.map(icon =><div class="icon-box flex justify-center items-center"><img src={icon.img} alt={icon.title} class="h-14 w-14"/></div>)}
+            <div class="icon-box__container flex flex-row justify-center w-full mt-24">
+                {programmingIcons.map(icon =><div class="icon-box flex justify-center items-center select-none"><img src={icon.img} alt={icon.title} class="h-14 w-14"/></div>)}
             </div> 
         </div>
+        <Section className="w-full sm:p-12 m-auto rounded-none b-0" color="green">
+            <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
+            <div class="text-left lg:text-right pr-4">
+                <h3 class=" title text-3xl md:text-4xl lg:text-5xl font-semibold">We <span>trust</span> your skills <br/> and ambitions</h3>
+                <h2 class="text-sm lg:text-2xl mt-12 text-secondary">
+                    Create outstanding software, engage in collaborative<br/>
+                    problem-solving and lead the next generation of innovators.
+                </h2>
+            </div>
+            <div class="flex">
+                {trustCards.map(item => <Card className="p-4 m-auto mt-4 text-left w-56 h-80 mx-2">
+                	<img src={item.img} alt={item.title}/>
+                    <h2 class="text-xl mt-4 font-semibold">{item.title}</h2>
+                    <p class="text-secondary">
+                        {item.description}
+                    </p></Card>)}
+            </div>
+        </div>
+        </Section>
 </Layout>
 
 <style>
