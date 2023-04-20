@@ -1,13 +1,77 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GradientBackground from "../components/ui/GradientBackground.astro";
+import Card from "../components/ui/Card.astro";
+import Feature from "../components/features/Feature/Feature.astro";
 ---
 
 <Layout>
 	<GradientBackground />
-	contact
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40 animate__animated animate__fadeIn">
+		<span>Connect</span> with us</h1>
+	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary animate__animated animate__fadeIn">
+		Meet our team, contribute on GitHub, engage with our<br/>
+		Discord community and keep in touch with us on LinkedIn.
+	</h2>
+	<Card className="support-card-gradient m-auto w-7/12 grid sm:grid-cols-2 mt-20">
+		<div>
+			<div class="support-card rounded-tl-xl flex align-center p-8">
+				<img class="w-14 logo m-auto mr-6" src="/icons/mokka.svg" alt="mokka"/>
+				<div class="flex-auto text-left mt-2">
+					<h3 class="text-xl font-semibold">Mokka studios</h3>
+					<p class="text-secondary">Learn more about the team behind Arke.</p>
+				</div>
+			</div>
+			<div class="support-card rounded-bl-xl flex align-center p-8">
+				<img class="w-14 logo m-auto mr-6" src="/icons/github.svg" alt="github"/>
+				<div class="flex-auto text-left mt-2">
+					<h3 class="text-xl font-semibold">GitHub repository</h3>
+					<p class="text-secondary">Dive in and fork the repository to begin your journey.</p>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="support-card rounded-tr-xl flex align-center p-8">
+				<div class="flex-auto text-right">
+					<h3 class="text-xl font-semibold">Discord Community</h3>
+					<p class="text-secondary mt-2">Join our vibrant community and become a driver of change.</p>
+				</div>
+				<img class="w-14 logo m-auto ml-6" src="/icons/discord.svg" alt="discord"/>
+			</div>
+
+
+			<div class="support-card rounded-br-xl flex align-center p-8">
+				<div class="flex-auto text-right">
+					<h3 class="text-xl font-semibold">LinkedIn</h3>
+					<p class="text-secondary mt-2">Follow us to stay updated on tech and community news.</p>
+				</div>
+				<img class="w-14 logo m-auto ml-6" src="/icons/linkedin.svg" alt="linkedin"/>
+			</div>
+		</div>
+	</Card>
+	<div class="h-40">
 </Layout>
 
 <style>
+	.title > span {
+		background: linear-gradient(90deg, #78E7C5, #9DFFAD);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 
+	.support-card-gradient {
+		background: radial-gradient(rgba(84, 153, 204, 0.1) 30%, rgba(10, 11, 18, 0) 75%);
+	}
+
+	.support-card {
+		cursor: pointer;
+		min-height: 160px;
+		opacity: 0.4;
+		transition: 0.3s ease-out 100ms;
+	}
+
+	.support-card:hover {
+		opacity: 1;
+		background: rgba(255, 255, 255, 0.1);
+	}
 </style>
