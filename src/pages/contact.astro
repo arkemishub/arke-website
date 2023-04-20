@@ -1,13 +1,121 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GradientBackground from "../components/ui/GradientBackground.astro";
+import Card from "../components/ui/Card.astro";
+import CircleButton from "../components/ui/CircleButton.astro";
+import Section from "../components/ui/Section.astro";
+import Feature from "../components/features/Feature/Feature.astro";
 ---
 
-<Layout>
+<Layout
+	title="Arke | Connect with us"
+	descriptions="Meet our team, contribute on GitHub, engage with our Discord community and keep in touch with us on LinkedIn"
+>
 	<GradientBackground />
-	contact
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40 animate__animated animate__fadeIn">
+		<span>Connect</span> with us</h1>
+	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary animate__animated animate__fadeIn">
+		Meet our team, contribute on GitHub, engage with our<br/>
+		Discord community and keep in touch with us on LinkedIn.
+	</h2>
+	<Card className="relative support-card-gradient m-auto w-10/12 sm:w-7/12 grid lg:grid-cols-2 mt-20">
+		<div>
+			<a href="https://www.mokkastudios.com/" target="_blank" >
+				<div class="support-card rounded-tl-xl flex align-center p-8">
+					<div class="w-14 flex align-center mr-6">
+						<img class="logo m-auto" src="/icons/mokka.svg" alt="mokka"/>
+					</div>
+					<div class="flex-auto text-left mt-2" style="width: 40%">
+						<h3 class="text-xl font-semibold">Mokka studios</h3>
+						<p class="text-secondary">Learn more about the team behind Arke.</p>
+					</div>
+				</div>
+			</a>
+			<a href="https://arkemishub.github.io/docs" target="_blank">
+				<div class="support-card rounded-bl-xl flex align-center p-8">
+					<div class="w-14 flex align-center mr-6">
+						<img class="w-14 logo m-auto" src="/icons/github.svg" alt="github"/>
+					</div>
+					<div class="flex-auto text-left mt-2">
+						<h3 class="text-xl font-semibold">GitHub repository</h3>
+						<p class="text-secondary">Dive in and fork the repository to begin your journey.</p>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div>
+			<a href="https://discord.gg/qTd8em5X" target="_blank">
+				<div class="support-card rounded-tr-xl flex flex-row-reverse lg:flex-row align-center p-8">
+					<div class="flex-auto text-left lg:text-right">
+						<h3 class="text-xl font-semibold">Discord Community</h3>
+						<p class="text-secondary mt-2">Join our vibrant community and become a driver of change.</p>
+					</div>
+					<div class="w-14 flex align-center mr-6 lg:ml-6">
+						<img class="w-14 logo m-auto" src="/icons/discord.svg" alt="discord"/>
+					</div>
+				</div>
+			</a>
+
+			<a href="https://www.linkedin.com/company/arkehub" target="_blank">
+				<div class="support-card rounded-br-xl flex flex-row-reverse lg:flex-row align-center p-8">
+					<div class="flex-auto text-left lg:text-right">
+						<h3 class="text-xl font-semibold">LinkedIn</h3>
+						<p class="text-secondary mt-2">Follow us to stay updated on tech and community news.</p>
+					</div>
+					<div class="w-14 flex align-center mr-6 lg:ml-6">
+						<img class="logo m-auto" src="/icons/linkedin.svg" alt="linkedin"/>
+					</div>
+				</div>
+			</a>
+		</div>
+	</Card>
+
+	<div class="mt-20">
+		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue" style="background: transparent">
+			<div class="w-8/12 m-auto lg:grid lg:gap-x-8 lg:grid-cols-3 items-center">
+				<div class="col-span-2 text-left">
+					<h4 class="text-5xl text-left font-medium mb-8" style="line-height: 78px">
+						Tell us how we can<br/>
+						<span class="text-blue">help you</span>
+					</h4>
+					<p class="text-secondary">
+						Contact us for information about our technology and services<br/>
+						and let's talk to address your challenges together.
+					</p>
+
+					<div class="mt-20 flex">
+						<a href="mailto:info@mokkastudio.com?subject=Arke - Information">info@mokkastudios.com</a>
+						<img src="/icons/arrow_link.svg" class="w-3 ml-2" alt="arrow_link" />
+					</div>
+				</div>
+				<div>
+
+				</div>
+			</div>
+		</Section>
+	</div>
 </Layout>
 
 <style>
+	.title > span {
+		background: linear-gradient(90deg, #78E7C5, #9DFFAD);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 
+	.support-card-gradient {
+		background: radial-gradient(rgba(84, 153, 204, 0.1) 30%, rgba(10, 11, 18, 0) 75%);
+	}
+
+	.support-card {
+		cursor: pointer;
+		min-height: 160px;
+		opacity: 0.4;
+		transition: 0.3s ease-out 100ms;
+	}
+
+	.support-card:hover {
+		opacity: 1;
+		background: rgba(255, 255, 255, 0.1);
+	}
 </style>

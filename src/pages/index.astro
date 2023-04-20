@@ -12,9 +12,18 @@ import StartNowButton from '../components/home/StartNowButton/StartNowButton.ast
 import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 ---
 
+<script>
+		const btnStartCta = document.getElementById('btnStartCta');
+		const btnEndCta = document.getElementById('btnEndCta');
+		const vLine = document.getElementById('vline');
+		const btnStartCtaTopPosition = btnStartCta.offsetTop;
+		const btnEndCtaTopPosition = btnEndCta.offsetTop;
+		vLine.style.height = `${btnEndCtaTopPosition - btnStartCtaTopPosition}px`;
+</script>
+
 <Layout
 	title="Arke | The Low-Code Framework to accelerate your development"
-	description="Design your project from a ready-to-use foundation. Speed up your development with our dedicated Console. Customize your code to suit your unique needs."
+	description="Design your project from a ready-to-use foundation. Speed up your development with our dedicated Console. Customize your code to suit your unique needs"
 >
 	<GradientBackground />
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40 animate__animated animate__fadeIn">
@@ -27,7 +36,7 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 	</h2>
 	<br/>
 	<br/>
-	<StartNowButton color="green"/>
+	<StartNowButton id="btnStartCta" color="green"/>
 	<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
 	<div class="relative choose-us-section">
 		<div class="flex justify-between items-end mx-12 mb-8">
@@ -49,7 +58,7 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 			<WorkflowStep step="01" color="green" className="mt-20"/>
 		</FeatureCircle>
 	</div>
-	<VerticalLine className="hidden lg:block" />
+	<VerticalLine id="vline" className="hidden lg:block" />
 
 	<!-- SET UP  -->
 	<Card className="p-4 px-8 w-fit m-auto -mt-32">
@@ -183,7 +192,10 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 	-->
 
 	<div class="mt-40">
-		<StartNowButton color="rose" className="-mt-4" />
+		<StartNowButton
+			id="btnEndCta"
+			color="rose"
+			className="-mt-4" />
 		<FooterCta />
 	</div>
 </Layout>

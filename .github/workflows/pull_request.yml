@@ -1,0 +1,27 @@
+
+# Workflow name
+name: 'Build'
+
+# Event for the workflow
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - "main"
+
+# List of jobs
+jobs:
+  Build-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 7.1.7
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build package
+        run: pnpm build
