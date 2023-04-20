@@ -1,14 +1,18 @@
 ---
 import GradientCircle from "../components/ui/GradientCircle.astro";
+import {twMerge} from "tailwind-merge";
 export interface Props {
+	className: string[];
 }
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
+
+const { className } = Astro.props;
 ---
 
 <div class="relative">
-	<footer class="flex flex-col mt-20 mb-8 mx-4 sm:mx-2 md:mx-12">
+	<footer class={twMerge("flex flex-col mt-20 mb-8 mx-4 sm:mx-2 md:mx-12", className)}>
 		<div class="block text-center gap-x-2 lg:grid sm:text-left lg:grid-cols-12">
 			<div class="col-span-2 mb-8 text-center sm:mb-0">
 				<a class={currentPath === "" ? "active" : ""} href="/">
