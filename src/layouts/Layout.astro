@@ -5,9 +5,10 @@ import 'animate.css';
 export interface Props {
 	title: string;
 	description: string;
+	footer?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, footer= true } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ const { title, description } = Astro.props;
 				<slot />
 			</main>
 		</div>
-		<Footer />
+		{footer && <Footer />}
 	</body>
 </html>
 <style is:global>
