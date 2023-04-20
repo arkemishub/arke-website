@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import GradientBackground from "../components/ui/GradientBackground.astro";
 import StartNowButton from '../components/home/StartNowButton/StartNowButton.astro';
 import DeveloperIntroBackground from '../components/developer/developerIntroBackground/DeveloperIntroBackground.astro';
+import DeliverQualityCodeBackground from '../components/developer/developerIntroBackground/DeliverQualityCodeBackground.astro';
 
 const programmingIcons = [
     {title: 'Elixir icon', img: '/developer/icons/elixir.svg'}, 
@@ -21,7 +22,6 @@ import Cursors from "../components/developers/Cursors/Cursors.astro";
 <Layout>
     <Cursors />
 	<GradientBackground />
-    <DeveloperIntroBackground />
     <h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
 		The <span>collaborative</span> framework to <br/>
 		shape your future</h1>
@@ -32,14 +32,15 @@ import Cursors from "../components/developers/Cursors/Cursors.astro";
         <br/>
         <br/>
         <StartNowButton color="green"/>
-        <div class="mt-80">
+        <div class="relative mt-48 py-24">
+            <DeliverQualityCodeBackground />
             <h3 class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"><div class="flex items-center">Choose <img src="./logos/logo_with_border.svg" class="mx-3 h-8 md:h-10 lg:h-12"> </div>to deliver quality code</h3>
             <h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
                 The open-source Agile framework that automates repetitive tasks,<br/>
                 allowing you to focus on creating high-impact, valuable code. 
             </h2>
-            <div class="flex justify-center mt-5">
-                {programmingIcons.map(icon =><div class="p-5 border-l border-l-white flex justify-center items-center"><img src={icon.img} alt={icon.title} class="h-14 w-14"/></div>)}
+            <div class="icon-box__container flex flex-row justify-center mt-10 w-full">
+                {programmingIcons.map(icon =><div class="icon-box flex justify-center items-center"><img src={icon.img} alt={icon.title} class="h-14 w-14"/></div>)}
             </div> 
         </div>
 </Layout>
@@ -51,8 +52,21 @@ import Cursors from "../components/developers/Cursors/Cursors.astro";
     -webkit-text-fill-color: transparent;
 }
 
+.icon-box__container {
+    width: 900px;
+    margin: 30px auto;
+    overflow-x: scroll;
+}
+
 .icon-box {
-    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.icon-box:not(:first-child) {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 139, 0), rgba(255, 255, 255, 0.167) ,rgba(0, 0, 139, 0)) 1;
 }
 
 </style>
