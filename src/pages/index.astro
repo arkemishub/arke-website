@@ -12,19 +12,22 @@ import StartNowButton from '../components/home/StartNowButton/StartNowButton.ast
 import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 ---
 
-<Layout>
+<Layout
+	title="Arke | The Low-Code Framework to accelerate your development"
+	description="Design your project from a ready-to-use foundation. Speed up your development with our dedicated Console. Customize your code to suit your unique needs."
+>
 	<GradientBackground />
-	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40 animate__animated animate__fadeIn">
 		The Low-Code Framework<br/> to
 		<span>accelerate</span>
 		your development</h1>
-	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary animate__animated animate__fadeIn">
 		Design your project from a ready-to-use foundation. Speed up your development<br/>
 		with our dedicated Console. Customize your code to suit your unique needs.
 	</h2>
 	<br/>
 	<br/>
-	<StartNowButton color="green" />
+	<StartNowButton color="green"/>
 	<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
 	<div class="relative choose-us-section">
 		<div class="flex justify-between items-end mx-12 mb-8">
