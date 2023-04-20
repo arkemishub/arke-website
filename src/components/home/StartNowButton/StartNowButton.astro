@@ -1,15 +1,16 @@
 ---
 import { twMerge } from 'tailwind-merge'
 export interface Props {
+    id: string;
     className: string[]
     color: string
 }
 
-const { className, color } = Astro.props;
+const { id, className, color } = Astro.props;
 ---
 
 <a href="https://arkemishub.github.io/docs" target="_blank">
-    <button class={twMerge("btn-circle z-10 w-28 h-28 lg:w-40 lg:h-40", `btn-circle-${color}`, className)}>
+    <button id={id} class={twMerge("btn-circle z-10 w-28 h-28 lg:w-40 lg:h-40", `btn-circle-${color}`, className)}>
         Start now
     </button>
 </a>
