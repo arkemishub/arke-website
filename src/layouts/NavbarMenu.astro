@@ -8,8 +8,8 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
-<a class={currentPath === "features" ? "active" : ""} href=`${import.meta.env.BASE_URL}features`>Features</a>
-<a class={currentPath === "enterprise" ? "active" : ""} href=`${import.meta.env.BASE_URL}enterprise`>Enterprise</a>
-<a class={currentPath === "developer" ? "active" : ""} href=`${import.meta.env.BASE_URL}developer`>Developer</a>
+<a class={currentPath === "features" ? "active" : ""} href=`${import.meta.env.BASE_URL}/features`>Features</a>
+<a class={currentPath === "enterprise" ? "active" : ""} href=`${import.meta.env.BASE_URL}/enterprise`>Enterprise</a>
+<a class={currentPath === "developer" ? "active" : ""} href=`${import.meta.env.BASE_URL}/developer`>Developer</a>
 <a href="https://arkemishub.github.io/docs" target="_blank">Documentation</a>
-<a href=`${import.meta.env.BASE_URL}contact`>Contact</a>
+<a href=`${import.meta.env.BASE_URL}/contact`>Contact</a>

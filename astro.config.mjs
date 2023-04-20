@@ -6,5 +6,6 @@ import preact from "@astrojs/preact";
 export default defineConfig({
     site: 'https://arkemishub.github.io',
     base: '/arke-website',
+    trailingSlash: 'never',
     integrations: [preact(), tailwind()],
 });

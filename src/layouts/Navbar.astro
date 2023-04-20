@@ -34,21 +34,21 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
 <nav class="rounded-xl sm:rounded-3xl top-4 md:top-8 my-2 mx-4 sm:mx-2 md:mx-12 md:my-2 px-2 sm:px-4 py-2 sm:py-3">
 	<div class="flex items-center flex-auto">
-		<a class={currentPath === "" ? "active" : ""} href=`${import.meta.env.BASE_URL}`>
-			<img src=`${import.meta.env.BASE_URL}logos/arke_logo.svg` class="w-20 md:w-28 ml-2" alt="arke_logo" />
+		<a class={currentPath === "" ? "active" : ""} href=`${import.meta.env.BASE_URL}/`>
+			<img src=`${import.meta.env.BASE_URL}/logos/arke_logo.svg` class="w-20 md:w-28 ml-2" alt="arke_logo" />
 		</a>
 		<span class="vl mx-4 lg:mx-6" />
 		<div class="menu hidden lg:flex justify-between">
 			<NavbarMenu />
 		</div>
 		<div class="lg:hidden">
-			<Button id="menuBtn" icon=`${import.meta.env.BASE_URL}icons/menu.svg`/>
+			<Button id="menuBtn" icon=`${import.meta.env.BASE_URL}/icons/menu.svg`/>
 		</div>
 	</div>
 	<div class="flex" style="gap: 12px">
 		<!--<Button icon="/icons/star.svg" title="Star" count="213"/>-->
 		<a href="https://github.com/arkemishub" target="_blank">
-			<Button icon=`${import.meta.env.BASE_URL}icons/github.svg` title="Join us"/>
+			<Button icon={`${import.meta.env.BASE_URL}/icons/github.svg`} title="Join us"/>
 		</a>
 	</div>
 </nav>
