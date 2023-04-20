@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GradientBackground from "../components/ui/GradientBackground.astro";
+import Button from "../components/ui/Button.astro";
+---
+
+<Layout>
+	<GradientBackground />
+	<div class="m-auto w-10/12 lg:w-6/12">
+		<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40">
+			Cookie Policy
+		<h2 class="px-4 md:px-12 text-sm lg:text-2xl mt-12 text-secondary">
+			To provide the best experiences, we use technologies like cookies to store and/or access device information.
+		</h2>
+
+		<div class="text-left mt-8 sm:mt-20">
+			<h3 class="text-3xl font-semibold">Who we are</h3>
+			<p class="mt-8 text-secondary">
+				Our website address is: <a href="https://arkehub.com">https://arkehub.com</a>.
+			</p>
+
+			<h3 class="text-3xl font-semibold mt-8">Information</h3>
+			<h4 class="text-2xl font-semibold mt-8">What are cookies?</h4>
+			<p class="mt-8 text-secondary">
+				Cookies are small text files which are stored on your device when you visit a website that uses them.
+				These cookies can serve a variety of purposes, but their general purpose is to store information which
+				makes your browsing experience smoother and more convenient. For example, when you log into your account,
+				a cookie may be saved which states your logged in. Then you won’t have to log in again next time you
+				browse to our site.
+
+				Cookies can come both from the site you’re visiting and third parties who place cookies on our site.
+				Some cookies are deleted as soon as you close your browser, while others remain and need to be
+				manually deleted.
+			</p>
+
+			<h4 class="text-2xl font-semibold mt-8">What types of cookies do we use?</h4>
+			<p class="mt-8 text-secondary">
+				On our website, we use three different kinds of cookies:
+			</p>
+
+			<h5 class="text-md font-semibold mt-4">Necessary cookies</h5>
+			<p class="mt-4 text-secondary">
+				These are cookies which are required for our website to function. Our site uses these to perform basic
+				tasks like logging you into your account and remembering your privacy settings. These cookies do not
+				store any personally identifiable information, and do not track you in any way.
+
+				Since these features are integral to the functioning of our website, we can’t offer the option to
+				turn these cookies off. If you still wish to disable them, most browsers offer settings or extensions
+				that can do this for you. However, take note that if you do, some parts of the site may not work
+				properly.
+			</p>
+
+			<h5 class="text-md font-semibold mt-4">Functional cookies</h5>
+			<p class="mt-4 text-secondary">
+				These are cookies that give us more insight into how our visitors use our website.
+				These cookies allow us to count visitors and track how users move through our website.
+				We can use this information to improve our website and offer our customers a more optimal experience.
+				All information these cookies collect is completely anonymous. Nothing these cookies collect can ever
+				be traced back to you. You can choose whether you want to allow these cookies or not.
+			</p>
+
+			<h5 class="text-md font-semibold mt-4">Analytical cookies</h5>
+			<p class="mt-4 text-secondary">
+				These cookies come from our business and advertising partners. In other words, they come from external
+				websites run by third parties. They may use these to get an idea of the topics you’re interested in,
+				and then use this information to show you more personalized advertisements on other websites.
+
+				These cookies do not store personally identifiable information, but they work using a unique
+				identifying number that’s connected to your browser and device. These cookies may track your activity
+				across multiple websites. You can choose whether to allow these cookies or not. If you choose to not
+				allow them, you will see fewer personalized advertisements.
+			</p>
+
+			<h4 class="text-2xl font-semibold mt-8">Deleting existing cookies</h4>
+			<p class="mt-8 text-secondary">
+				We are unable to delete our cookies for you, as they are saved locally on your device. You can
+				delete cookies from our site in your browser’s settings. The way this is done varies between browsers,
+				but generally a feature for this is laid out clearly in your browser’s settings. Please refer to
+				your browser’s support page for more information on how to delete cookies.
+				<br/>
+				<br/>
+				If you change your cookie preferences, we will of course follow your new preferences.
+				However, some old cookies from your previous settings may still remain on your device. If you want
+				to delete these, you can do so manually as described earlier.
+			</p>
+
+			<h4 class="text-2xl font-semibold mt-8">Changes to this policy</h4>
+			<p class="mt-8 text-secondary">
+				We reserve the right to make changes to our privacy policy. When these changes are significant
+				enough to require asking for your cookie preferences again, we will do so. If you do not agree with
+				the new policy, you are free to change your preferences at any point.
+			</p>
+
+			<h3 class="text-3xl font-semibold mt-8">Contact us</h3>
+			<p class="mt-8 text-secondary mb-6">
+				If you have any questions or concerns about this Cookie Policy please contact us at
+				<a href="mailto:info@mokkastudios.com">info@mokkastudios.com</a>.
+			</p>
+			<a href="/">
+				<Button icon="/icons/home.svg" title="Home"/>
+			</a>
+
+		</div>
+	</div>
+</Layout>
+
+<style>
+	a {
+		@apply text-green/70
+	}
+	a:hover {
+		@apply text-green
+	}
+</style>

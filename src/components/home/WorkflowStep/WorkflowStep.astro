@@ -3,12 +3,13 @@ import {twMerge} from "tailwind-merge";
 export interface Props {
 	step: string;
 	className: string;
+	color: 'green' | 'blue' | 'rose'
 }
 
-const { step, className } = Astro.props;
+const { step, className, color= 'green' } = Astro.props;
 ---
 
-<div class={twMerge("circle flex justify-center items-center m-auto w-24 h-24 rounded-full green", className)}>
+<div class={twMerge(`circle flex justify-center items-center m-auto w-24 h-24 rounded-full ${color}`, className)}>
 	<p class="text-4xl font-medium">{step}</p>
 </div>
 <style>
@@ -18,5 +19,13 @@ const { step, className } = Astro.props;
 
 	.green {
 		background: linear-gradient(349deg, #78E7C5 45.17%, #70FFB8 69.45%, #9DFFAD 100%);
+	}
+
+	.blue {
+		background: linear-gradient(133.68deg, #AFB7FA 2.2%, #73D5FF 51.07%, #6792FF 100%);
+	}
+
+	.rose {
+		background: linear-gradient(135.75deg, #FFC3C3 2.63%, #DDCEF0 66.01%, #EFAEFF 96.91%);
 	}
 </style>

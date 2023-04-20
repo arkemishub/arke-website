@@ -1,5 +1,7 @@
 ---
 import Button from "../components/ui/Button.astro";
+import Card from "../components/ui/Card.astro";
+import NavbarMenu from "./NavbarMenu.astro";
 export interface Props {
 }
 
@@ -7,18 +9,39 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
-<nav class="top-4 md:top-8 my-2 mx-4 sm:mx-2 md:mx-12 md:my-2">
+<script>
+	const button = document.getElementById('menuBtn');
+	const menu = document.getElementById('menu');
+
+	button.addEventListener('click', () => {
+		setTimeout(() => {
+			menu.classList.remove("hidden");
+			menu.classList.add("flex");
+		},10)
+
+	});
+
+	document.addEventListener('click', event => {
+		const isClickInside = menu.contains(event.target)
+		if (!isClickInside) {
+			menu.classList.remove("flex");
+			menu.classList.add("hidden");
+		}
+
+	})
+</script>
+
+<nav class="rounded-xl sm:rounded-3xl top-4 md:top-8 my-2 mx-4 sm:mx-2 md:mx-12 md:my-2 px-2 sm:px-4 py-2 sm:py-3">
 	<div class="flex items-center flex-auto">
 		<a class={currentPath === "" ? "active" : ""} href="/">
-			<img src="/logos/arke_logo.svg" class="w-20 md:w-28" alt="arke_logo" />
+			<img src="/logos/arke_logo.svg" class="w-20 md:w-28 ml-2" alt="arke_logo" />
 		</a>
 		<span class="vl mx-4 lg:mx-6" />
 		<div class="menu hidden lg:flex justify-between">
-			<a class={currentPath === "features" ? "active" : ""} href="/features">Features</a>
-			<a class={currentPath === "enterprise" ? "active" : ""} href="/enterprise">Enterprise</a>
-			<a class={currentPath === "developer" ? "active" : ""} href="/developer">Developer</a>
-			<a href="https://arkemishub.github.io/docs" target="_blank">Documentation</a>
-			<a href="https://www.mokkastudios.com" target="_blank">Company</a>
+			<NavbarMenu />
+		</div>
+		<div class="lg:hidden">
+			<Button id="menuBtn" icon="/icons/menu.svg"/>
 		</div>
 	</div>
 	<div class="flex" style="gap: 12px">
@@ -29,6 +52,12 @@ const currentPath = pathname.slice(1); // remove the first "/"
 	</div>
 </nav>
 
+<Card id="menu"
+	  className="hidden z-50 flex-col p-6 fixed top-20 sm:top-32"
+	  style="line-height: 60px;width: 80%;margin-left: 10%;background: rgba(255, 255, 255, 0.03);backdrop-filter: blur(33px)">
+	<NavbarMenu />
+</Card>
+
 <style>
 	nav {
 		z-index: 9999;
@@ -37,8 +66,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
 		background: rgba(255,255,255,0.03);
 		backdrop-filter: blur(33px);
 		border: 1px solid rgba(255,255,255,0.1);
-		border-radius: 24px;
-		padding: 12px 32px;
 		color: #797D94;
 	}
 

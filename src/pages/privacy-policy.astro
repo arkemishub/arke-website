@@ -6,15 +6,15 @@ import Button from "../components/ui/Button.astro";
 
 <Layout>
 	<GradientBackground />
-	<div class="m-auto w-6/12">
-		<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
+	<div class="m-auto w-10/12 lg:w-6/12">
+		<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40">
 			Privacy policy
-		<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+		<h2 class="px-4 md:px-12 text-sm lg:text-2xl mt-12 text-secondary">
 			This Privacy Policy sets out how we collect, use, and protect your
 			personal information when you use our website.
 		</h2>
 
-		<div class="text-left mt-20">
+		<div class="text-left mt-8 sm:mt-20">
 			<h3 class="text-3xl font-semibold">Information</h3>
 			<h4 class="text-2xl font-semibold mt-8">Information we collect</h4>
 			<p class="mt-8 text-secondary">
@@ -70,7 +70,7 @@ import Button from "../components/ui/Button.astro";
 				to ensure you are happy with any changes.
 			</p>
 
-			<h3 class="text-3xl font-semibold">Contact us</h3>
+			<h3 class="text-3xl font-semibold mt-8">Contact us</h3>
 			<p class="mt-8 text-secondary mb-6">
 				If you have any questions or concerns about this Privacy Policy or our use
 				of your personal information, please contact us at
@@ -85,5 +85,10 @@ import Button from "../components/ui/Button.astro";
 </Layout>
 
 <style>
-
+	a {
+		@apply text-green/70
+	}
+	a:hover {
+		@apply text-green
+	}
 </style>
