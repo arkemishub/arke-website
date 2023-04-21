@@ -1,6 +1,5 @@
-
 # Workflow name
-name: 'Build'
+name: "Build"
 
 # Event for the workflow
 on:
