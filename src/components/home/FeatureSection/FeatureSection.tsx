@@ -8,8 +8,8 @@ export default function FeatureSection(){
     return(
         <>
             <div className="relative choose-us-section">
-                <div className="flex justify-between items-end mx-12 mb-8 mt-12">
-                    <h3 className="flex-auto text-left lg:text-5xl font-medium">Why choose us</h3>
+                <div className="md:flex justify-between items-end mx-4 md:mx-12 mb-8 mt-12">
+                    <h3 className="flex-auto text-left text-xl mb-2 md:mb-0 lg:text-5xl font-medium">Why choose us</h3>
                     <div>
                         <FeatureTab
                             active={active}
