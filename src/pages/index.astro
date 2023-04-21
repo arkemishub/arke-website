@@ -4,7 +4,7 @@ import GradientCircle from '../components/ui/GradientCircle.astro';
 import GradientBackground from '../components/ui/GradientBackground.astro';
 import Card from '../components/ui/Card.astro';
 import FooterCta from '../components/ui/FooterCta.astro';
-import FeatureCard from '../components/home/FeatureCard/FeatureCard.astro';
+import FeatureSection from '../components/home/FeatureSection/FeatureSection.tsx';
 import FeatureCircle from '../components/home/FeatureCircle/FeatureCircle.astro';
 import WorkflowStep from '../components/home/WorkflowStep/WorkflowStep.astro';
 import WorkflowFeature from '../components/home/WorkflowFeature/WorkflowFeature.astro';
@@ -12,41 +12,40 @@ import StartNowButton from '../components/home/StartNowButton/StartNowButton.ast
 import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 ---
 
-<Layout>
+<script>
+		const btnStartCta = document.getElementById('btnStartCta');
+		const btnEndCta = document.getElementById('btnEndCta');
+		const vLine = document.getElementById('vline');
+		const btnStartCtaTopPosition = btnStartCta.offsetTop;
+		const btnEndCtaTopPosition = btnEndCta.offsetTop;
+		vLine.style.height = `${btnEndCtaTopPosition - btnStartCtaTopPosition}px`;
+</script>
+
+<Layout
+	title="Arke | The Low-Code Framework to accelerate your development"
+	description="Design your project from a ready-to-use foundation. Speed up your development with our dedicated Console. Customize your code to suit your unique needs"
+>
 	<GradientBackground />
-	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 animate__animated animate__fadeIn">
 		The Low-Code Framework<br/> to
 		<span>accelerate</span>
 		your development</h1>
-	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary animate__animated animate__fadeIn">
 		Design your project from a ready-to-use foundation. Speed up your development<br/>
 		with our dedicated Console. Customize your code to suit your unique needs.
 	</h2>
 	<br/>
 	<br/>
-	<StartNowButton color="green" />
-	<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
-	<div class="relative choose-us-section">
-		<div class="flex justify-between items-end mx-12 mb-8">
-			<h3 class="lg:text-5xl font-medium mt-12">Why choose us</h3>
-			<div class="grid gap-x-2 grid-cols-3 px-8 py-2">
-				tab space
-			</div>
-		</div>
-	</div>
-	<div class="px-4 md:px-12 grid gap-x-4 gap-y-4 md:grid-cols-2 lg:grid-cols-4">
-		<FeatureCard title="Powerful Elixir core" img="/features/square/feature_elixir.png" />
-		<FeatureCard title="Pluggable database" img="/features/square/feature_database.png" />
-		<FeatureCard title="Simple storage" img="/features/square/feature_storage.png" />
-		<FeatureCard title="Auto-generated REST APIs" img="/features/square/feature_api.png"/>
-	</div>
+	<StartNowButton id="btnStartCta" color="green"/>
+	<img src={`${import.meta.env.BASE_URL}console/arke_console.png`} class="mx-auto mt-20 w-9/12" alt="arke_console" />
+	<FeatureSection client:load />
 
 	<div class="flex justify-center align-center mt-40">
 		<FeatureCircle>
 			<WorkflowStep step="01" color="green" className="mt-20"/>
 		</FeatureCircle>
 	</div>
-	<VerticalLine className="hidden lg:block" />
+	<VerticalLine id="vline" className="hidden lg:block" />
 
 	<!-- SET UP  -->
 	<Card className="p-4 px-8 w-fit m-auto -mt-32">
@@ -67,21 +66,21 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 		<div>
 			<WorkflowFeature
 				title="Integrated environment"
-				icon="/features/circle/feature_environment.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_environment.png`}
 				description="Start a robust, secure, and optimized integrated environment, ensuring a streamlined initialization of your development pipeline."
 			/>
 			<WorkflowFeature
 				title="Built-in elements & Features"
-				icon="/features/circle/feature_built_in.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_built_in.png`}
 				description="Take advantage of customizable and ready-to-use elements & features to swiftly start your project, avoiding to write code from scratch."
 			/>
 			<WorkflowFeature
 				title="User-friendly console"
-				icon="/features/circle/feature_user_friendly.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_user_friendly.png`}
 				description="Simplify your project management with our intuitive console, designed for smooth and fast control."
 			/>
 		</div>
-		<img class="w-full mt-24" src="/workflow/workflow_workspace.png" alt="feature"/>
+		<img class="w-full mt-24" src={`${import.meta.env.BASE_URL}workflow/workflow_workspace.png`} alt="feature"/>
 	</div>
 
 	<!-- BUILD  -->
@@ -101,21 +100,21 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 	</Card>
 	<div class="mt-20 w-10/12 m-auto grid gap-x-32 lg:grid-cols-2 items-center">
 		<GradientCircle animate={true} color="blue"/>
-		<img class="w-full mt-24" src="/workflow/workflow_workspace.png" alt="feature"/>
+		<img class="w-full mt-24" src={`${import.meta.env.BASE_URL}workflow/workflow_workspace.png`} alt="feature"/>
 		<div>
 			<WorkflowFeature
 				title="Effortless design"
-				icon="/features/circle/feature_effortless_design.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_effortless_design.png`}
 				description="Easily design and instantly update your project through entities, units and relationships. Enjoy the power of automatic database and API generation."
 			/>
 			<WorkflowFeature
 				title="Dynamic prototyping"
-				icon="/features/circle/feature_dynamic_prototyping.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_dynamic_prototyping.png`}
 				description="Accelerate your development with flexible prototyping, enabling faster concept and feature testing for efficient iterations."
 			/>
 			<WorkflowFeature
 				title="Multi-language coding"
-				icon="/features/circle/feature_multilanguage_coding.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_multilanguage_coding.png`}
 				description="Connect your favorite programming language with the Arke backend through our Client SDKs for a tailored experience."
 			/>
 		</div>
@@ -140,21 +139,21 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 		<div>
 			<WorkflowFeature
 				title="Ever-evolving technology"
-				icon="/features/circle/feature_evolving_technology.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_evolving_technology.png`}
 				description="Our dedicated team provides constant updates pushing the limits of innovation and delivering unmatched value for your projects."
 			/>
 			<WorkflowFeature
 				title="Universal products"
-				icon="/features/circle/feature_universal_products.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_universal_products.png`}
 				description="Leverage on Arke's unmatched adaptability to deploy your project on Docker, Kubernetes, AWS, Google Cloud Platform, Azure or any other cloud provider."
 			/>
 			<WorkflowFeature
 				title="Scalable solutions"
-				icon="/features/circle/feature_scalable_solutions.png"
+				icon={`${import.meta.env.BASE_URL}features/circle/feature_scalable_solutions.png`}
 				description="Unleash the full potential of your product with our limitless scalability, driven by the high-performing Elixir core."
 			/>
 		</div>
-		<img class="w-full mt-24" src="/workflow/workflow_workspace.png" alt="feature"/>
+		<img class="w-full mt-24" src={`${import.meta.env.BASE_URL}workflow/workflow_workspace.png`} alt="feature"/>
 	</div>
 
 	<!--
@@ -164,23 +163,26 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 		</h4>
 		<div class="mt-20 grid lg:grid-cols-4">
 			<div class="w-full flex justify-center border-r opacity-40">
-				<img class="w-40" src="/logos/trusted/enersem.svg" alt="enersem" />
+				<img class="w-40" src={`${import.meta.env.BASE_URL}logos/trusted/enersem.svg`} alt="enersem` />
 			</div>
 			<div class="w-full flex justify-center border-r opacity-40">
-				<img class="w-40" src="/logos/trusted/cimberio.svg" alt="cimberio" />
+				<img class="w-40" src={`${import.meta.env.BASE_URL}logos/trusted/cimberio.svg`} alt="cimberio` />
 			</div>
 			<div class="w-full flex justify-center border-r opacity-40">
-				<img class="w-40" src="/logos/trusted/subito.svg" alt="subito" />
+				<img class="w-40" src={`${import.meta.env.BASE_URL}logos/trusted/subito.svg`} alt="subito" />
 			</div>
 			<div class="w-full flex justify-center opacity-40">
-				<img class="w-28" src="/logos/trusted/pagopa.svg" alt="pagopa" />
+				<img class="w-28" src={`${import.meta.env.BASE_URL}logos/trusted/pagopa.svg`} alt="pagopa" />
 			</div>
 		</div>
 	</Card>
 	-->
 
 	<div class="mt-40">
-		<StartNowButton color="rose" className="-mt-4" />
+		<StartNowButton
+			id="btnEndCta"
+			color="rose"
+			className="-mt-4" />
 		<FooterCta />
 	</div>
 </Layout>
@@ -195,12 +197,6 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 		background: linear-gradient(90deg, #AFDEFA, #4ba6ec);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-	}
-
-	.choose-us-section {
-		background: linear-gradient(rgba(10, 11, 18, 0.0) 10%, #0A0B12);
-		margin-top: -190px;
-		padding-top: 100px;
 	}
 
 	a .card-link:hover {

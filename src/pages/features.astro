@@ -11,32 +11,32 @@ import FooterCta from "../components/ui/FooterCta.astro";
 const backendFeatures = [
 	{
 		title: 'Powerful Elixir core',
-		img: '/features/square/feature_elixir.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_elixir.png`,
 		description: 'Develop next-gen applications with the dynamic, scalable and fault-tolerant Elixir core.'
 	},
 	{
 		title: 'Simple storage',
-		img: '/features/square/feature_storage.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_storage.png`,
 		description: 'Store and protect your media with flexible file, folder and bucket management.'
 	},
 	{
 		title: 'Secure Authentication',
-		img: '/features/square/feature_authentication.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_authentication.png`,
 		description: 'Make your apps safe with the JWT Standard and the refresh & verify token management.'
 	},
 	{
 		title: 'Pluggable database',
-		img: '/features/square/feature_database.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_database.png`,
 		description: 'You can either go for the PostgreSQL database we provide or choose one that meets your needs.'
 	},
 	{
 		title: 'Auto-generated REST APIs',
-		img: '/features/square/feature_api.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_api.png`,
 		description: 'Automatically interface with the database and use our search, sort and CRUD features.'
 	},
 	{
 		title: 'Multi-tenant architecture',
-		img: '/features/square/feature_multitenant.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_multitenant.png`,
 		description: 'Share infrastructure & resources among multiple users making scaling and maintenance easier.'
 	},
 ]
@@ -67,22 +67,22 @@ const frontendFeatures = [
 const consoleFeatures = [
 	{
 		title: 'Intuitive project management',
-		img: '/features/square/feature_project_management.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_project_management.png`,
 		description: 'Create and modify your entities, parameters, and relations with guided, skill-free workflows.'
 	},
 	{
 		title: 'Dynamic prototyping',
-		img: '/features/square/feature_prototyping.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_prototyping.png`,
 		description: 'Accelerate your CRUD operations and iterate Agile for lightning-fast prototyping.'
 	},
 	{
 		title: 'Smart code sync',
-		img: '/features/square/feature_smart_code_sync.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_smart_code_sync.png`,
 		description: 'Enjoy effortless code updates aligned with your console decisions.'
 	},
 	{
 		title: 'Add-ons & Integrations',
-		img: '/features/square/feature_integrations.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_integrations.png`,
 		description: 'Expand your console experience with tailored add-ons and integrations.'
 	},
 ]
@@ -90,25 +90,25 @@ const consoleFeatures = [
 const techStackFeatures = [
 	{
 		title: 'Multi-language SDKs',
-		img: '/illustrations/sdk.png',
+		img: `${import.meta.env.BASE_URL}illustrations/sdk.png`,
 		altImg: 'sdk',
 		description: 'Connect your favorite programming language with our backend for a tailored experience.'
 	},
 	{
 		title: 'Technology independency',
-		img: '/illustrations/technology_indipendency.png',
+		img: `${import.meta.env.BASE_URL}illustrations/technology_indipendency.png`,
 		altImg: 'technology_indipendency',
 		description: 'Switch when you want the technologies you use without any compatibility issues.'
 	},
 	{
 		title: 'Universal deployment',
-		img: '/illustrations/universal_deployment.png',
+		img: `${import.meta.env.BASE_URL}illustrations/universal_deployment.png`,
 		altImg: 'universal_deployment',
 		description: 'Deploy on Docker, Kubernetes, AWS, Google, Azure or any other cloud provider.'
 	},
 	{
 		title: 'Limitless scaling',
-		img: '/illustrations/limitless_scaling.png',
+		img: `${import.meta.env.BASE_URL}illustrations/limitless_scaling.png`,
 		altImg: 'limitless_scaling',
 		description: 'Take advantage of Elixir\'s low-latency core to scale your product when needed.'
 	},
@@ -117,38 +117,41 @@ const techStackFeatures = [
 const openSourceFeatures = [
 	{
 		title: 'Smoothly onboarding',
-		img: '/features/square/feature_onboarding.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_onboarding.png`,
 		altImg: 'smoothly_onboarding',
 		description: 'Begin your journey with Arke to shape the future of coding and become a driver of innovation.'
 	},
 	{
 		title: 'Ever-evolving technology',
-		img: '/features/square/feature_evolving_technology.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_evolving_technology.png`,
 		altImg: 'evolving_technology',
 		description: 'Join our team and GitHub community to shape the future of software development.'
 	},
 	{
 		title: 'Complete documentation',
-		img: '/features/square/feature_documentation.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_documentation.png`,
 		altImg: 'complete_documentation',
 		description: 'Build a solid foundation and master all the secrets of Arke following the technical documentation.'
 	},
 	{
 		title: 'Friendly environment',
-		img: '/features/square/feature_friendly_environment.png',
+		img: `${import.meta.env.BASE_URL}features/square/feature_friendly_environment.png`,
 		altImg: 'friendly_environment',
 		description: 'Stay up-to-date, share your doubts and learn everyday from our vibrant Discord community.'
 	},
 ]
 ---
 
-<Layout>
+<Layout
+	title="Arke | The unified framework to shape next-gen applications"
+	descriptions="Swiftly create high-performing and scalable applications by automatically managing the work behind the scenes"
+>
 	<GradientBackground />
 	<FeaturesAnimatedBackground />
-	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 animate__animated animate__fadeIn">
 		The unified framework to shape<br/>
 		<span>next-gen</span> applications</h1>
-	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary animate__animated animate__fadeIn">
 		Swiftly create high-performing and scalable applications by<br/>
 		automatically managing the work behind the scenes.
 	</h2>
@@ -164,7 +167,7 @@ const openSourceFeatures = [
 				Boost your applications with our state-of-the-art backend<br/>
 				infrastructure to optimize and scale performance.
 			</p>
-			<!--<img src="/img/backend_galaxy.png" class="w-11/12 mt-12 m-auto" alt="backend" />-->
+			<!--<img src={`${import.meta.env.BASE_URL}img/backend_galaxy.png`} class="w-11/12 mt-12 m-auto" alt="backend" />-->
 
 			<div class="mt-12 px-4 md:px-12 grid gap-x-4 gap-y-4 md:grid-cols-3">
 				{backendFeatures.map(item =>
@@ -189,7 +192,7 @@ const openSourceFeatures = [
 			</p>
 			<Card className="w-10/12 m-auto sm:grid sm:grid-cols-12 mt-12">
 				<div class="sm:col-span-7">
-					<img class="w-full" src="/illustrations/placeholder_green.svg" alt="placeholder">
+					<img class="w-full" src={`${import.meta.env.BASE_URL}illustrations/placeholder_green.svg`} alt="placeholder">
 				</div>
 				<div class="sm:col-span-5 sm:border-l">
 					{frontendFeatures.map(item =>
@@ -221,7 +224,7 @@ const openSourceFeatures = [
 				Harness the power of our user-friendly console to test and develop<br/>
 				your ideas without writing a single line of code.
 			</p>
-			<img src="/console/arke_console.png" class="mx-auto mt-20 w-9/12" alt="arke_console" />
+			<img src={`${import.meta.env.BASE_URL}console/arke_console.png`} class="mx-auto mt-20 w-9/12" alt="arke_console" />
 			<Card className="p-8 m-auto mt-4 w-10/12 -mt-4 sm:-mt-32 grid gap-x-4 sm:grid-cols-2">
 				{consoleFeatures.map(item =>
 					<Feature
@@ -282,7 +285,7 @@ const openSourceFeatures = [
 				)}
 				</div>
 				<div class="flex justify-center my-6">
-					<img class="w-6/12" src="/icons/github.svg" alt="github"/>
+					<img class="w-6/12" src={`${import.meta.env.BASE_URL}/icons/github.svg`} alt="github"/>
 				</div>
 				<div>
 					{openSourceFeatures.slice(2,4).map(item =>

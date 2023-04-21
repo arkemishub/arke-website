@@ -1,13 +1,44 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
+import FeatureCircle404 from "../components/404/FeatureCircle404/FeatureCircle404.astro";
+import Button from "../components/ui/Button.astro";
+import Footer from "../layouts/Footer.astro";
 ---
 
-<Layout>
-	<GradientBackground />
-	404
+<Layout footer={false}>
+  <GradientBackground />
+  <h1
+    class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40"
+  >
+    We couldn't find that page.
+  </h1>
+  <h2 class="px-12 text-sm lg:text-2xl mt-8 text-secondary">
+    Check the URL for errors and try again. Otherwise you can return back<br />
+    and find the desired information.
+  </h2>
+  <div class="mt-4 flex gap-3 justify-center items-center mt-8">
+    <a href={import.meta.env.BASE_URL}>
+      <Button icon={`${import.meta.env.BASE_URL}icons/home.svg`} title="homepage" className="bg-black" />
+    </a>
+    <Button
+      icon={`${import.meta.env.BASE_URL}icons/back_arrow.svg`}
+      title="previous page"
+      id="previousBtn"
+    />
+  </div>
+  <div class="flex justify-center align-center mt-40">
+    <FeatureCircle404 />
+  </div>
+  <Footer className="-mt-80" />
 </Layout>
 
-<style>
+<script>
+  const button = document.getElementById("previousBtn");
 
-</style>
+  button.addEventListener("click", () => {
+    window.history.back();
+  });
+</script>
+
+<style></style>

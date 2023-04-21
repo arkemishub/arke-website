@@ -5,15 +5,15 @@ export interface Props {
   color: "green" | "blue" | "rose" | "orange";
 }
 
-const { className, color = "green" } = Astro.props;
+const { className, color = 'green', style } = Astro.props;
 ---
 
 <div class="relative overflow-hidden">
-  <div class={`border-gradient ${color}`}></div>
-  <div class={`border-light light-${color}`}></div>
-  <div class={twMerge("section", className)}>
-    <slot />
-  </div>
+    <div class={`border-gradient ${color}`}/>
+    <div class={`border-light light-${color}`}/>
+    <div class={twMerge("section", className)} style={style}>
+        <slot />
+    </div>
 </div>
 
 <style>

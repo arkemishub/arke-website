@@ -1,43 +1,27 @@
 ---
 import { twMerge } from "tailwind-merge";
 export interface Props {
-  className: string[];
+  className?: string[];
 }
 
 const { className } = Astro.props;
 
 const features = [
-  "Innovative",
-  "Efficient",
-  "Transparent",
-  "Open-source",
-  "Flexible",
-  "User-friendly",
-  "Fast",
-  "Customizable",
-  "Scalable",
-  "Dynamic",
-  "Reactive",
-  "Intuitive",
-  "Adaptable",
-  "Responsive",
-  /*'Reliable',
-    'Robust',
-    'Secure',
-    'Evolving',
-    'Modular',
-    'Cross-platform',
-    'High-performance',
-    'Collaborative',
-    'Versatile',
-    'Maintainable',
-    'Advanced',
-    'Revolutionary',
-    'Agile',
-    'Integrated',
-    'Optimized',
-    'Automated',
-    'Cutting-edge',*/
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
+  "404",
 ];
 ---
 
@@ -52,14 +36,14 @@ const features = [
       <textPath
         xlink:href="#circle"
         class="font-semibold"
-        style="font-size: 3px"
+        style="font-size: 6px;"
       >
-        {features.join(" - ")} -
+        {features.join(" — ")} -
       </textPath>
     </text>
   </svg>
   <div class="outer-circle m-auto">
-    <div class="outer-circle-border mt-20 w-64 h-64 m-auto">
+    <div class="outer-circle-border mt-16 w-3/4 h-3/4 m-auto">
       <slot />
     </div>
     <div class="inner-circle"></div>
@@ -77,10 +61,10 @@ const features = [
   }
 
   svg {
-    margin-left: -28%;
-    margin-top: -28%;
-    width: 156%;
-    height: 156%;
+    margin-left: -32%;
+    margin-top: -25%;
+    width: 164%;
+    height: 147%;
     position: absolute;
     color: #fff;
     fill: currentColor;
@@ -92,8 +76,8 @@ const features = [
   }
 
   .outer-circle {
-    width: 420px;
-    height: 420px;
+    width: 500px;
+    height: 500px;
     position: relative;
     border-radius: 50%;
     background: #0a0b12;
@@ -102,7 +86,7 @@ const features = [
   .outer-circle-border {
     position: relative;
     border-radius: 50%;
-    background: #0a0b12;
+    background: #78e7b0;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -110,11 +94,33 @@ const features = [
     background-image: radial-gradient(rgba(168, 251, 215, 0.3) 20%, #ffffff01);
     content: "";
     position: absolute;
-    top: -80px;
-    bottom: -80px;
-    right: -80px;
-    left: -80px;
+    top: -94px;
+    bottom: -94px;
+    right: -94px;
+    left: -94px;
     z-index: -2;
     border-radius: inherit;
+  }
+
+  @media only screen and (max-width: 600px) {
+    svg {
+      margin-left: -32%;
+      margin-top: -22%;
+      width: 164%;
+      height: 147%;
+    }
+
+    .outer-circle {
+      width: 420px;
+      height: 420px;
+    }
+
+    .inner-circle {
+      position: absolute;
+      top: -60px;
+      bottom: -60px;
+      right: -60px;
+      left: -60px;
+    }
   }
 </style>
