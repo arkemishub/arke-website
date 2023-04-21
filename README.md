@@ -4,6 +4,15 @@
 
 ![Screenshot 2023-04-14 alle 17 20 36](https://user-images.githubusercontent.com/81776297/232085841-34c325f8-1506-4bd3-b095-46ea87f8412b.png)
 
+## 🧞 Environment
+
+Set the `.env` file for define a BASE_URL (github pages) and the output mode `static/server`
+```dotenv
+PUBLIC_BASE_URL="/arke-website"
+# PUBLIC_OUTPUT static / server
+PUBLIC_OUTPUT=server
+```
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

@@ -7,16 +7,16 @@ const {
   PUBLIC_BASE_URL
 } = loadEnv(import.meta.env.MODE, process.cwd(), "");
 const {
-  PUBLIC_STANDALONE
+  PUBLIC_OUTPUT
 } = loadEnv(import.meta.env.MODE, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://arkemishub.github.io",
-  base: PUBLIC_BASE_URL ?? '/',
-  trailingSlash: "never",
+  base: PUBLIC_BASE_URL ? PUBLIC_BASE_URL + '/' : '',
+  trailingSlash: PUBLIC_BASE_URL ? "always" : "never",
   integrations: [tailwind(), react()],
-  output: PUBLIC_STANDALONE,
+  output: PUBLIC_OUTPUT ?? 'static',
   adapter: node({
     mode: "standalone"
   })
