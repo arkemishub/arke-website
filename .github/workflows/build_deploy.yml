@@ -1,0 +1,73 @@
+name: Build and Deploy
+
+# Controls when the action will run.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      -
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build_test:
+    name: Build and Test
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    if: "!contains(github.head_ref, 'renovate')" # it doesn't accept renovate pattern
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 7.30.5
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Dependencies ⬆️
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build Dist 🔧
+        run: pnpm build
+
+      - name: Upload Next build 📦
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: |
+            dist
+            retention-days: 1 
+
+  docker-push:
+    name: Deploy on GHCP
+    needs: build_test # Job depends on build_test(above) job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download next build # Download the above uploaded artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+
+      - name: Build & push Docker image 🐳
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: arke-website
+          tags: latest
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}

@@ -41,7 +41,9 @@ dependencies:
 devDependencies:
   '@astrojs/preact':
     specifier: ^2.1.0
-    version: 2.1.0(preact@10.13.2)
+
+    version: 2.1.0
+
   '@astrojs/tailwind':
     specifier: ^3.1.1
     version: 3.1.1(astro@2.3.0)(tailwindcss@3.3.1)
@@ -63,6 +65,9 @@ devDependencies:
   prettier-plugin-astro:
     specifier: ^0.8.0
     version: 0.8.0
+  vite:
+    specifier: ^4.3.1
+    version: 4.3.1
 
 packages:
 
@@ -118,7 +123,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/preact@2.1.0(preact@10.13.2):
+
+  /@astrojs/preact@2.1.0:
     resolution: {integrity: sha512-1AnXpnjC24/mWJyq+EN5DoWp+w9Hg/y3dwFX3728rlBhyuY573jx+4+VHuG/g0A1alzJuIAhSPtqCP0YQktUnw==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
@@ -126,7 +132,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.4
       '@babel/plugin-transform-react-jsx': 7.21.0(@babel/core@7.21.4)
-      '@preact/signals': 1.1.3(preact@10.13.2)
+      '@preact/signals': 1.1.3
       babel-plugin-module-resolver: 5.0.0
       preact: 10.13.2
       preact-render-to-string: 5.2.6(preact@10.13.2)
@@ -730,13 +736,13 @@ packages:
     resolution: {integrity: sha512-M+M3ZOtd1dtV/uasyk4SZu1vbfEJ4NeENv0F7F12nijZYedB5wSgbtZcuACyssnTznhF4ctUyrR0dZHuHfyWKA==}
     dev: true
 
-  /@preact/signals@1.1.3(preact@10.13.2):
+
+  /@preact/signals@1.1.3:
     resolution: {integrity: sha512-N09DuAVvc90bBZVRwD+aFhtGyHAmJLhS3IFoawO/bYJRcil4k83nBOchpCEoS0s5+BXBpahgp0Mjf+IOqP57Og==}
     peerDependencies:
       preact: 10.x
     dependencies:
       '@preact/signals-core': 1.3.0
-      preact: 10.13.2
     dev: true
 
   /@proload/core@0.3.3:
@@ -1104,8 +1110,8 @@ packages:
       typescript: 5.0.4
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.2.2
-      vitefu: 0.2.4(vite@4.2.2)
+      vite: 4.3.1
+      vitefu: 0.2.4(vite@4.3.1)
       yargs-parser: 21.1.1
       zod: 3.21.4
     transitivePeerDependencies:
@@ -3316,7 +3322,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /preact-render-to-string@5.2.6(preact@10.13.2):
+
+  /preact-render-to-string@5.2.6:
     resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
     peerDependencies:
       preact: '>=10'
@@ -4111,8 +4118,8 @@ packages:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  /vite@4.2.2:
-    resolution: {integrity: sha512-PcNtT5HeDxb3QaSqFYkEum8f5sCVe0R3WK20qxgIvNBZPXU/Obxs/+ubBMeE7nLWeCo2LDzv+8hRYSlcaSehig==}
+  /vite@4.3.1:
+    resolution: {integrity: sha512-EPmfPLAI79Z/RofuMvkIS0Yr091T2ReUoXQqc5ppBX/sjFRhHKiPPF/R46cTdoci/XgeQpB23diiJxq5w30vdg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -4138,12 +4145,11 @@ packages:
     dependencies:
       esbuild: 0.17.17
       postcss: 8.4.22
-      resolve: 1.22.2
       rollup: 3.20.6
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitefu@0.2.4(vite@4.2.2):
+  /vitefu@0.2.4(vite@4.3.1):
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0
@@ -4151,7 +4157,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.2.2
+      vite: 4.3.1
 
   /vscode-css-languageservice@6.2.4:
     resolution: {integrity: sha512-9UG0s3Ss8rbaaPZL1AkGzdjrGY8F+P+Ne9snsrvD9gxltDGhsn8C2dQpqQewHrMW37OvlqJoI8sUU2AWDb+qNw==}
