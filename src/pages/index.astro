@@ -4,7 +4,7 @@ import GradientCircle from '../components/ui/GradientCircle.astro';
 import GradientBackground from '../components/ui/GradientBackground.astro';
 import Card from '../components/ui/Card.astro';
 import FooterCta from '../components/ui/FooterCta.astro';
-import FeatureCard from '../components/home/FeatureCard/FeatureCard.astro';
+import FeatureSection from '../components/home/FeatureSection/FeatureSection.tsx';
 import FeatureCircle from '../components/home/FeatureCircle/FeatureCircle.astro';
 import WorkflowStep from '../components/home/WorkflowStep/WorkflowStep.astro';
 import WorkflowFeature from '../components/home/WorkflowFeature/WorkflowFeature.astro';
@@ -38,20 +38,7 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 	<br/>
 	<StartNowButton id="btnStartCta" color="green"/>
 	<img src={`${import.meta.env.BASE_URL}/console/arke_console.png`} class="mx-auto mt-20 w-9/12" alt="arke_console" />
-	<div class="relative choose-us-section">
-		<div class="flex justify-between items-end mx-12 mb-8">
-			<h3 class="lg:text-5xl font-medium mt-12">Why choose us</h3>
-			<div class="grid gap-x-2 grid-cols-3 px-8 py-2">
-				tab space
-			</div>
-		</div>
-	</div>
-	<div class="px-4 md:px-12 grid gap-x-4 gap-y-4 md:grid-cols-2 lg:grid-cols-4">
-		<FeatureCard title="Powerful Elixir core" img={`${import.meta.env.BASE_URL}/features/square/feature_elixir.png`} />
-		<FeatureCard title="Pluggable database" img={`${import.meta.env.BASE_URL}/features/square/feature_database.png`} />
-		<FeatureCard title="Simple storage" img={`${import.meta.env.BASE_URL}/features/square/feature_storage.png`} />
-		<FeatureCard title="Auto-generated REST APIs" img={`${import.meta.env.BASE_URL}/features/square/feature_api.png`} />
-	</div>
+	<FeatureSection client:load />
 
 	<div class="flex justify-center align-center mt-40">
 		<FeatureCircle>
@@ -210,12 +197,6 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 		background: linear-gradient(90deg, #AFDEFA, #4ba6ec);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-	}
-
-	.choose-us-section {
-		background: linear-gradient(rgba(10, 11, 18, 0.0) 10%, #0A0B12);
-		margin-top: -190px;
-		padding-top: 100px;
 	}
 
 	a .card-link:hover {

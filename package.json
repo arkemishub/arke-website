@@ -16,9 +16,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^2.1.1",
+    "@nanostores/react": "^0.5.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "animate.css": "^4.1.1",
     "astro": "^2.2.3",
-    "preact": "^10.13.2",
+    "nanostores": "^0.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "tailwind-merge": "^1.12.0",
     "tailwindcss": "^3.0.24"
   },

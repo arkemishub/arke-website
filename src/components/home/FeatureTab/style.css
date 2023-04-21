@@ -1,0 +1,30 @@
+.feature-tab-card {
+    background: linear-gradient(179.86deg, rgba(255, 255, 255, 0.03) 0.12%, rgba(255, 255, 255, 0) 93.36%);
+    backdrop-filter: blur(15px);
+    list-style: none;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.feature-tab-vl{
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    height: 32px;
+}
+
+.feature-tab-border-gradient {
+    position: absolute;
+    bottom: -20px;
+    height: 40px;
+    width: 33%;
+    margin-left: 0;
+}
+.feature-tab-border-light {
+    height:1px;
+    width: 100%;
+}
+.feature-tab-green {
+    background: radial-gradient(rgba(72, 199, 142, 0.6) 25%, rgba(10, 11, 18, 0) 75%);
+    opacity: 0.3;
+}
+.feature-tab-light-green {
+    background: linear-gradient(0.25turn, rgba(10, 11, 18, 0.1) 10%, rgba(72, 199, 142, 0.6), rgba(10, 11, 18, 0.1) 90%);
+}
