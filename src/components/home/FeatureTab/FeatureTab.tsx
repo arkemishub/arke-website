@@ -14,7 +14,7 @@ export default function FeatureTab(props: Props) {
   return (
     <div
       className={twMerge(
-        "feature-tab-card w-full relative py-3 rounded-xl overflow-hidden"
+        "feature-tab-card flex justify-between w-full relative px-3 py-3 rounded-xl overflow-hidden"
       )}
     >
       <button
