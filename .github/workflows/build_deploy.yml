@@ -40,7 +40,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build Dist 🔧
-        run: pnpm build
+        run: PUBLIC_STANDALONE=server pnpm build
 
       - name: Upload Next build 📦
         uses: actions/upload-artifact@v2
