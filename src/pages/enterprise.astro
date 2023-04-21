@@ -5,9 +5,21 @@ import GradientBackground from "../components/ui/GradientBackground.astro";
 
 <Layout>
 	<GradientBackground />
-	enterprise
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40">
+		The ultimate framework to<br/>
+		<span>level-up</span> your business method
+	</h1>
+	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+		Optimize digital processes in an integrated, scalable and efficient ecosystem that fosters quality,
+		creativity and innovation.
+	</h2>
+	<div class="h-80"/>
 </Layout>
 
 <style>
-
+	.title > span {
+		background: linear-gradient(90deg, #78E7C5, #9DFFAD);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 </style>

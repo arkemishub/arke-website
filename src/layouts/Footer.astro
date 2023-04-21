@@ -1,30 +1,34 @@
 ---
 import GradientCircle from "../components/ui/GradientCircle.astro";
+import {twMerge} from "tailwind-merge";
 export interface Props {
+	className: string[];
 }
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
+
+const { className } = Astro.props;
 ---
 
 <div class="relative">
-	<footer class="flex flex-col mt-20 mb-8 mx-4 sm:mx-2 md:mx-12">
+	<footer class={twMerge("flex flex-col mt-20 mb-8 mx-4 sm:mx-2 md:mx-12", className)}>
 		<div class="block text-center gap-x-2 lg:grid sm:text-left lg:grid-cols-12">
 			<div class="col-span-2 mb-8 text-center sm:mb-0">
-				<a class={currentPath === "" ? "active" : ""} href="/">
-					<img src="/logos/arke_logo.svg" class="w-20 md:w-28" alt="arke_logo" />
+				<a class={currentPath === "" ? "active" : ""} href={import.meta.env.BASE_URL}>
+					<img src={`${import.meta.env.BASE_URL}/logos/arke_logo.svg`} class="w-20 md:w-28" alt="arke_logo" />
 				</a>
 			</div>
 			<div class="menu md:col-span-8 lg:px-12 sm:mt-6 lg:mt-0">
 				<div class="grid gap-x-1 grid-cols-2 sm:grid-cols-5">
 					<div>
 						<p class="uppercase mb-2">Product</p>
-						<a href="/features">Features</a>
+						<a href={`${import.meta.env.BASE_URL}/features`}>Features</a>
 					</div>
 					<div class="flex flex-col">
 						<p class="uppercase mb-2">Solutions</p>
-						<a href="/features">Enterprise</a>
-						<a href="/developers">Developers</a>
+						<a href={`${import.meta.env.BASE_URL}/features`}>Enterprise</a>
+						<a href={`${import.meta.env.BASE_URL}/developers`}>Developers</a>
 					</div>
 					<div class="flex flex-col">
 						<p class="uppercase mb-2">Resources</p>
@@ -34,22 +38,22 @@ const currentPath = pathname.slice(1); // remove the first "/"
 					</div>
 					<div class="flex flex-col">
 						<p class="uppercase mb-2">Contact</p>
-						<a href="/contact">Contact</a>
+						<a href={`${import.meta.env.BASE_URL}/contact`}>Contact</a>
 					</div>
 					<div class="flex flex-col">
 						<p class="uppercase mb-2">Legal</p>
-						<a href="/terms-of-use">Terms</a>
-						<a href="/privacy-policy">Privacy</a>
-						<a href="#">Cookies</a>
+						<a href={`${import.meta.env.BASE_URL}/terms-of-use`}>Terms</a>
+						<a href={`${import.meta.env.BASE_URL}/privacy-policy`}>Privacy</a>
+						<a href={`${import.meta.env.BASE_URL}/cookies`}>Cookies</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-span-2 mt-12 lg:pl-12 lg:mt-0">
 				<div class="grid grid-cols-4 gap-x-1">
-					<img class="w-5 logo m-auto" src="/icons/github.svg" alt="discord"/>
-					<img class="w-5 logo m-auto" src="/icons/linkedin.svg" alt="discord"/>
-					<img class="w-5 logo m-auto" src="/icons/discord.svg" alt="discord"/>
-					<img class="w-5 logo m-auto" src="/icons/mokka.svg" alt="discord"/>
+					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}/icons/github.svg`} alt="github"/>
+					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}/icons/linkedin.svg`} alt="linkedin"/>
+					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}/icons/discord.svg`} alt="discord"/>
+					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}/icons/mokka.svg`} alt="mokka"/>
 				</div>
 			</div>
 		</div>

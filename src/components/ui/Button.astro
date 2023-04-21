@@ -1,44 +1,61 @@
 ---
-import {twMerge} from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 export interface Props {
-    id?: string;
-    icon: Node;
-    title?: string;
-    count?: number;
+  id?: string;
+  icon: Node;
+  title?: string;
+  count?: number;
+  className: string[];
 }
 
-const { id, icon, title,count } = Astro.props;
+const { id, icon, title, count, className } = Astro.props;
 ---
 
-<button id={id} class="rounded-md sm:rounded-xl flex items-center px-2 md:px-4 py-1 md:py-3">
-    {icon && <img src={icon} class={twMerge(`w-4 md:w-5`, title && 'mr-3')} alt="icon" />}
-	{title && <span>{title.toUpperCase()}</span>}
-	{count &&
-        <>
-            <span class="vl mx-2"/>
-            <span class="text-xs">{count}</span>
-        </>
-    }
+<button
+  id={id}
+  class={twMerge(
+    "rounded-md sm:rounded-xl flex items-center px-2 md:px-4 py-1 md:py-3",
+    className
+  )}
+>
+  {
+    icon && (
+      <img
+        src={icon}
+        class={twMerge(`w-4 md:w-5`, title && "mr-3")}
+        alt="icon"
+      />
+    )
+  }
+  {title && <span>{title.toUpperCase()}</span>}
+  {
+    count && (
+      <>
+        <span class="vl mx-2" />
+        <span class="text-xs">{count}</span>
+      </>
+    )
+  }
 </button>
 <style>
-	button {
-		min-height: 32px;
-		background: rgba(255,255,255,0.08);
-		border: 1px solid rgba(255,255,255,0.1);
-		color: #fff;
-        transition: background-color 0.2s ease-out 100ms
-	}
+  button {
+    min-height: 32px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: background-color 0.2s ease-out 100ms;
+  }
 
-    button:hover {
-        background: rgba(255,255,255,0.3);
-    }
+  button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
 
-    button > span {
-        @apply text-sm
-    }
+  button > span {
+    @apply text-sm;
+  }
 
-    .vl{
-        border-left: 1px solid #fff;
-        height: 16px;
-    }
+  .vl {
+    border-left: 1px solid #fff;
+    height: 16px;
+  }
 </style>
