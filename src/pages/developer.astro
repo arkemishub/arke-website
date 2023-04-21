@@ -37,6 +37,7 @@ import Section from '../components/ui/Section.astro';
 <Layout>
     <Cursors />
 	<GradientBackground />
+    <div class="absolute background-intro w-full -z-10 h-72 lg:h-96"></div>
     <h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
 		The <span>collaborative</span> framework to <br/>
 		shape your future</h1>
@@ -148,8 +149,7 @@ import Section from '../components/ui/Section.astro';
 }
 
 .background-intro {
-    background-color: white;
-    height: 2000px;
-    opacity: 20%;
+    background: linear-gradient(180deg, #78e7c600, #ffffff18);
+    border-bottom: 1px solid  #ffffff34; 
 }
 </style>
