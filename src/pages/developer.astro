@@ -112,7 +112,7 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
           src="./logos/logo_with_border.svg"
           class="mx-3 h-8 md:h-10 lg:h-12"
         /> to deliver
-      </div> quality code
+      </div><div class="relative pr-4 py-3">quality code<img src="/icons/code-snippet-02.svg" class="absolute top-2 right-0 h-4 md:top-0 md:h-6"/></div> 
     </h3>
     <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
       The open-source Agile framework that automates repetitive tasks,<br />
@@ -137,7 +137,7 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
   <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
     <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
       <div class="pl-6 text-left lg:text-right pr-4">
-        <h3 class="subtitle-1 text-3xl md:text-4xl lg:text-5xl font-semibold">
+        <h3 class="title text-3xl md:text-4xl lg:text-5xl font-semibold">
           We <span>trust</span> your skills <br /> and ambitions
         </h3>
         <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
@@ -189,7 +189,7 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
     color=""
   >
     <div class="pt-24 pb-12">
-      <h3 class="subtitle-1 text-3xl md:text-4xl lg:text-5xl font-semibold">
+      <h3 class="title text-3xl md:text-4xl lg:text-5xl font-semibold">
         We <span>collaborate</span> beyond code
       </h3>
       <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
@@ -227,7 +227,9 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
     <h3
       class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
     >
-    Experience the <span class="px-3">open-source</span> power
+    <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
+    <div>Experience the</div> <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div><img src={`public/icons/cursor-box.svg`} class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"/>
+    </div>
     </h3>
     <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
       The open-source Agile framework that automates repetitive tasks,<br />
@@ -237,13 +239,6 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
       <div
         class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
       >
-        {
-          programmingIcons.map((icon) => (
-            <div class="icon-box flex justify-center items-center select-none">
-              <img src={icon.img} alt={icon.title} class="h-14 w-14" />
-            </div>
-          ))
-        }
       </div>
     </div>
   </div>
@@ -258,18 +253,17 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
     -webkit-text-fill-color: transparent;
 }
 
-.subtitle-1 > span {
-    background: linear-gradient(90deg, #78E7C5, #9DFFAD);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-
 .subtitle-2 > span {
     background: linear-gradient(90deg, #AFB7FA, #6792FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+.subtitle-3 > span {
+    background: linear-gradient(135.75deg, #BB92EF 2.63%, #FAA6A6 71.86%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
   .icon-box__container {
     width: 900px;
