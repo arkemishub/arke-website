@@ -106,14 +106,19 @@ import FooterCta from "../components/ui/FooterCta.astro";
   <div class="relative mt-48 md:pt-24 md:pb-44">
     <RectanglesBackground />
     <h3
-      class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+      class="text-2xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
     >
       <div class="flex items-center md:mx-3">
         Choose <img
           src="./logos/logo_with_border.svg"
           class="mx-3 h-8 md:h-10 lg:h-12"
         /> to deliver
-      </div> quality code
+      </div><div class="relative pr-4 py-3">
+        quality code<img
+          src="/icons/code-snippet-02.svg"
+          class="absolute top-2 right-0 h-4 md:top-0 md:h-6"
+        />
+      </div>
     </h3>
     <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
       The open-source Agile framework that automates repetitive tasks,<br />
@@ -137,7 +142,7 @@ import FooterCta from "../components/ui/FooterCta.astro";
   <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
     <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
       <div class="pl-6 text-left lg:text-right pr-4">
-        <h3 class="subtitle-1 text-3xl md:text-4xl lg:text-5xl font-semibold">
+        <h3 class="title text-3xl md:text-4xl lg:text-5xl font-semibold">
           We <span>trust</span> your skills <br /> and ambitions
         </h3>
         <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
@@ -199,7 +204,7 @@ import FooterCta from "../components/ui/FooterCta.astro";
   >
     <GradientBackground />
     <div class="pt-24 pb-12">
-      <h3 class="subtitle-1 text-3xl md:text-4xl lg:text-5xl font-semibold">
+      <h3 class="title text-3xl md:text-4xl lg:text-5xl font-semibold">
         We <span>collaborate</span> beyond code
       </h3>
       <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
@@ -232,6 +237,30 @@ import FooterCta from "../components/ui/FooterCta.astro";
       </div>
     </div>
   </Section>
+  <div class="relative">
+    <RectanglesBackground />
+    <h3
+      class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+    >
+      <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
+        <div>Experience the</div>
+        <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div><img
+          src={`public/icons/cursor-box.svg`}
+          class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"
+        />
+      </div>
+    </h3>
+    <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
+      The open-source Agile framework that automates repetitive tasks,<br />
+      allowing you to focus on creating high-impact, valuable code.
+    </h2>
+    <div class="overflow-x-auto">
+      <div
+        class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
+      >
+      </div>
+    </div>
+  </div>
   <div class="mt-40">
     <StartNowButton id="btnEndCta" color="rose" className="-mt-4" />
     <FooterCta />
@@ -245,14 +274,14 @@ import FooterCta from "../components/ui/FooterCta.astro";
     -webkit-text-fill-color: transparent;
   }
 
-  .subtitle-1 > span {
-    background: linear-gradient(90deg, #78e7c5, #9dffad);
+  .subtitle-2 > span {
+    background: linear-gradient(90deg, #afb7fa, #6792ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .subtitle-2 > span {
-    background: linear-gradient(90deg, #afb7fa, #6792ff);
+  .subtitle-3 > span {
+    background: linear-gradient(135.75deg, #bb92ef 2.63%, #faa6a6 71.86%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
