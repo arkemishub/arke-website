@@ -132,6 +132,8 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
       </div>
     </div>
   </div>
+
+
   <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
     <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
       <div class="pl-6 text-left lg:text-right pr-4">
@@ -160,36 +162,28 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
       </div>
     </div>
   </Section>
-  <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="blue">
-    <div
-      class="py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center"
-    >
-      <div class="overflow-x-scroll mt-6 lg:mt-0">
-        <div class="flex cards-container px-3.5">
-          {
-            improveCards.map((item) => (
-              <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
-                <img src={item.img} alt={item.title} />
-                <h2 class="text-lg mt-4 font-medium leading-7">{item.title}</h2>
-                <p class="text-secondary text-sm leading-6">
-                  {item.description}
-                </p>
-              </Card>
-            ))
-          }
+        <Section className="w-full lg:pr-12 m-auto rounded-none b-0" color="blue">
+            <div class="py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center">
+            <div class="overflow-x-scroll mt-6 lg:mt-0">
+                <div class="flex ml-auto cards-container px-3.5">
+                    {improveCards.map(item => <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
+                        <img src={item.img} alt={item.title}/>
+                        <h2 class="text-lg mt-2 font-medium leading-7">{item.title}</h2>
+                        <p class="text-secondary text-sm mt-2 leading-6">
+                            {item.description}
+                        </p></Card>)}
+                </div>
+            </div>
+            <div class=" pl-6 text-right lg:text-left pr-4">
+                <h3 class="subtitle-2 text-3xl md:text-4xl lg:text-5xl font-semibold">We give you tools <br/> to <span>improve</span></h3>
+                <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
+                    Develop outstanding software, share your problems and<br/>
+                    solutions, and become a driver of change.
+                </h2>
+            </div>
         </div>
-      </div>
-      <div class="pl-6 text-right lg:text-left pr-4">
-        <h3 class="subtitle-2 text-3xl md:text-4xl lg:text-5xl font-semibold">
-          We give you tools <br /> to <span>improve</span>
-        </h3>
-        <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
-          Develop outstanding software, share your problems and<br />
-          solutions, and become a driver of change.
-        </h2>
-      </div>
-    </div>
-  </Section>
+        </Section>
+     
   <Section
     className="w-full p-12 lg:p-32 m-auto rounded-none b-0 relative"
     color=""
@@ -230,15 +224,24 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
   </Section>
 </Layout>
 
+
 <style>
-  .subtitle-1 > span {
-    background: linear-gradient(90deg, #78e7c5, #9dffad);
+
+.title > span {
+    background: linear-gradient(90deg, #78E7C5, #9DFFAD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle-1 > span {
+    background: linear-gradient(90deg, #78E7C5, #9DFFAD);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .subtitle-2 > span {
-    background: linear-gradient(90deg, #afb7fa, #6792ff);
+
+.subtitle-2 > span {
+    background: linear-gradient(90deg, #AFB7FA, #6792FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
