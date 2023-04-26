@@ -3,10 +3,7 @@ name: Build and Deploy
 # Controls when the action will run.
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-      -
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build_test:
@@ -40,7 +37,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build Dist 🔧
-        run: pnpm build
+        run: PUBLIC_OUTPUT=server pnpm build
 
       - name: Upload Next build 📦
         uses: actions/upload-artifact@v2

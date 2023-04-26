@@ -1,65 +1,178 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
-import StartNowButton from '../components/home/StartNowButton/StartNowButton.astro';
-import DeveloperIntroBackground from '../components/developer/developerIntroBackground/DeveloperIntroBackground.astro';
-import RectanglesBackground from '../components/developer/developerIntroBackground/RectanglesBackground.astro';
-import Card from '../components/ui/Card.astro';
+import StartNowButton from "../components/home/StartNowButton/StartNowButton.astro";
+import DeveloperIntroBackground from "../components/developer/developerIntroBackground/DeveloperIntroBackground.astro";
+import RectanglesBackground from "../components/developer/developerIntroBackground/RectanglesBackground.astro";
+import Card from "../components/ui/Card.astro";
 
 const programmingIcons = [
-    {title: 'Elixir icon', img: 'developer/icons/elixir.svg'}, 
-    {title: 'JS icon', img: 'developer/icons/JS.svg'}, 
-    {title: 'React icon', img: 'developer/icons/react.svg'}, 
-    {title: 'Phyton icon' , img: 'developer/icons/phyton.svg'},
-    {title: 'Docker icon' , img: 'developer/icons/docker.svg'}, 
-    {title: 'Aws icon', img:'developer/icons/aws.svg'}, 
-    {title: 'Gcp icon', img: 'developer/icons/cloud.svg'},
-    {title: 'Azure icon', img: 'developer/icons/azure.svg'},  
-    {title: 'Next-js icon', img:'developer/icons/next-js.svg'}
-]
+  { title: "Elixir icon", img: "/developer/icons/elixir.svg" },
+  { title: "JS icon", img: "/developer/icons/JS.svg" },
+  { title: "React icon", img: "/developer/icons/react.svg" },
+  { title: "Phyton icon", img: "/developer/icons/phyton.svg" },
+  { title: "Docker icon", img: "/developer/icons/docker.svg" },
+  { title: "Aws icon", img: "/developer/icons/aws.svg" },
+  { title: "Gcp icon", img: "/developer/icons/cloud.svg" },
+  { title: "Azure icon", img: "/developer/icons/azure.svg" },
+  { title: "Next-js icon", img: "/developer/icons/next-js.svg" },
+];
 
 const trustCards = [
-    {title: 'Smart development', img: 'developer/icons/peopleIcon.svg', description: 'Stop wasting your skills on repetitive tasks and focus on innovation and value generation.'},
-    {title: 'Knowledge share', img: 'developer/icons/puzzleIcon.svg', description: 'Promote a culture of transparency and growth through shared awareness enrichment and knowledge transfer.'},
-    {title: 'Code quality', img: 'developer/icons/spinIcon.svg', description: 'Develop reliable, maintainable, and efficient software to improve the user experience and have a posive impact on the world.'}
-]
+  {
+    title: "Smart development",
+    img: "/developer/icons/peopleIcon.svg",
+    description:
+      "Stop wasting your skills on repetitive tasks and focus on innovation and value generation.",
+  },
+  {
+    title: "Knowledge share",
+    img: "/developer/icons/puzzleIcon.svg",
+    description:
+      "Promote a culture of transparency and growth through shared awareness enrichment and knowledge transfer.",
+  },
+  {
+    title: "Code quality",
+    img: "/developer/icons/spinIcon.svg",
+    description:
+      "Develop reliable, maintainable, and efficient software to improve the user experience and have a posive impact on the world.",
+  },
+];
 
 const improveCards = [
-    {title: 'Smart development', img: 'developer/icons/peopleIcon.svg', description: 'Boost your applications with our state-of-the-art backend infrastructure to optimize and scale performance.'},
-    {title: 'Knowledge share', img: 'developer/icons/puzzleIcon.svg', description: 'Choose ready-to-use UI components and APIs or enjoy the freedom to customize them to fit your unique needs.'},
-    {title: 'Code quality', img: 'developer/icons/spinIcon.svg', description: 'Test ideas, standardize processes and develop your prototypes without writing a single line of code.'}
-]
+  {
+    title: "Smart development",
+    img: "/developer/icons/peopleIcon.svg",
+    description:
+      "Boost your applications with our state-of-the-art backend infrastructure to optimize and scale performance.",
+  },
+  {
+    title: "Knowledge share",
+    img: "/developer/icons/puzzleIcon.svg",
+    description:
+      "Choose ready-to-use UI components and APIs or enjoy the freedom to customize them to fit your unique needs.",
+  },
+  {
+    title: "Code quality",
+    img: "/developer/icons/spinIcon.svg",
+    description:
+      "Test ideas, standardize processes and develop your prototypes without writing a single line of code.",
+  },
+];
+
+const collaborateSection = [
+  {
+    title: "Continuous connection",
+    content:
+      "Connect with developers, teams, startups and companies around the world and start building the best solutions together.",
+  },
+  {
+    title: "Direct communication",
+    content:
+      "Engage with our vibrant community, collaborate on exciting projects, exchange knowledge and ask for support  on our Discord channels.",
+  },
+  {
+    title: "Seamless collaboration",
+    content:
+      "Access our technical documentation and GitHub repository to enhance your understanding and contribute to a thriving open-source ecosystem.",
+  },
+];
 
 import Cursors from "../components/developers/Cursors/Cursors.astro";
-import Section from '../components/ui/Section.astro';
+import Section from "../components/ui/Section.astro";
 ---
 
 <Layout>
-    <Cursors />
-	<GradientBackground />
-    <div class="absolute background-intro w-full -z-10 h-72 lg:h-96"></div>
-    <h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40">
-		The <span>collaborative</span> framework to <br/>
-		shape your future</h1>
-        <h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
-            Boost your productivity and develop quality code with a<br/>
-            dynamic community you can rely on
+  <Cursors />
+  <GradientBackground />
+  <h1
+    class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-40"
+  >
+    The <span>collaborative</span> framework to <br />
+    shape your future
+  </h1>
+  <h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary">
+    Boost your productivity and develop quality code with a<br />
+    dynamic community you can rely on
+  </h2>
+  <br />
+  <br />
+  <StartNowButton color="green" />
+  <div class="relative mt-48 pt-24 pb-44">
+    <RectanglesBackground />
+    <h3
+      class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+    >
+      <div class="flex items-center mx-3">
+        Choose <img
+          src="./logos/logo_with_border.svg"
+          class="mx-3 h-8 md:h-10 lg:h-12"
+        /> to deliver
+      </div> quality code
+    </h3>
+    <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
+      The open-source Agile framework that automates repetitive tasks,<br />
+      allowing you to focus on creating high-impact, valuable code.
+    </h2>
+    <div class="overflow-x-auto">
+      <div
+        class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
+      >
+        {
+          programmingIcons.map((icon) => (
+            <div class="icon-box flex justify-center items-center select-none">
+              <img src={icon.img} alt={icon.title} class="h-14 w-14" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
+    <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
+      <div class="pl-6 text-left lg:text-right pr-4">
+        <h3 class="subtitle-1 text-3xl md:text-4xl lg:text-5xl font-semibold">
+          We <span>trust</span> your skills <br /> and ambitions
+        </h3>
+        <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
+          Create outstanding software, engage in collaborative<br />
+          problem-solving and lead the next generation of innovators.
         </h2>
-        <br/>
-        <br/>
-        <StartNowButton color="green"/>
-        <div class="relative mt-48 pt-24 pb-44">
-            <RectanglesBackground />
-            <h3 class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"><div class="flex items-center mx-3">Choose <img src="./logos/logo_with_border.svg" class="mx-3 h-8 md:h-10 lg:h-12"> to deliver</div> quality code</h3>
-            <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
-                The open-source Agile framework that automates repetitive tasks,<br/>
-                allowing you to focus on creating high-impact, valuable code. 
-            </h2>
-            <div class="overflow-x-auto">
-                <div class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12">
-                    {programmingIcons.map(icon =><div class="icon-box flex justify-center items-center select-none"><img src={icon.img} alt={icon.title} class="h-14 w-14"/></div>)}
-                </div> 
+      </div>
+      <div class="overflow-x-scroll mt-6 lg:mt-0">
+        <div class="flex cards-container px-3.5">
+          {
+            trustCards.map((item) => (
+              <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
+                <img src={item.img} alt={item.title} />
+                <h2 class="text-lg mt-4 font-medium leading-7">{item.title}</h2>
+                <p class="text-secondary text-sm leading-6">
+                  {item.description}
+                </p>
+              </Card>
+            ))
+          }
         </div>
+      </div>
+    </div>
+  </Section>
+  <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="blue">
+    <div
+      class="py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center"
+    >
+      <div class="overflow-x-scroll mt-6 lg:mt-0">
+        <div class="flex cards-container px-3.5">
+          {
+            improveCards.map((item) => (
+              <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
+                <img src={item.img} alt={item.title} />
+                <h2 class="text-lg mt-4 font-medium leading-7">{item.title}</h2>
+                <p class="text-secondary text-sm leading-6">
+                  {item.description}
+                </p>
+              </Card>
+            ))
+          }
         </div>
         <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
             <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
@@ -103,6 +216,56 @@ import Section from '../components/ui/Section.astro';
             </div>
         </div>
         </Section>
+      </div>
+      <div class="pl-6 text-right lg:text-left pr-4">
+        <h3 class="subtitle-2 text-3xl md:text-4xl lg:text-5xl font-semibold">
+          We give you tools <br /> to <span>improve</span>
+        </h3>
+        <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
+          Develop outstanding software, share your problems and<br />
+          solutions, and become a driver of change.
+        </h2>
+      </div>
+    </div>
+  </Section>
+  <Section
+    className="w-full lg:pl-12 m-auto rounded-none b-0 relative"
+    color=""
+  >
+    <div class="pt-24">
+      <h3 class="subtitle-1 text-3xl md:text-4xl lg:text-5xl font-semibold">
+        We <span>collaborate</span> beyond code
+      </h3>
+      <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
+        Turn collaboration into innovation and follow the path of <br /> continuous
+        improvement for long-term growth.
+      </h2>
+    </div>
+    <div class="h-screen flex">
+      <div class="mt-12 w-1/2 h-screen mx-14">
+        {
+          collaborateSection.map((item) => (
+            <div class="flex flex-col justify-start  items-start py-2 pr-60">
+              <h2 class="text-lg mt-4 font-medium leading-7">{item.title}</h2>
+              <p class="text-secondary text-md leading-6 text-left my-4">
+                {item.content}
+              </p>
+              </div>
+              <div class="border-gradient w-full" />
+          ))
+        }
+      </div>
+      <div class="absolute bottom-32 right-2 w-30">
+        <Cursors />
+        <img
+          src="/img/terminale.png"
+          alt="immagine terminale"
+          width="790px"
+          class="img-terminal"
+        />
+      </div>
+    </div>
+  </Section>
 </Layout>
 
 
@@ -118,38 +281,50 @@ import Section from '../components/ui/Section.astro';
     background: linear-gradient(90deg, #78E7C5, #9DFFAD);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+  }
 
 
 .subtitle-2 > span {
     background: linear-gradient(90deg, #AFB7FA, #6792FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+  }
 
-.icon-box__container {
+  .icon-box__container {
     width: 900px;
     margin: 30px auto;
     overflow-x: scroll;
-}
+  }
 
-.icon-box {
+  .icon-box {
     padding-left: 20px;
     padding-right: 20px;
-}
+  }
 
-.icon-box:not(:first-child) {
+  .icon-box:not(:first-child) {
     border-left-width: 1px;
     border-left-style: solid;
-    border-image: linear-gradient(to bottom, rgba(0, 0, 139, 0), rgba(255, 255, 255, 0.167) ,rgba(0, 0, 139, 0)) 1;
-}
+    border-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 139, 0),
+        rgba(255, 255, 255, 0.167),
+        rgba(0, 0, 139, 0)
+      )
+      1;
+  }
 
-.cards-container {
+  .cards-container {
     width: 700px;
-}
+  }
 
-.background-intro {
-    background: linear-gradient(180deg, #78e7c600, #ffffff18);
-    border-bottom: 1px solid  #ffffff34; 
-}
+  .border-gradient:not(:last-child) {
+    border-bottom: 1px solid transparent;
+    background: padding-box linear-gradient(rgb(4 6 22), rgb(4 6 22)),
+      border-box
+        linear-gradient(to right, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.2));
+  }
+
+  .img-terminal {
+    z-index: -1;
+  }
 </style>

@@ -13,7 +13,11 @@ RUN \
 COPY . .
 
 RUN pnpm install --no-frozen-lockfile
+<<<<<<< HEAD
 RUN pnpm build
+=======
+RUN PUBLIC_OUTPUT=server pnpm build
+>>>>>>> 271b860072dee1e0d31ce3e894f9eaabe7d25d2f
 
 ENV PORT=3000
 EXPOSE 3000

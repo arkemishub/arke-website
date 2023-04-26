@@ -16,19 +16,19 @@ const { className } = Astro.props;
 		<div class="block text-center gap-x-2 lg:grid sm:text-left lg:grid-cols-12">
 			<div class="col-span-2 mb-8 text-center sm:mb-0">
 				<a class={currentPath === "" ? "active" : ""} href={import.meta.env.BASE_URL}>
-					<img src={`${import.meta.env.BASE_URL}/logos/arke_logo.svg`} class="w-20 md:w-28" alt="arke_logo" />
+					<img src={`${import.meta.env.BASE_URL}logos/arke_logo.svg`} class="w-20 md:w-28" alt="arke_logo" />
 				</a>
 			</div>
 			<div class="menu md:col-span-8 lg:px-12 sm:mt-6 lg:mt-0">
 				<div class="grid gap-x-1 grid-cols-2 sm:grid-cols-5">
 					<div>
 						<p class="uppercase mb-2">Product</p>
-						<a href={`${import.meta.env.BASE_URL}/features`}>Features</a>
+						<a href={`${import.meta.env.BASE_URL}features`}>Features</a>
 					</div>
 					<div class="flex flex-col">
 						<p class="uppercase mb-2">Solutions</p>
-						<a href={`${import.meta.env.BASE_URL}/features`}>Enterprise</a>
-						<a href={`${import.meta.env.BASE_URL}/developers`}>Developers</a>
+						<a href={`${import.meta.env.BASE_URL}features`}>Enterprise</a>
+						<a href={`${import.meta.env.BASE_URL}developers`}>Developers</a>
 					</div>
 					<div class="flex flex-col">
 						<p class="uppercase mb-2">Resources</p>
@@ -38,22 +38,22 @@ const { className } = Astro.props;
 					</div>
 					<div class="flex flex-col">
 						<p class="uppercase mb-2">Contact</p>
-						<a href={`${import.meta.env.BASE_URL}/contact`}>Contact</a>
+						<a href={`${import.meta.env.BASE_URL}contact`}>Contact</a>
 					</div>
 					<div class="flex flex-col">
 						<p class="uppercase mb-2">Legal</p>
-						<a href={`${import.meta.env.BASE_URL}/terms-of-use`}>Terms</a>
-						<a href={`${import.meta.env.BASE_URL}/privacy-policy`}>Privacy</a>
-						<a href={`${import.meta.env.BASE_URL}/cookies`}>Cookies</a>
+						<a href={`${import.meta.env.BASE_URL}terms-of-use`}>Terms</a>
+						<a href={`${import.meta.env.BASE_URL}privacy-policy`}>Privacy</a>
+						<a href={`${import.meta.env.BASE_URL}cookies`}>Cookies</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-span-2 mt-12 lg:pl-12 lg:mt-0">
 				<div class="grid grid-cols-4 gap-x-1">
-					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}/icons/github.svg`} alt="github"/>
-					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}/icons/linkedin.svg`} alt="linkedin"/>
-					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}/icons/discord.svg`} alt="discord"/>
-					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}/icons/mokka.svg`} alt="mokka"/>
+					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}icons/github.svg`} alt="github"/>
+					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}icons/linkedin.svg`} alt="linkedin"/>
+					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}icons/discord.svg`} alt="discord"/>
+					<img class="w-5 logo m-auto" src={`${import.meta.env.BASE_URL}icons/mokka.svg`} alt="mokka"/>
 				</div>
 			</div>
 		</div>
