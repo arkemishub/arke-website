@@ -128,6 +128,8 @@ import Section from "../components/ui/Section.astro";
       </div>
     </div>
   </div>
+
+
   <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
     <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
       <div class="pl-6 text-left lg:text-right pr-4">
@@ -156,45 +158,6 @@ import Section from "../components/ui/Section.astro";
       </div>
     </div>
   </Section>
-  <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="blue">
-    <div
-      class="py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center"
-    >
-      <div class="overflow-x-scroll mt-6 lg:mt-0">
-        <div class="flex cards-container px-3.5">
-          {
-            improveCards.map((item) => (
-              <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
-                <img src={item.img} alt={item.title} />
-                <h2 class="text-lg mt-4 font-medium leading-7">{item.title}</h2>
-                <p class="text-secondary text-sm leading-6">
-                  {item.description}
-                </p>
-              </Card>
-            ))
-          }
-        </div>
-        <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
-            <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
-            <div class=" pl-6 text-left lg:text-right pr-4">
-                <h3 class="subtitle-1 text-3xl md:text-4xl lg:text-5xl font-semibold">We <span>trust</span> your skills <br/> and ambitions</h3>
-                <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
-                    Create outstanding software, engage in collaborative<br/>
-                    problem-solving and lead the next generation of innovators.
-                </h2>
-            </div>
-            <div class="overflow-x-scroll mt-6 lg:mt-0">
-                <div class="flex cards-container px-3.5">
-                    {trustCards.map(item => <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
-                        <img src={item.img} alt={item.title}/>
-                        <h2 class="text-lg mt-2 font-medium leading-7">{item.title}</h2>
-                        <p class="text-secondary text-sm mt-2 leading-6">
-                            {item.description}
-                        </p></Card>)}
-                </div>
-            </div>
-        </div>
-        </Section>
         <Section className="w-full lg:pr-12 m-auto rounded-none b-0" color="blue">
             <div class="py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center">
             <div class="overflow-x-scroll mt-6 lg:mt-0">
@@ -216,18 +179,7 @@ import Section from "../components/ui/Section.astro";
             </div>
         </div>
         </Section>
-      </div>
-      <div class="pl-6 text-right lg:text-left pr-4">
-        <h3 class="subtitle-2 text-3xl md:text-4xl lg:text-5xl font-semibold">
-          We give you tools <br /> to <span>improve</span>
-        </h3>
-        <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
-          Develop outstanding software, share your problems and<br />
-          solutions, and become a driver of change.
-        </h2>
-      </div>
-    </div>
-  </Section>
+     
   <Section
     className="w-full lg:pl-12 m-auto rounded-none b-0 relative"
     color=""
