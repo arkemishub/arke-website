@@ -84,6 +84,7 @@ import WorkflowFeature from "../components/home/WorkflowFeature/WorkflowFeature.
 import FeatureCircle from "../components/home/FeatureCircle/FeatureCircle.astro";
 import WorkflowStep from "../components/home/WorkflowStep/WorkflowStep.astro";
 import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircleDev.astro";
+import FooterCta from "../components/ui/FooterCta.astro";
 ---
 
 <Layout>
@@ -102,12 +103,12 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
   <br />
   <br />
   <StartNowButton color="green" />
-  <div class="relative mt-48 pt-24 pb-44">
+  <div class="relative mt-48 md:pt-24 md:pb-44">
     <RectanglesBackground />
     <h3
       class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
     >
-      <div class="flex items-center mx-3">
+      <div class="flex items-center md:mx-3">
         Choose <img
           src="./logos/logo_with_border.svg"
           class="mx-3 h-8 md:h-10 lg:h-12"
@@ -118,21 +119,20 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
       The open-source Agile framework that automates repetitive tasks,<br />
       allowing you to focus on creating high-impact, valuable code.
     </h2>
-    <div class="overflow-x-auto">
+    <div class="overflow-x-hidden relative">
       <div
-        class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
+        class="icon-box__container flex flex-row justify-center md:w-full md:mt-6 lg:mt-12 relative max-sm:animate-primary"
       >
         {
           programmingIcons.map((icon) => (
-            <div class="icon-box flex justify-center items-center select-none">
-              <img src={icon.img} alt={icon.title} class="h-14 w-14" />
+            <div class="md:px-5 flex justify-center items-center select-none ">
+              <img src={icon.img} alt={icon.title} class="h-14 w-14 " />
             </div>
           ))
         }
       </div>
     </div>
   </div>
-
 
   <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
     <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
@@ -162,32 +162,42 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
       </div>
     </div>
   </Section>
-        <Section className="w-full lg:pr-12 m-auto rounded-none b-0" color="blue">
-            <div class="py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center">
-            <div class="overflow-x-scroll mt-6 lg:mt-0">
-                <div class="flex ml-auto cards-container px-3.5">
-                    {improveCards.map(item => <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
-                        <img src={item.img} alt={item.title}/>
-                        <h2 class="text-lg mt-2 font-medium leading-7">{item.title}</h2>
-                        <p class="text-secondary text-sm mt-2 leading-6">
-                            {item.description}
-                        </p></Card>)}
-                </div>
-            </div>
-            <div class=" pl-6 text-right lg:text-left pr-4">
-                <h3 class="subtitle-2 text-3xl md:text-4xl lg:text-5xl font-semibold">We give you tools <br/> to <span>improve</span></h3>
-                <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
-                    Develop outstanding software, share your problems and<br/>
-                    solutions, and become a driver of change.
-                </h2>
-            </div>
+  <Section className="w-full lg:pr-12 m-auto rounded-none b-0" color="blue">
+    <div
+      class="py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center"
+    >
+      <div class="overflow-x-scroll mt-6 lg:mt-0">
+        <div class="flex ml-auto cards-container px-3.5">
+          {
+            improveCards.map((item) => (
+              <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
+                <img src={item.img} alt={item.title} />
+                <h2 class="text-lg mt-2 font-medium leading-7">{item.title}</h2>
+                <p class="text-secondary text-sm mt-2 leading-6">
+                  {item.description}
+                </p>
+              </Card>
+            ))
+          }
         </div>
-        </Section>
+      </div>
+      <div class="pl-6 text-right lg:text-left pr-4">
+        <h3 class="subtitle-2 text-3xl md:text-4xl lg:text-5xl font-semibold">
+          We give you tools <br /> to <span>improve</span>
+        </h3>
+        <h2 class="text-sm lg:text-2xl mt-4 lg:mt-12 text-secondary">
+          Develop outstanding software, share your problems and<br />
+          solutions, and become a driver of change.
+        </h2>
+      </div>
+    </div>
+  </Section>
 
   <Section
     className="w-full p-12 lg:p-32 m-auto rounded-none b-0 relative"
     color=""
   >
+    <GradientBackground />
     <div class="pt-24 pb-12">
       <h3 class="subtitle-1 text-3xl md:text-4xl lg:text-5xl font-semibold">
         We <span>collaborate</span> beyond code
@@ -222,39 +232,39 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
       </div>
     </div>
   </Section>
+  <div class="mt-40">
+    <StartNowButton id="btnEndCta" color="rose" className="-mt-4" />
+    <FooterCta />
+  </div>
 </Layout>
 
-
 <style>
-
-.title > span {
-    background: linear-gradient(90deg, #78E7C5, #9DFFAD);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle-1 > span {
-    background: linear-gradient(90deg, #78E7C5, #9DFFAD);
+  .title > span {
+    background: linear-gradient(90deg, #78e7c5, #9dffad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
+  .subtitle-1 > span {
+    background: linear-gradient(90deg, #78e7c5, #9dffad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.subtitle-2 > span {
-    background: linear-gradient(90deg, #AFB7FA, #6792FF);
+  .subtitle-2 > span {
+    background: linear-gradient(90deg, #afb7fa, #6792ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .icon-box__container {
-    width: 900px;
+    width: 680px;
     margin: 30px auto;
-    overflow-x: scroll;
-  }
-
-  .icon-box {
-    padding-left: 20px;
-    padding-right: 20px;
+    gap: 1rem;
+    padding: 0 1rem;
+    padding-top: 1rem;
+    padding-bottom: 3.5rem;
+    position: absolute;
   }
 
   .icon-box:not(:first-child) {
