@@ -13,8 +13,8 @@ const {
 // https://astro.build/config
 export default defineConfig({
   site: "https://arkemishub.github.io",
-  base: PUBLIC_BASE_URL ? PUBLIC_BASE_URL + '/' : '',
-  trailingSlash: PUBLIC_BASE_URL ? "always" : "never",
+  base: PUBLIC_BASE_URL ? PUBLIC_BASE_URL : '',
+  trailingSlash: "ignore",
   integrations: [tailwind(), react()],
   output: PUBLIC_OUTPUT ?? 'static',
   adapter: node({
