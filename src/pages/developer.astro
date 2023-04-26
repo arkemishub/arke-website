@@ -218,6 +218,31 @@ import Section from "../components/ui/Section.astro";
       </div>
     </div>
   </Section>
+  <div class="relative">
+    <RectanglesBackground />
+    <h3
+      class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+    >
+    Experience the <span class="px-3">open-source</span> power
+    </h3>
+    <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
+      The open-source Agile framework that automates repetitive tasks,<br />
+      allowing you to focus on creating high-impact, valuable code.
+    </h2>
+    <div class="overflow-x-auto">
+      <div
+        class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
+      >
+        {
+          programmingIcons.map((icon) => (
+            <div class="icon-box flex justify-center items-center select-none">
+              <img src={icon.img} alt={icon.title} class="h-14 w-14" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </Layout>
 
 
