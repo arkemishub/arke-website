@@ -1,0 +1,57 @@
+---
+import { twMerge } from "tailwind-merge";
+export interface Props {
+  className: string[];
+}
+
+const { className } = Astro.props;
+---
+
+<div class="relative -z-10">
+  <div class="outer-circle m-auto">
+    <div class="outer-circle-border mt-10 w-60 h-60 m-auto">
+      <slot />
+    </div>
+    <div class="inner-circle"></div>
+  </div>
+</div>
+
+<style>
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  .outer-circle {
+    width: 320px;
+    height: 320px;
+    position: relative;
+    border-radius: 50%;
+    background: #172568;
+    border: 1px solid #212121;
+  }
+
+  .outer-circle-border {
+    position: relative;
+    border-radius: 50%;
+    background: #154f6f;
+    border: 1px solid #154f6f;
+  }
+
+  .inner-circle {
+    background-image: radial-gradient(rgb(36, 36, 36), #212121);
+    content: "";
+    position: absolute;
+    top: -40px;
+    bottom: -40px;
+    right: -40px;
+    left: -40px;
+    z-index: -2;
+    border-radius: inherit;
+  }
+</style>
