@@ -1,10 +1,10 @@
 name: Deploy on Pages
 
 on:
-  workflow_call:
+  workflow_dispatch:
   push:
     branches:
-      - main
+      - staging
 
 jobs:
   deploy:
