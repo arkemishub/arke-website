@@ -139,9 +139,9 @@ const collaborateSection = [
     </div>
   </div>
 
-  <Section className="w-full lg:pl-12 m-auto rounded-none b-0" color="green">
-    <div class="py-32 flex flex-col lg:flex-row justify-center lg:items-center">
-      <div class="pl-6 text-left lg:text-right pr-4">
+  <Section className="w-full lg:px-12 m-auto rounded-none b-0" color="green">
+    <div class="py-20 flex flex-col lg:flex-row justify-center lg:items-center">
+      <div class="text-left pr-4 lg:text-right lg:w-2/6 pl-6">
         <h3 class="title text-3xl md:text-4xl lg:text-5xl font-semibold">
           We <span>trust</span> your skills <br /> and ambitions
         </h3>
@@ -151,10 +151,10 @@ const collaborateSection = [
         </h2>
       </div>
       <div class="overflow-x-scroll mt-6 lg:mt-0">
-        <div class="flex cards-container px-3.5">
+        <div class="flex justify-between cards-container lg:ml-8">
           {
             trustCards.map((item) => (
-              <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
+              <Card className="p-2 ml-6 mt-4 text-left w-56 h-72">
                 <div><img src={item.img} alt={item.title}/></div>
                 <h2 class="text-lg mt-4 font-medium leading-7">{item.title}</h2>
                 <p class="text-secondary text-sm leading-6">
@@ -169,13 +169,13 @@ const collaborateSection = [
   </Section>
   <Section className="w-full lg:pr-12 m-auto rounded-none b-0" color="blue">
     <div
-      class="py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center"
+      class="py-20 flex flex-col-reverse lg:flex-row justify-center lg:items-center"
     >
       <div class="overflow-x-scroll mt-6 lg:mt-0">
         <div class="flex ml-auto cards-container px-3.5">
           {
             improveCards.map((item) => (
-              <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
+              <Card className="p-2 mr-6 mt-4 text-left w-56 h-72">
                 <img src={item.img} alt={item.title} />
                 <h2 class="text-lg mt-2 font-medium leading-7">{item.title}</h2>
                 <p class="text-secondary text-sm mt-2 leading-6">
@@ -186,7 +186,7 @@ const collaborateSection = [
           }
         </div>
       </div>
-      <div class="pl-6 text-right lg:text-left pr-4">
+      <div class="pl-6 text-right lg:text-left lg:w-2/6 pr-6">
         <h3 class="subtitle-2 text-3xl md:text-4xl lg:text-5xl font-semibold">
           We give you tools <br /> to <span>improve</span>
         </h3>
