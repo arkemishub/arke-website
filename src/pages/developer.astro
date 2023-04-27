@@ -150,7 +150,7 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
           {
             trustCards.map((item) => (
               <Card className="p-2 m-auto mt-4 text-left w-56 h-72 mx-2">
-                <img src={item.img} alt={item.title} />
+                <div><img src={item.img} alt={item.title}/></div>
                 <h2 class="text-lg mt-4 font-medium leading-7">{item.title}</h2>
                 <p class="text-secondary text-sm leading-6">
                   {item.description}
@@ -223,24 +223,24 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
     </div>
   </Section>
   <div class="relative">
-    <RectanglesBackground />
-    <h3
-      class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
-    >
-    <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
-    <div>Experience the</div> <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div><img src={`public/icons/cursor-box.svg`} class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"/>
-    </div>
-    </h3>
-    <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
-      The open-source Agile framework that automates repetitive tasks,<br />
-      allowing you to focus on creating high-impact, valuable code.
-    </h2>
-    <div class="overflow-x-auto">
-      <div
-        class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
-      >
-      </div>
-    </div>
+        <RectanglesBackground />
+        <h3
+        class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+        >
+        <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
+        <div>Experience the</div> <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div><img src={`public/icons/cursor-box.svg`} class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"/>
+        </div>
+        </h3>
+        <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
+        The open-source Agile framework that automates repetitive tasks,<br />
+        allowing you to focus on creating high-impact, valuable code.
+        </h2>
+        <div class="overflow-x-auto">
+        <div
+            class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
+        >
+        </div>
+        </div>
   </div>
 </Layout>
 
@@ -302,4 +302,5 @@ import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircl
           rgba(255, 255, 255, 0.2)
         );
   }
+
 </style>
