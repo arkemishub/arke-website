@@ -14,6 +14,19 @@ module.exports = {
       rose: "#EFAEFF",
       // ...
     },
+    keyframes: {
+      primary: {
+        "0%": {
+          left: "0%",
+        },
+        "100%": {
+          left: "-100%",
+        },
+      },
+    },
+    animation: {
+      primary: "primary 20s linear infinite",
+    },
   },
   plugins: [],
 };
