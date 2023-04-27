@@ -5,35 +5,42 @@ import StartNowButton from "../components/home/StartNowButton/StartNowButton.ast
 import DeveloperIntroBackground from "../components/developer/developerIntroBackground/DeveloperIntroBackground.astro";
 import RectanglesBackground from "../components/developer/developerIntroBackground/RectanglesBackground.astro";
 import Card from "../components/ui/Card.astro";
+import Cursors from "../components/developer/Cursors/Cursors.astro";
+import Section from "../components/ui/Section.astro";
+import WorkflowFeature from "../components/home/WorkflowFeature/WorkflowFeature.astro";
+import FeatureCircle from "../components/home/FeatureCircle/FeatureCircle.astro";
+import WorkflowStep from "../components/home/WorkflowStep/WorkflowStep.astro";
+import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircleDev.astro";
+import FooterCta from "../components/ui/FooterCta.astro";
 
 const programmingIcons = [
-  { title: "Elixir icon", img: "/developer/icons/elixir.svg" },
-  { title: "JS icon", img: "/developer/icons/JS.svg" },
-  { title: "React icon", img: "/developer/icons/react.svg" },
-  { title: "Phyton icon", img: "/developer/icons/phyton.svg" },
-  { title: "Docker icon", img: "/developer/icons/docker.svg" },
-  { title: "Aws icon", img: "/developer/icons/aws.svg" },
-  { title: "Gcp icon", img: "/developer/icons/cloud.svg" },
-  { title: "Azure icon", img: "/developer/icons/azure.svg" },
-  { title: "Next-js icon", img: "/developer/icons/next-js.svg" },
+  { title: "Elixir icon", img: `${import.meta.env.BASE_URL}developer/icons/elixir.svg` },
+  { title: "JS icon", img: `${import.meta.env.BASE_URL}developer/icons/JS.svg` },
+  { title: "React icon", img: `${import.meta.env.BASE_URL}developer/icons/react.svg` },
+  { title: "Phyton icon", img: `${import.meta.env.BASE_URL}developer/icons/phyton.svg` },
+  { title: "Docker icon", img: `${import.meta.env.BASE_URL}developer/icons/docker.svg` },
+  { title: "Aws icon", img: `${import.meta.env.BASE_URL}developer/icons/aws.svg` },
+  { title: "Gcp icon", img: `${import.meta.env.BASE_URL}developer/icons/cloud.svg` },
+  { title: "Azure icon", img: `${import.meta.env.BASE_URL}developer/icons/azure.svg` },
+  { title: "Next-js icon", img: `${import.meta.env.BASE_URL}developer/icons/next-js.svg` },
 ];
 
 const trustCards = [
   {
     title: "Smart development",
-    img: "/developer/icons/peopleIcon.svg",
+    img: `${import.meta.env.BASE_URL}developer/icons/peopleIcon.svg`,
     description:
       "Stop wasting your skills on repetitive tasks and focus on innovation and value generation.",
   },
   {
     title: "Knowledge share",
-    img: "/developer/icons/puzzleIcon.svg",
+    img: `${import.meta.env.BASE_URL}developer/icons/puzzleIcon.svg`,
     description:
       "Promote a culture of transparency and growth through shared awareness enrichment and knowledge transfer.",
   },
   {
     title: "Code quality",
-    img: "/developer/icons/spinIcon.svg",
+    img: `${import.meta.env.BASE_URL}developer/icons/spinIcon.svg`,
     description:
       "Develop reliable, maintainable, and efficient software to improve the user experience and have a posive impact on the world.",
   },
@@ -42,19 +49,19 @@ const trustCards = [
 const improveCards = [
   {
     title: "Smart development",
-    img: "/developer/icons/peopleIcon.svg",
+    img: `${import.meta.env.BASE_URL}developer/icons/peopleIcon.svg`,
     description:
       "Boost your applications with our state-of-the-art backend infrastructure to optimize and scale performance.",
   },
   {
     title: "Knowledge share",
-    img: "/developer/icons/puzzleIcon.svg",
+    img: `${import.meta.env.BASE_URL}developer/icons/puzzleIcon.svg`,
     description:
       "Choose ready-to-use UI components and APIs or enjoy the freedom to customize them to fit your unique needs.",
   },
   {
     title: "Code quality",
-    img: "/developer/icons/spinIcon.svg",
+    img: `${import.meta.env.BASE_URL}developer/icons/spinIcon.svg`,
     description:
       "Test ideas, standardize processes and develop your prototypes without writing a single line of code.",
   },
@@ -78,13 +85,6 @@ const collaborateSection = [
   },
 ];
 
-import Cursors from "../components/developer/Cursors/Cursors.astro";
-import Section from "../components/ui/Section.astro";
-import WorkflowFeature from "../components/home/WorkflowFeature/WorkflowFeature.astro";
-import FeatureCircle from "../components/home/FeatureCircle/FeatureCircle.astro";
-import WorkflowStep from "../components/home/WorkflowStep/WorkflowStep.astro";
-import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircleDev.astro";
-import FooterCta from "../components/ui/FooterCta.astro";
 ---
 
 <Layout>
@@ -110,12 +110,12 @@ import FooterCta from "../components/ui/FooterCta.astro";
     >
       <div class="flex items-center md:mx-3">
         Choose <img
-          src="./logos/logo_with_border.svg"
+          src={`${import.meta.env.BASE_URL}logos/logo_with_border.svg`}
           class="mx-3 h-8 md:h-10 lg:h-12"
         /> to deliver
       </div><div class="relative pr-4 py-3">
         quality code<img
-          src="/icons/code-snippet-02.svg"
+          src={`${import.meta.env.BASE_URL}icons/code-snippet-02.svg`}
           class="absolute top-2 right-0 h-4 md:top-0 md:h-6"
         />
       </div>
