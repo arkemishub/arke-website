@@ -2,15 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
 import StartNowButton from "../components/home/StartNowButton/StartNowButton.astro";
-import DeveloperIntroBackground from "../components/developer/developerIntroBackground/DeveloperIntroBackground.astro";
 import RectanglesBackground from "../components/developer/developerIntroBackground/RectanglesBackground.astro";
 import Card from "../components/ui/Card.astro";
 import Cursors from "../components/developer/Cursors/Cursors.astro";
 import Section from "../components/ui/Section.astro";
-import WorkflowFeature from "../components/home/WorkflowFeature/WorkflowFeature.astro";
-import FeatureCircle from "../components/home/FeatureCircle/FeatureCircle.astro";
-import WorkflowStep from "../components/home/WorkflowStep/WorkflowStep.astro";
-import FeatureCircleDev from "../components/developer/featureCircle/FeatureCircleDev.astro";
 import FooterCta from "../components/ui/FooterCta.astro";
 
 const programmingIcons = [
@@ -233,7 +228,7 @@ const collaborateSection = [
       </div>
       <div class="xl:p-20">
         <Cursors />
-        <img src="/img/terminale.png" alt="immagine terminale" />
+        <img src={`${import.meta.env.BASE_URL}/img/terminale.png`} alt="terminal" />
       </div>
     </div>
   </Section>
@@ -243,7 +238,8 @@ const collaborateSection = [
         class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
         >
         <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
-        <div>Experience the</div> <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div><img src={`public/icons/cursor-box.svg`} class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"/>
+        <div>Experience the</div> <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div>
+          <img alt="cursor-box" src={`${import.meta.env.BASE_URL}/icons/cursor-box.svg`} class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"/>
         </div>
         </h3>
         <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
