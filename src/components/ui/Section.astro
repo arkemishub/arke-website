@@ -3,14 +3,15 @@ import { twMerge } from "tailwind-merge";
 export interface Props {
   className: string[];
   color: "green" | "blue" | "rose" | "orange";
+  position: "left" | "right" | "center"
 }
 
-const { className, color = 'green', style } = Astro.props;
+const { className, color = 'green', style, position = 'center' } = Astro.props;
 ---
 
 <div class="relative overflow-hidden">
-    <div class={`border-gradient ${color}`}/>
-    <div class={`border-light light-${color}`}/>
+    <div class={`border-gradient-${position} ${color}`}/>
+    <div class={`border-light-${position} light-${color}`}/>
     <div class={twMerge("section", className)} style={style}>
         <slot />
     </div>
@@ -22,16 +23,43 @@ const { className, color = 'green', style } = Astro.props;
     backdrop-filter: blur(15px);
     list-style: none;
   }
-  .border-gradient {
+  .border-gradient-center {
     position: absolute;
     top: -200px;
     height: 400px;
     width: 70%;
     margin-left: 15%;
   }
-  .border-light {
+
+  .border-gradient-left {
+    position: absolute;
+    top: -300px;
+    left: -20%;
+    height: 700px;
+    width: 70%;
+  }
+
+  .border-gradient-right {
+    position: absolute;
+    top: -300px;
+    right: -20%;
+    height: 700px;
+    width: 70%;
+  }
+  .border-light-center {
     height: 1px;
     width: 100%;
+  }
+
+  .border-light-left {
+    height: 1px;
+    width: 50%;
+  }
+
+  .border-light-right {
+    height: 1px;
+    width: 50%;
+    margin-left: 50%;
   }
   .blue {
     background: radial-gradient(
