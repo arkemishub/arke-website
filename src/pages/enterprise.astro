@@ -39,11 +39,8 @@ import Circle from "../components/ui/Circle.astro";
       <h2 class="px-6 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary md:w-4/6 ">
         The open-source Agile framework designed to ensure an efficient prototyping and management process, minimize development risks and accelerate product delivery.
       </h2>
-      <div
-      class="absolute btn-prototype text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-60 mt-20 z-10"
-    >
-      <h3 class="md:text-md">prototype</h3>
-    </div>
+      <Circle title="Prototype" className={'absolute prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-60 mt-20 z-10'} />
+    
     </div>
  
   <Section
@@ -127,11 +124,7 @@ import Circle from "../components/ui/Circle.astro";
     <div
       class="bg-secondary flex justify-center items-center border rounded-full w-48 h-48 mx-auto mt-2"
     >
-      <div
-        class="btn-prototype text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full"
-      >
-        <h3 class="md:text-md">develop</h3>
-      </div>
+    <Circle title="develop" className={'prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full'} />
     </div>
   </Section>
 </Layout>
@@ -184,7 +177,7 @@ import Circle from "../components/ui/Circle.astro";
         background: linear-gradient(90deg,  #17373d, #17373d29); 
     }
 
-  .btn-prototype {
+  .prototype-circle {
     background: linear-gradient(180deg, #ffffff 21.07%, #bbd8f2 100%);
   }
 
