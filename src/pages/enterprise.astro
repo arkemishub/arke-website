@@ -1,7 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/ui/Section.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
-import ShpereBackground from '../components/enterprise/ShpereBackground/ShpereBackground.astro';
+import ShpereBackground from "../components/enterprise/ShpereBackground/ShpereBackground.astro";
+import Card from "../components/ui/Card.astro";
 ---
 
 <Layout>
@@ -24,25 +26,119 @@ import ShpereBackground from '../components/enterprise/ShpereBackground/ShpereBa
         <div class="circle test-circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0"><p class="absolute">TEST</p></div>
         <div class="circle evolve-circle md:p-14 p-12 md:right-5 sm:right-6 right-24 bottom-32 sm:bottom-0"><p class="absolute">EVOLVE</p></div>
     </div>
-	<div class="h-20 md:h-40"/>
-    <div class="choose-arke-section flex flex-col items-center md:py-32 pt-20 pb-32">
+	<div class="h-5 md:h-24"/>
+    <div class="choose-arke-section flex flex-col items-center md:h-96 pt-20 pb-32 relative">
         <h3
         class="title text-2xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
       >
       Choose <span class="px-3">Arke</span> for maximum value
       </h3>
-      <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary md:w-3/6">
+      <h2 class="px-6 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary md:w-4/6 ">
         The open-source Agile framework designed to ensure an efficient prototyping and management process, minimize development risks and accelerate product delivery.
       </h2>
+      <div
+      class="absolute btn-prototype text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-60 mt-20 z-10"
+    >
+      <h3 class="md:text-md">prototype</h3>
     </div>
+    </div>
+ 
+  <Section
+    className="w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1 lg:pt-36 md:pt-24 pt-20"
+    color=""
+  >
+  <div>
+    <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold">
+      Fast & Flexible iterations
+    </h3>
+    <h2
+      class="text-md lg:text-2xl max-sm:px-10 md:px-40 mt-4 lg:mt-12 text-secondary"
+    >
+      Maximize your business success combining Agile and <br /> Arke to reduce risks,
+      accelerate go-to-market and unlock your <br /> product's true potential.
+    </h2>
+    </div>
+    <div
+      class="md:bg-[url('/img/Ellipse.png')] container-card flex pt-10 pb-32 lg:gap-4 gap-3 max-sm:flex-col items-center w-full"
+    >
+      <Card className="h-fit w-11/12 px-14 md:w-1/3 md:px-0 lg:mx-0 md:ml-2">
+        <div
+          class="w-full border-b-card mr-4 rounded-t-xl lg:text-7xl text-5xl py-4 px-10 flex items-center justify-center"
+        >
+          <h3 class="text-blue px-2">+10000</h3>
+        </div>
+        <div
+          class="w-full border-b-card py-4 md:px-4 mr-4 lg:text-lg text-md uppercase flex justify-center items-center"
+        >
+          Quicker in testing business assumptions
+        </div>
+        <div class="w-full mr-4 rounded-b-xl">
+          <h3 class="md:text-lg text-md my-4">Detailed analysis</h3>
+          <p class="lg:text-base text-md text-secondary mb-4 lg:px-16">
+            We understand your needs and evaluate the best solutions.
+          </p>
+        </div>
+      </Card>
+
+      <Card className="h-fit md:mt-24 md:w-1/3 w-11/12 md:px-0 px-14">
+        <div
+          class="w-full mr-4 border-b-card py-4 rounded-t-3xl lg:text-7xl text-5xl flex justify-center items-center"
+        >
+          <h3 class="text-primary">x2</h3>
+        </div>
+        <div
+          class="w-full mr-4 border-b-card md:px-4 py-4 lg:text-lg text-md uppercase flex justify-center items-center"
+        >
+          Quicker in testing business assumptions
+        </div>
+        <div class="w-full mr-4 rounded-b-3xl flex flex-col justify-center">
+          <h3 class="md:text-lg text-md my-4">Real-time demo</h3>
+          <p class="lg:text-base text-md text-secondary mb-4 lg:px-16">
+            We shape your ideas in real-time to test business assumptions.
+          </p>
+        </div>
+      </Card>
+
+      <Card className="h-fit md:w-1/3 lg:mx-0 w-11/12 px-14 md:px-0 md:mr-2">
+        <div
+          class="w-full border-b-card mr-4 rounded-t-3xl lg:text-7xl text-5xl py-4 px-10 flex justify-center items-center"
+        >
+          <h3 class="text-rose px-2">100%</h3>
+        </div>
+        <div
+          class="w-full border-b-card md:px-4 py-4 mr-4 lg:text-lg text-md uppercase flex justify-center items-center"
+        >
+          Quicker in testing business assumptions
+        </div>
+        <div class="w-full mr-4 rounded-b-3xl">
+          <h3 class="md:text-lg text-md my-4">Ready-to-use MVP</h3>
+          <p class="lg:text-base text-md text-secondary mb-4 lg:px-16">
+            We proivide an intuitive, flexible and ready-to-scale solution.
+          </p>
+        </div>
+      </Card>
+    </div>
+  </Section>
+
+  <Section className="w-full h-full lg:px-12 m-auto rounded-none b-0" color="">
+    <div
+      class="bg-secondary flex justify-center items-center border rounded-full w-48 h-48 mx-auto -mt-2"
+    >
+      <div
+        class="btn-prototype text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full"
+      >
+        <h3 class="md:text-md">develop</h3>
+      </div>
+    </div>
+  </Section>
 </Layout>
 
 <style>
-	.title > span {
-		background: linear-gradient(90deg, #78E7C5, #9DFFAD);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
+  .title > span {
+    background: linear-gradient(90deg, #78e7c5, #9dffad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
     .circle {
         border-radius: 100%;
@@ -55,11 +151,11 @@ import ShpereBackground from '../components/enterprise/ShpereBackground/ShpereBa
         position: relative;
     }
 
-    .main-circle {
-        background: linear-gradient(90deg, #78e7c5, #9dffad);
-        color: black;
-        border: 1px solid #FFFFFF;
-    }
+  .main-circle {
+    background: linear-gradient(90deg, #78e7c5, #9dffad);
+    color: black;
+    border: 1px solid #ffffff;
+  }
 
     .main-circle-background {
         background: linear-gradient(90deg, #58B9BF, #1D6957 );
@@ -85,4 +181,16 @@ import ShpereBackground from '../components/enterprise/ShpereBackground/ShpereBa
         background: linear-gradient(90deg,  #17373d, #17373d29); 
     }
 
+  .btn-prototype {
+    background: linear-gradient(180deg, #ffffff 21.07%, #bbd8f2 100%);
+  }
+
+  .border-b-card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .container-card {
+    background-repeat: no-repeat;
+    background-position-y: 5rem;
+  }
 </style>
