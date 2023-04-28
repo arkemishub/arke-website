@@ -7,7 +7,7 @@ import ShpereBackground from '../components/enterprise/ShpereBackground/ShpereBa
 <Layout>
 	<GradientBackground />
     <ShpereBackground />
-	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40">
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 px-4">
 		The ultimate framework to<br/>
 		<span>level-up</span> your business method
 	</h1>
@@ -16,15 +16,25 @@ import ShpereBackground from '../components/enterprise/ShpereBackground/ShpereBa
 		creativity and innovation.
 	</h2>
     <div class="w-full flex justify-center items-center sm:mt-10 mt-28">
-        <div class="circle md:p-16 p-12 md:left-5 sm:left-6 left-24 bottom-32 sm:bottom-0"><p class="absolute">EXPLORE</p></div>
-        <div class="circle md:p-20 p-16 md:left-3 sm:left-5 left-10 z-10 bottom-14 sm:bottom-0"><p class="absolute">PLAN</p></div>
+        <div class="circle explore-circle md:p-14 p-12 md:left-5 sm:left-6 left-24 bottom-32 sm:bottom-0"><p class="absolute">EXPLORE</p></div>
+        <div class="circle plan-circle md:p-20 p-16 md:left-3 sm:left-5 left-10 z-10 bottom-14 sm:bottom-0"><p class="absolute">PLAN</p></div>
         <div class="circle main-circle-background md:p-12 p-8 z-20">
         <div class="circle main-circle md:p-20 p-16 drop-shadow-lg"><p class="absolute">DEVELOP</p></div>
         </div>
-        <div class="circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0"><p class="absolute">TEST</p></div>
-        <div class="circle md:p-16 p-12 md:right-5 sm:right-6 right-24 bottom-32 sm:bottom-0"><p class="absolute">EVOLVE</p></div>
+        <div class="circle test-circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0"><p class="absolute">TEST</p></div>
+        <div class="circle evolve-circle md:p-14 p-12 md:right-5 sm:right-6 right-24 bottom-32 sm:bottom-0"><p class="absolute">EVOLVE</p></div>
     </div>
-	<div class="h-80"/>
+	<div class="h-20 md:h-40"/>
+    <div class="choose-arke-section flex flex-col items-center md:py-32 pt-20 pb-32">
+        <h3
+        class="title text-2xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+      >
+      Choose <span class="px-3">Arke</span> for maximum value
+      </h3>
+      <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary md:w-3/6">
+        The open-source Agile framework designed to ensure an efficient prototyping and management process, minimize development risks and accelerate product delivery.
+      </h2>
+    </div>
 </Layout>
 
 <style>
@@ -43,8 +53,6 @@ import ShpereBackground from '../components/enterprise/ShpereBackground/ShpereBa
         justify-content: center;
         align-items: center;
         position: relative;
-        border: 1px solid rgba(94, 229, 193, 0.244);
-        background: linear-gradient(45deg, #011114, #06534eb6); 
     }
 
     .main-circle {
@@ -56,4 +64,25 @@ import ShpereBackground from '../components/enterprise/ShpereBackground/ShpereBa
     .main-circle-background {
         background: linear-gradient(90deg, #58B9BF, #1D6957 );
     }
+
+    .choose-arke-section {
+        background-color: #ffffff16;
+    }
+
+    .explore-circle{
+        background: linear-gradient(60deg,  #080f10, #315056e2); 
+    }
+
+    .plan-circle{
+        background: linear-gradient(160deg,  #315056, #17373db2); 
+    }
+
+    .test-circle{
+        background: linear-gradient(180deg,  #17373d, #17373db2); 
+    }
+
+    .evolve-circle{
+        background: linear-gradient(90deg,  #17373d, #17373d29); 
+    }
+
 </style>
