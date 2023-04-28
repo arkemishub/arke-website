@@ -38,7 +38,7 @@ import Circle from "../components/ui/Circle.astro";
       <h2 class="px-6 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary md:w-4/6 ">
         The open-source Agile framework designed to ensure an efficient prototyping and management process, minimize development risks and accelerate product delivery.
       </h2>
-      <div class="prototype-circle-background p-6 absolute rounded-full w-fit h-fit lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-60 mt-20 z-10">
+      <div class="prototype-circle-background p-3 absolute rounded-full w-fit h-fit lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-60 mt-20 z-10">
       <Circle title="Prototype" className={'prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full'} />
       </div>
 
@@ -122,10 +122,10 @@ import Circle from "../components/ui/Circle.astro";
   </Section>
 
   <Section className="choose-arke-section w-full h-full lg:px-12 m-auto rounded-none b-0 flex flex-col items-center relative" color={'transparent'}>
-    <div class="p-6 rounded-full choose-develop-section flex justify-center items-center -top-20 lg:-top-24 absolute">
+    <div class="p-3 rounded-full choose-develop-section flex justify-center items-center -top-20 lg:-top-24 absolute">
     <Circle title="develop" className={' develop-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
     </div>
-    <div class="z-10">
+    <div>
         <div class="lg:pt-36 pt-24">
             <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold">
              Identity & Quality all-in-one
@@ -135,6 +135,45 @@ import Circle from "../components/ui/Circle.astro";
             >
               Unleash your product's true potential and achieve outstanding results that your competitors could never reach.
             </h2>
+        </div>
+        <div class="mt-16 flex flex-col lg:flex-row gap-4">
+            <div class="lg:w-3/6 mx-4">
+                <Card className={'flex flex-col sm:flex-row justify-around'}>
+                    <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
+                        <h1 class="text-7xl font-medium text-green">+10000</h1>
+                        <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
+                    </div>
+                    <div class="border-t sm:border-t-0 sm:border-l border-l-secondary border-t-secondary px-4 py-4 sm:py-8 sm:w-3/6 text-left">
+                        <p class="text-lg">Custom design</p>
+                        <p class="text-base text-secondary mt-4">We adapt your brand identity or create one from scratch.</p>
+                    </div>
+                </Card>
+                <Card className={'flex justify-around mt-4'}>
+                    <div class="p-8 w-3/6">
+                        <h1 class="text-7xl font-medium text-blue">x2</h1>
+                        <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
+                    </div>
+                    <div class="border-l border-l-secondary px-4 py-8 w-3/6 text-left">
+                        <p class="text-lg">Efficient development</p>
+                        <p class="text-base text-secondary mt-4">We turn your prototype into a product that boosts your business performance.</p>
+                    </div>
+                </Card>
+                <Card className={'flex justify-around mt-4'}>
+                    <div class="p-8 w-3/6">
+                        <h1 class="text-7xl font-medium text-rose">100%</h1>
+                        <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
+                    </div>
+                    <div class="border-l border-l-secondary px-4 py-8 w-3/6 text-left">
+                        <p class="text-lg">Continuos delivery</p>
+                        <p class="text-base text-secondary mt-4">We deliver a secure, high-performing, scalable product at each stage.</p>
+                    </div>
+                </Card>
+            </div>
+            <div class="lg:w-3/6">
+                <Card>
+                    <p>???</p>
+                </Card>
+            </div>
         </div>
     </div>
    
