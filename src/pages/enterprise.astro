@@ -38,12 +38,14 @@ import Circle from "../components/ui/Circle.astro";
       <h2 class="px-6 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary md:w-4/6 ">
         The open-source Agile framework designed to ensure an efficient prototyping and management process, minimize development risks and accelerate product delivery.
       </h2>
-      <Circle title="Prototype" className={'absolute prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-60 mt-20 z-10'} />
-    
+      <div class="prototype-circle-background p-6 absolute rounded-full w-fit h-fit lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-60 mt-20 z-10">
+      <Circle title="Prototype" className={'prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full'} />
+      </div>
+
     </div>
  
   <Section
-    className="w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1 lg:pt-36 md:pt-24 pt-20"
+    className="w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1 lg:pt-40 sm:pt-32 pt-28"
     color={"transparent"}
   >
   <div>
@@ -120,7 +122,7 @@ import Circle from "../components/ui/Circle.astro";
   </Section>
 
   <Section className="choose-arke-section w-full h-full lg:px-12 m-auto rounded-none b-0 flex flex-col items-center relative" color={'transparent'}>
-    <div class="p-4 rounded-full choose-develop-section flex justify-center items-center -top-24 absolute">
+    <div class="p-6 rounded-full choose-develop-section flex justify-center items-center -top-24 absolute">
     <Circle title="develop" className={' prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
     </div>
     <div class="z-10 h-36">
@@ -161,6 +163,10 @@ import Circle from "../components/ui/Circle.astro";
         background-color: #2a2b376d;
     }
 
+    .choose-develop-section {
+        background-color: #2a2b37ea;
+    }
+
     .explore-circle{
         background: linear-gradient(60deg,  #080f10, #315056e2); 
     }
@@ -179,6 +185,10 @@ import Circle from "../components/ui/Circle.astro";
 
   .prototype-circle {
     background: linear-gradient(180deg, #ffffff 21.07%, #bbd8f2 100%);
+  }
+
+  .prototype-circle-background{
+    background-color: #0a0b12;
   }
 
   .border-b-card {
