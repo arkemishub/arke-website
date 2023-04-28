@@ -5,6 +5,7 @@ import GradientBackground from "../components/ui/GradientBackground.astro";
 import ShpereBackground from "../components/enterprise/ShpereBackground/ShpereBackground.astro";
 import Card from "../components/ui/Card.astro";
 import CirclesBackground from "../components/enterprise/CirclesBackground/CirclesBackground.astro";
+import Circle from "../components/ui/Circle.astro";
 ---
 
 <Layout>
@@ -19,13 +20,13 @@ import CirclesBackground from "../components/enterprise/CirclesBackground/Circle
 		creativity and innovation.
 	</h2>
     <Section className="w-full flex justify-center items-center sm:mt-10 mt-28" color={'transparent'}>
-        <div class="circle explore-circle md:p-14 p-12 md:left-5 sm:left-6 left-24 bottom-32 sm:bottom-0"><p class="absolute">EXPLORE</p></div>
-        <div class="circle plan-circle md:p-20 p-16 md:left-3 sm:left-5 left-10 z-10 bottom-14 sm:bottom-0"><p class="absolute">PLAN</p></div>
+        <Circle title='EXPLORE' className={'explore-circle md:p-14 p-12 md:left-5 sm:left-6 left-24 bottom-32 sm:bottom-0'} />
+        <Circle title='PLAN' className={'plan-circle md:p-20 p-16 md:left-3 sm:left-5 left-10 z-10 bottom-14 sm:bottom-0'} />
         <div class="circle main-circle-background md:p-12 p-8 z-20">
-        <div class="circle main-circle md:p-20 p-16 drop-shadow-lg"><p class="absolute">DEVELOP</p></div>
-        </div>
-        <div class="circle test-circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0"><p class="absolute">TEST</p></div>
-        <div class="circle evolve-circle md:p-14 p-12 md:right-5 sm:right-6 right-24 bottom-32 sm:bottom-0"><p class="absolute">EVOLVE</p></div>
+           <Circle title='DEVELOP' className={'develop-circle md:p-20 p-16 drop-shadow-lg'} />
+            </div>
+        <Circle title='TEST' className={'test-circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0'} />
+        <Circle title='EVOLVE' className={'evolve-circle md:p-14 p-12 md:right-5 sm:right-6 right-24 bottom-32 sm:bottom-0'} />
     </Section>
 	<div class="h-5 md:h-24"/>
     <div class="choose-arke-section flex flex-col items-center md:h-96 pt-20 pb-32 relative">
@@ -153,7 +154,7 @@ import CirclesBackground from "../components/enterprise/CirclesBackground/Circle
         position: relative;
     }
 
-  .main-circle {
+  .develop-circle {
     background: linear-gradient(90deg, #78e7c5, #9dffad);
     color: black;
     border: 1px solid #ffffff;
