@@ -9,7 +9,7 @@ export interface Props {
 const { className, color = 'green', style, position = 'center' } = Astro.props;
 ---
 
-<div class="relative overflow-hidden">
+<div class={`relative ${color !== 'transparent' && 'overflow-hidden'}`}>
     <div class={`border-gradient-${position} ${color}`}/>
     <div class={`border-light-${position} light-${color}`}/>
     <div class={twMerge(color !== 'transparent' && "section", className)} style={style}>
