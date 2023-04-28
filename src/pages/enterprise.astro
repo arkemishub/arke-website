@@ -2,15 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/ui/Section.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
-import ShpereBackground from "../components/enterprise/ShpereBackground/ShpereBackground.astro";
 import Card from "../components/ui/Card.astro";
-import CirclesBackground from "../components/enterprise/CirclesBackground/CirclesBackground.astro";
 import Circle from "../components/ui/Circle.astro";
 ---
 
 <Layout>
 	<GradientBackground />
-    <ShpereBackground />
+    <Section className="flex flex-col items-center bg-[url('illustrations/shpere.png')] container-shpere pb-24" color={'transparent'}>
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 px-4">
 		The ultimate framework to<br/>
 		<span>level-up</span> your business method
@@ -27,8 +25,9 @@ import Circle from "../components/ui/Circle.astro";
             </div>
         <Circle title='TEST' className={'test-circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0'} />
         <Circle title='EVOLVE' className={'evolve-circle md:p-14 p-12 md:right-5 sm:right-6 right-24 bottom-32 sm:bottom-0'} />
+
     </Section>
-	<div class="h-5 md:h-24"/>
+    </Section>
     <div class="choose-arke-section flex flex-col items-center md:h-96 pt-20 pb-32 relative">
    
         <h3
@@ -120,12 +119,13 @@ import Circle from "../components/ui/Circle.astro";
     </div>
   </Section>
 
-  <Section className="w-full h-full lg:px-12 m-auto rounded-none b-0" color={'transparent'}>
-    <div
-      class="bg-secondary flex justify-center items-center border rounded-full w-48 h-48 mx-auto mt-2"
-    >
-    <Circle title="develop" className={'prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full'} />
+  <Section className="choose-arke-section w-full h-full lg:px-12 m-auto rounded-none b-0 flex flex-col items-center relative" color={'transparent'}>
+    <div class="p-4 rounded-full choose-develop-section flex justify-center items-center -top-24 absolute">
+    <Circle title="develop" className={' prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
     </div>
+    <div class="z-10 h-36">
+    </div>
+   
   </Section>
 </Layout>
 
@@ -188,5 +188,41 @@ import Circle from "../components/ui/Circle.astro";
   .container-card {
     background-repeat: no-repeat;
     background-position-y: 5rem;
+  }
+
+  @media screen and (min-width: 1024px){
+    .container-shpere {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -45px;
+    background-size: auto;
+  }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    .container-shpere {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -130px;
+    background-size: auto;
+  }
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 768px){
+    .container-shpere {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -270px;
+    background-size: auto;
+  }
+  }
+
+  @media screen and (max-width: 640px){
+    .container-shpere {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -185px;
+    background-size: auto;
+  }
   }
 </style>
