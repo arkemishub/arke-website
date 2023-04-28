@@ -21,7 +21,7 @@ import Circle from "../components/ui/Circle.astro";
         <Circle title='EXPLORE' className={'explore-circle md:p-14 p-12 md:left-5 sm:left-6 left-24 bottom-32 sm:bottom-0'} />
         <Circle title='PLAN' className={'plan-circle md:p-20 p-16 md:left-3 sm:left-5 left-10 z-10 bottom-14 sm:bottom-0'} />
         <div class="circle main-circle-background md:p-12 p-8 z-20">
-           <Circle title='DEVELOP' className={'develop-circle md:p-20 p-16 drop-shadow-lg'} />
+           <Circle title='DEVELOP' className={'main-circle md:p-20 p-16 drop-shadow-lg'} />
             </div>
         <Circle title='TEST' className={'test-circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0'} />
         <Circle title='EVOLVE' className={'evolve-circle md:p-14 p-12 md:right-5 sm:right-6 right-24 bottom-32 sm:bottom-0'} />
@@ -122,10 +122,20 @@ import Circle from "../components/ui/Circle.astro";
   </Section>
 
   <Section className="choose-arke-section w-full h-full lg:px-12 m-auto rounded-none b-0 flex flex-col items-center relative" color={'transparent'}>
-    <div class="p-6 rounded-full choose-develop-section flex justify-center items-center -top-24 absolute">
-    <Circle title="develop" className={' prototype-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
+    <div class="p-6 rounded-full choose-develop-section flex justify-center items-center -top-20 lg:-top-24 absolute">
+    <Circle title="develop" className={' develop-circle text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
     </div>
-    <div class="z-10 h-36">
+    <div class="z-10">
+        <div class="lg:pt-36 pt-24">
+            <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold">
+             Identity & Quality all-in-one
+            </h3>
+            <h2
+              class="text-md lg:text-2xl max-sm:px-10 md:px-40 mt-4 lg:mt-12 text-secondary"
+            >
+              Unleash your product's true potential and achieve outstanding results that your competitors could never reach.
+            </h2>
+        </div>
     </div>
    
   </Section>
@@ -149,7 +159,7 @@ import Circle from "../components/ui/Circle.astro";
         position: relative;
     }
 
-  .develop-circle {
+  .main-circle {
     background: linear-gradient(90deg, #78e7c5, #9dffad);
     color: black;
     border: 1px solid #ffffff;
@@ -164,7 +174,7 @@ import Circle from "../components/ui/Circle.astro";
     }
 
     .choose-develop-section {
-        background-color: #2a2b37ea;
+        background-color: #2a2b37;
     }
 
     .explore-circle{
@@ -189,6 +199,10 @@ import Circle from "../components/ui/Circle.astro";
 
   .prototype-circle-background{
     background-color: #0a0b12;
+  }
+
+  .develop-circle{
+    background: linear-gradient(180deg, #ffffff 21.07%, #B2FFBF 100%);
   }
 
   .border-b-card {
