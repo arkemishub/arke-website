@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/ui/Section.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
+import ShpereBackground from "../components/enterprise/ShpereBackground/ShpereBackground.astro";
 import Card from "../components/ui/Card.astro";
 ---
 
@@ -17,8 +18,38 @@ import Card from "../components/ui/Card.astro";
     Optimize digital processes in an integrated, scalable and efficient
     ecosystem that fosters quality, creativity and innovation.
   </h2>
+  <div class="w-full flex justify-center items-center sm:mt-10 mt-28">
+    <div
+      class="circle md:p-16 p-12 md:left-5 sm:left-6 left-24 bottom-36 sm:bottom-0"
+    >
+      <p class="absolute">EXPLORE</p>
+    </div>
+    <div
+      class="circle md:p-20 p-16 md:left-3 sm:left-5 left-10 z-10 bottom-14 sm:bottom-0"
+    >
+      <p class="absolute">PLAN</p>
+    </div>
+    <div class="circle main-circle-background md:p-12 p-8 z-20">
+      <div class="circle main-circle md:p-20 p-16 drop-shadow-lg">
+        <p class="absolute">DEVELOP</p>
+      </div>
+    </div>
+    <div
+      class="circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0"
+    >
+      <p class="absolute">TEST</p>
+    </div>
+    <div
+      class="circle md:p-16 p-12 md:right-5 sm:right-6 right-24 bottom-36 sm:bottom-0"
+    >
+      <p class="absolute">EVOLVE</p>
+    </div>
+  </div>
   <div class="h-80"></div>
-  <Section className="w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1" color="">
+  <Section
+    className="w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1"
+    color=""
+  >
     <div class="flex justify-center">
       <div
         class="btn-prototype text-black w-28 h-28 mb-10 mt-20 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full"
@@ -99,7 +130,9 @@ import Card from "../components/ui/Card.astro";
   </Section>
 
   <Section className="w-full h-full lg:px-12 m-auto rounded-none b-0" color="">
-    <div class="bg-secondary flex justify-center items-center border rounded-full w-48 h-48 mx-auto -mt-2">
+    <div
+      class="bg-secondary flex justify-center items-center border rounded-full w-48 h-48 mx-auto -mt-2"
+    >
       <div
         class="btn-prototype text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full"
       >
@@ -116,12 +149,37 @@ import Card from "../components/ui/Card.astro";
     -webkit-text-fill-color: transparent;
   }
 
+  .circle {
+    border-radius: 100%;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgba(94, 229, 193, 0.244);
+    background: linear-gradient(45deg, #011114, #06534eb6);
+  }
+
+  .main-circle {
+    background: linear-gradient(90deg, #78e7c5, #9dffad);
+    color: black;
+    border: 1px solid #ffffff;
+  }
+
+  .main-circle-background {
+    background: linear-gradient(90deg, #58b9bf, #1d6957);
+  }
+
   .btn-prototype {
     background: linear-gradient(180deg, #ffffff 21.07%, #bbd8f2 100%);
   }
+
   .border-b-card {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
+
   .container-card {
     background-repeat: no-repeat;
     background-position-y: 5rem;
