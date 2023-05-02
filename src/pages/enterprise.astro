@@ -199,9 +199,9 @@ import Circle from "../components/ui/Circle.astro";
 
             </div>
             <div class="w-full">
-                <Card className={'flex flex-col sm:flex-row justify-around mt-4 rounded-none border-none'}>
+                <Card className={'flex flex-col sm:flex-row justify-around lg:mt-4 rounded-none border-none px-6 rectangle-card'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl font-medium text-rose">+10000</h1>
+                        <h1 class="text-7xl font-semibold text-rose">+10000</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -209,9 +209,9 @@ import Circle from "../components/ui/Circle.astro";
                         <p class="text-base text-secondary mt-4">We provide technical assistance at every stage of your project.</p>
                     </div>
                 </Card>
-                <Card className={'flex flex-col sm:flex-row justify-around mt-4 rounded-none border-none'}>
+                <Card className={'flex flex-col sm:flex-row justify-around lg:mt-4 rounded-none border-none px-6 rectangle-card'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl font-medium text-green">x2</h1>
+                        <h1 class="text-7xl font-semibold text-green">x2</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -219,9 +219,9 @@ import Circle from "../components/ui/Circle.astro";
                         <p class="text-base text-secondary mt-4">We expand your product beyond the limits of innovation.</p>
                     </div>
                 </Card>
-                <Card className={'flex flex-col sm:flex-row justify-around mt-4 rounded-none border-none'}>
+                <Card className={'flex flex-col sm:flex-row justify-around lg:mt-4 rounded-none border-none px-6 rectangle-card'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl font-medium text-blue">100%</h1>
+                        <h1 class="text-7xl font-semibold text-blue">100%</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -317,6 +317,10 @@ import Circle from "../components/ui/Circle.astro";
     background-position-y: 90%;
     background-position-x: center;
     background-size: auto;
+  }
+
+  .rectangle-card{
+    background: linear-gradient(170deg,  #2a2b371c, #2a2b371c, #fff2f21d); 
   }
   @media screen and (min-width: 1024px){
     .container-shpere {
