@@ -179,10 +179,12 @@ import Circle from "../components/ui/Circle.astro";
    
   </Section>
 
-  <Section className={'h-96 flex flex-col items-center'} color={'transparent'}>
-    <div class="prototype-circle-background p-3 rounded-full flex justify-center items-center -top-16 lg:-top-20 absolute">
+  <Section className={'h-96 flex flex-col items-center relative'} color={'transparent'}>
+    <div class="prototype-circle-background p-3 rounded-full flex justify-center items-center w-fit absolute lg:-top-20 -top-16">
         <Circle title="expand" className={' rose-gradient text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
         </div>
+    <div class="absolute top-0 flex justify-center items-center lg:w-4/5 w-full pb-96 bg-[url('illustrations/circles.png')] container-circles" />
+    <div class="h-72 w-full"></div>
 </Section>
 </Layout>
 
@@ -264,6 +266,12 @@ import Circle from "../components/ui/Circle.astro";
     background-position-y: 5rem;
   }
 
+  .container-circles{
+    background-repeat: no-repeat;
+    background-position-y: 90%;
+    background-position-x: center;
+    background-size: auto;
+  }
   @media screen and (min-width: 1024px){
     .container-shpere {
     background-repeat: no-repeat;
