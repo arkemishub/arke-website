@@ -136,7 +136,7 @@ import Circle from "../components/ui/Circle.astro";
               Unleash your product's true potential and achieve outstanding results that your competitors could never reach.
             </h2>
         </div>
-        <div class="mt-16 flex flex-col lg:flex-row gap-4 mt-8 mx-4">
+        <div class="mt-16 flex flex-col lg:flex-row gap-4 mt-12 mx-4">
             <div class="lg:w-3/6">
                 <Card className={'flex flex-col sm:flex-row justify-around'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
@@ -179,7 +179,7 @@ import Circle from "../components/ui/Circle.astro";
    
   </Section>
 
-  <Section className={'h-96 flex flex-col items-center relative'} color={'transparent'}>
+  <Section className={'flex flex-col items-center relative'} color={'transparent'}>
     <div class="prototype-circle-background p-3 rounded-full flex justify-center items-center w-fit absolute lg:-top-20 -top-16">
         <Circle title="expand" className={' rose-gradient text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
         </div>
@@ -194,7 +194,43 @@ import Circle from "../components/ui/Circle.astro";
         Turn collaboration into innovation and follow the path of continuous <br/> improvement for long-term business thriving
         </h2>
         </div>
-    <div class="h-72 w-full"></div>
+        <div class="flex flex-col md:flex-row justify-between py-12 w-screen">
+            <div class="w-full">
+
+            </div>
+            <div class="w-full">
+                <Card className={'flex flex-col sm:flex-row justify-around mt-4 rounded-none border-none'}>
+                    <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
+                        <h1 class="text-7xl font-medium text-rose">+10000</h1>
+                        <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
+                    </div>
+                    <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
+                        <p class="text-lg">Seamless support</p>
+                        <p class="text-base text-secondary mt-4">We provide technical assistance at every stage of your project.</p>
+                    </div>
+                </Card>
+                <Card className={'flex flex-col sm:flex-row justify-around mt-4 rounded-none border-none'}>
+                    <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
+                        <h1 class="text-7xl font-medium text-green">x2</h1>
+                        <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
+                    </div>
+                    <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
+                        <p class="text-lg">Limitless Integration</p>
+                        <p class="text-base text-secondary mt-4">We expand your product beyond the limits of innovation.</p>
+                    </div>
+                </Card>
+                <Card className={'flex flex-col sm:flex-row justify-around mt-4 rounded-none border-none'}>
+                    <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
+                        <h1 class="text-7xl font-medium text-blue">100%</h1>
+                        <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
+                    </div>
+                    <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
+                        <p class="text-lg">Reliable Manteinance</p>
+                        <p class="text-base text-secondary mt-4">We keep your product up-to-date and state-of-the-art.</p>
+                    </div>
+                </Card>
+            </div>
+        </div>
 </Section>
 </Layout>
 
