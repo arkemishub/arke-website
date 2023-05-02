@@ -179,7 +179,7 @@ import Circle from "../components/ui/Circle.astro";
    
   </Section>
 
-  <Section className={'flex flex-col items-center relative'} color={'transparent'}>
+  <Section className={'flex flex-col items-center relative pb-12'} color={'transparent'}>
     <div class="prototype-circle-background p-3 rounded-full flex justify-center items-center w-fit absolute lg:-top-20 -top-16">
         <Circle title="expand" className={' rose-gradient text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
         </div>
@@ -194,7 +194,7 @@ import Circle from "../components/ui/Circle.astro";
         Turn collaboration into innovation and follow the path of continuous <br/> improvement for long-term business thriving
         </h2>
         </div>
-        <div class="flex flex-col md:flex-row justify-between py-12 w-screen">
+        <div class="flex flex-col lg:flex-row justify-between pt-12 w-screen">
             <div class="w-full">
 
             </div>
@@ -231,6 +231,22 @@ import Circle from "../components/ui/Circle.astro";
                 </Card>
             </div>
         </div>
+</Section>
+
+<Section className={'flex flex-col items-center pt-24 pb-40 z-10 relative'} color={'transparent'}>
+    <h3
+    class="title text-2xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+  >
+  Experience the <span class="px-3">open-source</span> power
+  </h3>
+  <h2 class="px-6 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary md:w-4/6 ">
+    Benefit from a constantly evolving framework and experience the perfect balance of privacy and open-source to elevate your business.
+  </h2>
+</Section>
+
+<Section className={'relative h-72 flex flex-col items-center'} color={'transparent'}>
+    <Circle title="start the change" className={"text-white w-28 h-28 border border-black lg:h-40 lg:w-40 uppercase flex justify-center items-center bg-[url('illustrations/Ellipse.png')] ellipse-background rounded-full z-10 absolute md:-top-20 -top-16"} />
+    <div class=" h-60 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-full" />
 </Section>
 </Layout>
 
@@ -319,8 +335,20 @@ import Circle from "../components/ui/Circle.astro";
     background-size: auto;
   }
 
+  .circles-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+
   .rectangle-card{
     background: linear-gradient(170deg,  #2a2b371c, #2a2b371c, #fff2f21d); 
+  }
+
+  .ellipse-background{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   @media screen and (min-width: 1024px){
     .container-shpere {
