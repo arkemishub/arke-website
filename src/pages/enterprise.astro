@@ -246,11 +246,14 @@ import Circle from "../components/ui/Circle.astro";
   </h2>
 </Section>
 
-<Section className={'relative h-72 flex flex-col items-center'} color={'transparent'}>
+<Section className={'relative flex flex-col items-center'} color={'transparent'}>
     <Circle title="start the change" className={"text-white w-28 h-28 border border-black lg:h-40 lg:w-40 uppercase flex justify-center items-center bg-[url('illustrations/Ellipse.png')] ellipse-background rounded-full z-10 absolute md:-top-20 -top-16"} />
-    <div class=" h-60 lg:pt-64 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-full" />
+    <div class=" h-60 lg:pt-64 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-72" />
 </Section>
 
+<Section className="bg-[url('illustrations/rectangleRounded.png')] final-background z-10 h-96 w-screen" color={'transparent'}>
+    <h1 class="big-one">one</h1>
+</Section>
 </Layout>
 
 <style>
@@ -356,6 +359,20 @@ import Circle from "../components/ui/Circle.astro";
 
   .border-card-color {
     border-color:rgba(255, 255, 255, 0.1);
+  }
+
+  .final-background {
+    background-size: 100%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+
+  .big-one {
+    font-size: 200px;
+    font-weight: bolder;
+    background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   @media screen and (min-width: 1024px){
     .container-shpere {
