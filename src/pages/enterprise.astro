@@ -20,7 +20,7 @@ import Circle from "../components/ui/Circle.astro";
     <Section className="w-full flex justify-center items-center sm:mt-10 mt-28" color={'transparent'}>
         <Circle title='EXPLORE' className={'explore-circle md:p-14 p-12 md:left-5 sm:left-6 left-24 bottom-32 sm:bottom-0'} />
         <Circle title='PLAN' className={'plan-circle md:p-20 p-16 md:left-3 sm:left-5 left-10 z-10 bottom-14 sm:bottom-0'} />
-        <div class="circle main-circle-background md:p-12 p-8 z-20">
+        <div class="circle develop-circle-background md:p-12 p-8 z-20">
            <Circle title='DEVELOP' className={'develop-circle md:p-20 p-16 drop-shadow-lg'} />
             </div>
         <Circle title='TEST' className={'test-circle md:p-20 p-16 md:right-3 sm:right-5 right-10 z-10 bottom-14 sm:bottom-0'} />
@@ -29,7 +29,7 @@ import Circle from "../components/ui/Circle.astro";
     </Section>
     </Section>
 
-    <Section className="choose-arke-section flex flex-col items-center md:h-96 pt-20 pb-32 relative" color={'transparent'}>
+    <Section className="section-background flex flex-col items-center md:h-96 pt-20 pb-32 relative" color={'transparent'}>
    
         <h3
         class="title text-2xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
@@ -39,7 +39,7 @@ import Circle from "../components/ui/Circle.astro";
       <h2 class="px-6 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary md:w-4/6 ">
         The open-source Agile framework designed to ensure an efficient prototyping and management process, minimize development risks and accelerate product delivery.
       </h2>
-      <div class="prototype-circle-background p-3 absolute rounded-full w-fit h-fit lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-60 mt-20 z-10">
+      <div class="prototype-circle-background p-3 absolute rounded-full w-fit h-fit lg:top-72 lg:mt-8 md:mt-24 sm:mt-20 sm:top-60 top-64 mt-20 z-10">
       <Circle title="prototype" className={'blue-gradient text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full'} />
       </div>
 
@@ -122,8 +122,8 @@ import Circle from "../components/ui/Circle.astro";
     </div>
   </Section>
 
-  <Section className="choose-arke-section w-full h-full lg:px-12 m-auto rounded-none b-0 flex flex-col items-center relative" color={'transparent'}>
-    <div class="p-3 rounded-full choose-develop-section flex justify-center items-center -top-20 lg:-top-24 absolute">
+  <Section className="section-background w-full h-full lg:px-12 m-auto rounded-none b-0 flex flex-col items-center relative" color={'transparent'}>
+    <div class="p-3 rounded-full choose-develop-section flex justify-center items-center -top-16 lg:-top-24 absolute">
     <Circle title="develop" className={' green-gradient text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
     </div>
     <div class="lg:py-36 py-24">
@@ -247,7 +247,7 @@ import Circle from "../components/ui/Circle.astro";
 
 <Section className={'relative h-72 flex flex-col items-center'} color={'transparent'}>
     <Circle title="start the change" className={"text-white w-28 h-28 border border-black lg:h-40 lg:w-40 uppercase flex justify-center items-center bg-[url('illustrations/Ellipse.png')] ellipse-background rounded-full z-10 absolute md:-top-20 -top-16"} />
-    <div class=" h-60 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-full" />
+    <div class=" h-60 lg:pt-64 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-full" />
 </Section>
 
 </Layout>
@@ -289,11 +289,11 @@ import Circle from "../components/ui/Circle.astro";
     border: 1px solid #ffffff;
   }
 
-    .main-circle-background {
+    .develop-circle-background {
         background: linear-gradient(90deg, #58B9BF, #1D6957 );
     }
 
-    .choose-arke-section {
+    .section-background {
         background-color: #2a2b376d;
     }
 
