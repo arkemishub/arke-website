@@ -247,12 +247,14 @@ import Circle from "../components/ui/Circle.astro";
 </Section>
 
 <Section className={'relative flex flex-col items-center'} color={'transparent'}>
-    <Circle title="start the change" className={"text-white w-28 h-28 border border-black lg:h-40 lg:w-40 uppercase flex justify-center items-center bg-[url('illustrations/Ellipse.png')] ellipse-background rounded-full z-10 absolute md:-top-20 -top-16"} />
+    <Circle title="start the change" className={"text-white w-28 h-28 border border-black lg:h-40 lg:w-40 uppercase flex justify-center items-center bg-[url('illustrations/Ellipse.png')] ellipse-background rounded-full z-20 absolute md:-top-20 -top-16"} />
     <div class=" h-60 lg:pt-64 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-72" />
 </Section>
 
-<Section className="bg-[url('illustrations/rectangleRounded.png')] final-background z-10 h-96 w-screen" color={'transparent'}>
-    <h1 class="big-one">one</h1>
+<Section className="z-10 w-screen relative flex flex-col items-center" color={'transparent'}>
+    <h1 class="big-one z-30">one</h1>
+    <div class="bg-[url('illustrations/greenSemicircle.svg')] final-background h-96 w-full absolute z-20" />
+    <div class="bg-[url('illustrations/transparentSemicircle.svg')] final-background h-96 w-full absolute z-10" />
 </Section>
 </Layout>
 
@@ -399,6 +401,14 @@ import Circle from "../components/ui/Circle.astro";
     background-position-y: -270px;
     background-size: auto;
   }
+
+  .big-one {
+    font-size: 150px;
+    font-weight: bolder;
+    background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   }
 
   @media screen and (max-width: 640px){
@@ -407,6 +417,14 @@ import Circle from "../components/ui/Circle.astro";
     background-position-x: center;
     background-position-y: -185px;
     background-size: auto;
+  }
+
+  .big-one {
+    font-size: 150px;
+    font-weight: bolder;
+    background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   }
 </style>
