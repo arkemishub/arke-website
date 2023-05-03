@@ -28,7 +28,7 @@ import Circle from "../components/ui/Circle.astro";
 
     </Section>
     </Section>
-    
+
     <Section className="choose-arke-section flex flex-col items-center md:h-96 pt-20 pb-32 relative" color={'transparent'}>
    
         <h3
@@ -144,7 +144,7 @@ import Circle from "../components/ui/Circle.astro";
                         <h1 class="text-7xl font-medium text-green">+10000</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
-                    <div class="border-t sm:border-t-0 sm:border-l border-l-secondary border-t-secondary px-4 py-4 sm:py-8 sm:w-3/6 text-left">
+                    <div class="border-t sm:border-t-0 sm:border-l border-card-color px-4 py-4 sm:py-8 sm:w-3/6 text-left">
                         <p class="text-lg">Custom design</p>
                         <p class="text-base text-secondary mt-4">We adapt your brand identity or create one from scratch.</p>
                     </div>
@@ -154,7 +154,7 @@ import Circle from "../components/ui/Circle.astro";
                         <h1 class="text-7xl font-medium text-blue">x2</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
-                    <div class="border-t sm:border-t-0 sm:border-l border-l-secondary border-t-secondary px-4 py-4 sm:py-8 sm:w-3/6 text-left">
+                    <div class="border-t sm:border-t-0 sm:border-l border-card-color px-4 py-4 sm:py-8 sm:w-3/6 text-left">
                         <p class="text-lg">Efficient development</p>
                         <p class="text-base text-secondary mt-4">We turn your prototype into a product that boosts your business performance.</p>
                     </div>
@@ -164,7 +164,7 @@ import Circle from "../components/ui/Circle.astro";
                         <h1 class="text-7xl font-medium text-rose">100%</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
-                    <div class="border-t sm:border-t-0 sm:border-l border-l-secondary border-t-secondary px-4 py-4 sm:py-8 sm:w-3/6 text-left">
+                    <div class="border-t sm:border-t-0 sm:border-l border-card-color px-4 py-4 sm:py-8 sm:w-3/6 text-left">
                         <p class="text-lg">Continuos delivery</p>
                         <p class="text-base text-secondary mt-4">We deliver a secure, high-performing, scalable product at each stage.</p>
                     </div>
@@ -351,6 +351,10 @@ import Circle from "../components/ui/Circle.astro";
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .border-card-color {
+    border-color:rgba(255, 255, 255, 0.1);
   }
   @media screen and (min-width: 1024px){
     .container-shpere {
