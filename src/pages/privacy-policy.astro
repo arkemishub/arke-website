@@ -91,4 +91,16 @@ import Button from "../components/ui/Button.astro";
 	a:hover {
 		@apply text-green
 	}
+
+    .gray-line {
+        border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 139, 0),
+        rgba(255, 255, 255, 0.167),
+        rgba(0, 0, 139, 0)
+      )
+      1;
+    border-top-width: 1px;
+    border-style: solid;
+    }
 </style>
