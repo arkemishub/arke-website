@@ -69,7 +69,7 @@ import Circle from "../components/ui/Circle.astro";
         <div
           class="w-full border-b-card mr-4 rounded-t-xl lg:text-7xl text-5xl py-4 px-10 flex items-center justify-center"
         >
-          <h3 class="text-blue px-2">+10000</h3>
+          <h3 class="blue-gradient-text px-2">+10000</h3>
         </div>
         <div
           class="w-full border-b-card py-4 md:px-4 mr-4 lg:text-lg text-md uppercase flex justify-center items-center"
@@ -88,7 +88,7 @@ import Circle from "../components/ui/Circle.astro";
         <div
           class="w-full mr-4 border-b-card py-4 rounded-t-3xl lg:text-7xl text-5xl flex justify-center items-center"
         >
-          <h3 class="text-primary">x2</h3>
+          <h3 class="green-gradient-text">x2</h3>
         </div>
         <div
           class="w-full mr-4 border-b-card md:px-4 py-4 lg:text-lg text-md uppercase flex justify-center items-center"
@@ -107,7 +107,7 @@ import Circle from "../components/ui/Circle.astro";
         <div
           class="w-full border-b-card mr-4 rounded-t-3xl lg:text-7xl text-5xl py-4 px-10 flex justify-center items-center"
         >
-          <h3 class="text-rose px-2">100%</h3>
+          <h3 class="rose-gradient-text px-2">100%</h3>
         </div>
         <div
           class="w-full border-b-card md:px-4 py-4 mr-4 lg:text-lg text-md uppercase flex justify-center items-center"
@@ -143,7 +143,7 @@ import Circle from "../components/ui/Circle.astro";
             <div class="lg:w-3/6">
                 <Card className={'flex flex-col sm:flex-row justify-around'}>
                     <div class="p-4 md:pl-2 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl md:text-6xl font-medium text-green">+10000</h1>
+                        <h1 class="text-7xl md:text-6xl font-medium green-gradient-text">+10000</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="border-t sm:border-t-0 sm:border-l border-card-color px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -153,7 +153,7 @@ import Circle from "../components/ui/Circle.astro";
                 </Card>
                 <Card className={'flex flex-col sm:flex-row justify-around mt-4'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl md:text-6xl font-medium text-blue">x2</h1>
+                        <h1 class="text-7xl md:text-6xl font-medium blue-gradient-text">x2</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="border-t sm:border-t-0 sm:border-l border-card-color px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -163,7 +163,7 @@ import Circle from "../components/ui/Circle.astro";
                 </Card>
                 <Card className={'flex flex-col sm:flex-row justify-around mt-4'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl md:text-6xl font-medium text-rose">100%</h1>
+                        <h1 class="text-7xl md:text-6xl font-medium rose-gradient-text">100%</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="border-t sm:border-t-0 sm:border-l border-card-color px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -204,7 +204,7 @@ import Circle from "../components/ui/Circle.astro";
             <div class="w-full">
                 <Card className={'flex flex-col sm:flex-row justify-around lg:mt-4 rounded-none border-none px-6 rectangle-card'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl font-semibold text-rose">+10000</h1>
+                        <h1 class="text-7xl font-semibold rose-gradient-text">+10000</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -214,7 +214,7 @@ import Circle from "../components/ui/Circle.astro";
                 </Card>
                 <Card className={'flex flex-col sm:flex-row justify-around lg:mt-4 rounded-none border-none px-6 rectangle-card'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl font-semibold text-green">x2</h1>
+                        <h1 class="text-7xl font-semibold green-gradient-text">x2</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -224,7 +224,7 @@ import Circle from "../components/ui/Circle.astro";
                 </Card>
                 <Card className={'flex flex-col sm:flex-row justify-around lg:mt-4 rounded-none border-none px-6 rectangle-card'}>
                     <div class="p-4 sm:p-8 sm:w-3/6 sm:text-center text-left">
-                        <h1 class="text-7xl font-semibold text-blue">100%</h1>
+                        <h1 class="text-7xl font-semibold blue-gradient-text">100%</h1>
                         <h2 class="font-medium text-base uppercase mt-6">faster development than traditional models</h2>
                     </div>
                     <div class="px-4 py-4 sm:py-8 sm:w-3/6 text-left">
@@ -291,6 +291,23 @@ import Circle from "../components/ui/Circle.astro";
   .rose-gradient{
     background: linear-gradient(180deg, #ffffff 21.07%, #EFAEFF 100%);
   }
+
+  .blue-gradient-text {
+    background: linear-gradient(150deg, #afb7fa 21.07%, #bbd8f2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .green-gradient-text {
+    background: linear-gradient(150deg, #78e7c5 21.07%, #B2FFBF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .rose-gradient-text {
+    background: linear-gradient(150deg, #ffc3c3 21.07%, #EFAEFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 
 
   .develop-circle {
