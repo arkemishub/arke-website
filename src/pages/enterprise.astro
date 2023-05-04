@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Footer from "../layouts/Footer.astro";
 import Section from "../components/ui/Section.astro";
 import GradientBackground from "../components/ui/GradientBackground.astro";
 import Card from "../components/ui/Card.astro";
 import Circle from "../components/ui/Circle.astro";
 ---
 
-<Layout>
+<Layout footer={false}>
 	<GradientBackground />
     <Section className="flex flex-col items-center bg-[url('illustrations/shpere.png')] container-shpere pb-24" color={'transparent'}>
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 px-4">
@@ -256,6 +257,9 @@ import Circle from "../components/ui/Circle.astro";
     <div class="bg-[url('illustrations/greenSemicircle.png')] final-background h-full w-full absolute z-20 pb-36" />
     <div class="absolute h-full w-full z-40 top-40 md:top-48 lg:top-52 bg-[url('illustrations/blueSemicircle.png')] final-background2 flex flex-col items-center"><h2 class="text-3xl md:text-4xl lg:text-6xl text-center font-medium pt-8 md:pt-12 leading-6">Month</h2><p>to develop</p></div>
 </Section>
+<div class="footer-container">
+<Footer className="-mt-10 z-50" />
+</div>
 </Layout>
 
 <style>
@@ -382,6 +386,10 @@ import Circle from "../components/ui/Circle.astro";
     background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .footer-container{
+    background-color: #100c14;
   }
 
   @media screen and (min-width: 1024px){
