@@ -21,7 +21,7 @@ import Feature from "../components/features/Feature/Feature.astro";
 	<Card className="relative support-card-gradient m-auto w-10/12 sm:w-7/12 grid lg:grid-cols-2 mt-20">
 		<div>
 			<a href="https://www.mokkastudios.com/" target="_blank" >
-				<div class="support-card rounded-tl-xl flex align-center p-8">
+				<div class="support-card rounded-tl-xl flex align-center p-8 border-r border-b border-card-color">
 					<div class="w-14 flex align-center mr-6">
 						<img class="logo m-auto" src={`${import.meta.env.BASE_URL}icons/mokka.svg`} alt="mokka"/>
 					</div>
@@ -32,7 +32,7 @@ import Feature from "../components/features/Feature/Feature.astro";
 				</div>
 			</a>
 			<a href="https://arkemishub.github.io/docs" target="_blank">
-				<div class="support-card rounded-bl-xl flex align-center p-8">
+				<div class="support-card rounded-bl-xl flex align-center p-8 border-t border-r border-card-color">
 					<div class="w-14 flex align-center mr-6">
 						<img class="w-14 logo m-auto" src={`${import.meta.env.BASE_URL}icons/github.svg`} alt="github"/>
 					</div>
@@ -45,7 +45,7 @@ import Feature from "../components/features/Feature/Feature.astro";
 		</div>
 		<div>
 			<a href="https://discord.gg/qTd8em5X" target="_blank">
-				<div class="support-card rounded-tr-xl flex flex-row-reverse lg:flex-row align-center p-8">
+				<div class="support-card rounded-tr-xl flex flex-row-reverse lg:flex-row align-center p-8 border-b border-l border-card-color">
 					<div class="flex-auto text-left lg:text-right">
 						<h3 class="text-xl font-semibold">Discord Community</h3>
 						<p class="text-secondary mt-2">Join our vibrant community and become a driver of change.</p>
@@ -57,7 +57,7 @@ import Feature from "../components/features/Feature/Feature.astro";
 			</a>
 
 			<a href="https://www.linkedin.com/company/arkehub" target="_blank">
-				<div class="support-card rounded-br-xl flex flex-row-reverse lg:flex-row align-center p-8">
+				<div class="support-card rounded-br-xl flex flex-row-reverse lg:flex-row align-center p-8 border-l border-t border-card-color">
 					<div class="flex-auto text-left lg:text-right">
 						<h3 class="text-xl font-semibold">LinkedIn</h3>
 						<p class="text-secondary mt-2">Follow us to stay updated on tech and community news.</p>
@@ -118,4 +118,8 @@ import Feature from "../components/features/Feature/Feature.astro";
 		opacity: 1;
 		background: rgba(255, 255, 255, 0.1);
 	}
+
+    .border-card-color {
+    border-color:rgba(255, 255, 255, 0.1);
+  }
 </style>
