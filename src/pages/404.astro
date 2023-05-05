@@ -8,18 +8,20 @@ import Footer from "../layouts/Footer.astro";
 
 <Layout footer={false}>
   <GradientBackground />
-  <h1
-    class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40"
-  >
-    We couldn't find that page.
+  <h1 class="title text-4xl md:text-5xl lg:text-7xl font-medium text-center mt-12 md:mt-40">
+    We couldn't find that page
   </h1>
   <h2 class="px-12 text-sm lg:text-2xl mt-8 text-secondary">
-    Check the URL for errors and try again. Otherwise you can return back<br />
+    Check the URL for errors and try again. Otherwise you can return to home or <br /> previous page
     and find the desired information.
   </h2>
   <div class="mt-4 flex gap-3 justify-center items-center mt-8">
     <a href={import.meta.env.BASE_URL}>
-      <Button icon={`${import.meta.env.BASE_URL}icons/home.svg`} title="homepage" className="bg-black" />
+      <Button
+        icon={`${import.meta.env.BASE_URL}icons/home.svg`}
+        title="home page"
+        className="bg-black"
+      />
     </a>
     <Button
       icon={`${import.meta.env.BASE_URL}icons/back_arrow.svg`}
@@ -27,10 +29,10 @@ import Footer from "../layouts/Footer.astro";
       id="previousBtn"
     />
   </div>
-  <div class="flex justify-center align-center mt-40">
+  <div class="flex justify-center align-center md:mt-40 mt-32">
     <FeatureCircle404 />
   </div>
-  <Footer className="-mt-80" />
+  <Footer className="-mt-72 max-sm:-mt-52 mx-0 mb-0 rounded-b-none" />
 </Layout>
 
 <script>

@@ -1,5 +1,4 @@
 ---
-import { twMerge } from "tailwind-merge";
 export interface Props {
   className?: string[];
 }
@@ -7,13 +6,7 @@ export interface Props {
 const { className } = Astro.props;
 
 const features = [
-  "404",
-  "404",
-  "404",
-  "404",
-  "404",
-  "404",
-  "404",
+  "—404",
   "404",
   "404",
   "404",
@@ -32,18 +25,17 @@ const features = [
         id="circle"
         d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path>
     </defs>
-    <text font-size="17">
+    <text font-size="7">
       <textPath
         xlink:href="#circle"
-        class="font-semibold"
-        style="font-size: 6px;"
+        style="font-size: 7.05px; letter-spacing: 0.245em"
       >
-        {features.join(" — ")} -
+        {features.join("—")}
       </textPath>
     </text>
   </svg>
   <div class="outer-circle m-auto">
-    <div class="outer-circle-border mt-16 w-3/4 h-3/4 m-auto">
+    <div class="outer-circle-border md:mt-16 mt-10 w-3/4 h-3/4 m-auto">
       <slot />
     </div>
     <div class="inner-circle"></div>
@@ -62,7 +54,7 @@ const features = [
 
   svg {
     margin-left: -32%;
-    margin-top: -25%;
+    margin-top: -23%;
     width: 164%;
     height: 147%;
     position: absolute;
@@ -76,12 +68,20 @@ const features = [
   }
 
   .outer-circle {
-    width: 500px;
-    height: 500px;
+    width: 510px;
+    height: 510px;
     position: relative;
     border-radius: 50%;
-    background: #0a0b12;
-    border: 1px solid #345147;
+    background: rgb(10, 11, 18);
+    background-image: radial-gradient(
+      circle at center,
+      transparent 0%,
+      rgb(120, 231, 176, 0.2) 40%,
+      rgba(10, 11, 18, 0.4) 70%,
+      rgba(10, 11, 18, 0.6) 80%,
+      rgba(10, 11, 18, 0.8) 90%
+    );
+    border: 1px solid #363636;
   }
   .outer-circle-border {
     position: relative;
@@ -91,7 +91,7 @@ const features = [
   }
 
   .inner-circle {
-    background-image: radial-gradient(rgba(168, 251, 215, 0.3) 20%, #ffffff01);
+    background-image: radial-gradient(rgba(103, 100, 100, 0.3) 20%, #ffffff01);
     content: "";
     position: absolute;
     top: -94px;
@@ -111,8 +111,8 @@ const features = [
     }
 
     .outer-circle {
-      width: 420px;
-      height: 420px;
+      width: 335px;
+      height: 335px;
     }
 
     .inner-circle {
