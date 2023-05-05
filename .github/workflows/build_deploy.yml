@@ -3,15 +3,12 @@ name: Deploy on GHCP
 # Controls when the action will run.
 on:
   workflow_dispatch:
-<<<<<<< HEAD
   push:
     branches:
       - main
-=======
   pull_request:
     branches:
       - "main"
->>>>>>> 73f1be44d49de729afb7b697c9d827045e09797e
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
