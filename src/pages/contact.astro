@@ -5,6 +5,7 @@ import Card from "../components/ui/Card.astro";
 import CircleButton from "../components/ui/CircleButton.astro";
 import Section from "../components/ui/Section.astro";
 import Feature from "../components/features/Feature/Feature.astro";
+import Form from '../components/contact/Form.astro';
 ---
 
 <Layout
@@ -18,7 +19,7 @@ import Feature from "../components/features/Feature/Feature.astro";
 		Meet our team, contribute on GitHub, engage with our<br/>
 		Discord community and keep in touch with us on LinkedIn.
 	</h2>
-	<Card className="relative support-card-gradient m-auto w-10/12 sm:w-7/12 grid lg:grid-cols-2 mt-20">
+	<Card className="relative support-card-gradient m-auto w-10/12 sm:w-9/12 grid lg:grid-cols-2 mt-20 relative">
 		<div>
 			<a href="https://www.mokkastudios.com/" target="_blank" >
 				<div class="support-card rounded-tl-xl flex align-center p-8 border-r border-b border-card-color">
@@ -68,12 +69,15 @@ import Feature from "../components/features/Feature/Feature.astro";
 				</div>
 			</a>
 		</div>
+        <div class="absolute h-full w-full hidden lg:flex items-center justify-center">
+        <CircleButton className={"bg-[url('/illustrations/Ellipse2.png')] btn-background border-none"} color={''}>Contact us</CircleButton>
+    </div>
 	</Card>
 
 	<div class="mt-20">
 		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue" position={'left'} style="background: transparent">
-			<div class="w-8/12 m-auto lg:grid lg:gap-x-8 lg:grid-cols-3 items-center">
-				<div class="col-span-2 text-left">
+			<div class="w-9/12 m-auto lg:grid lg:gap-x-8 lg:grid-cols-2 items-center">
+				<div class="col-span-1 text-left mt-6">
 					<h4 class="text-5xl text-left font-medium mb-8" style="line-height: 78px">
 						Tell us how we can<br/>
 						<span class="text-blue">help you</span>
@@ -88,6 +92,9 @@ import Feature from "../components/features/Feature/Feature.astro";
 						<img src={`${import.meta.env.BASE_URL}icons/arrow_link.svg`} class="w-3 ml-2" alt="arrow_link" />
 					</div>
 				</div>
+                <div class="col-span-1">
+                    <Form />
+                </div>
 				<div>
 
 				</div>
@@ -121,5 +128,11 @@ import Feature from "../components/features/Feature/Feature.astro";
 
     .border-card-color {
     border-color:rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-background {
+    background-repeat: no-repeat;
+    background-size: 100%;
+
   }
 </style>
