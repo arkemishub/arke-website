@@ -1,37 +1,52 @@
 ---
-
+import CircleButton from '../../components/ui/CircleButton.astro';
 
 ---
 
-<div class="flex flex-col p-4 bg-black drop-shadow-md border border-secondary">
+<form class="flex flex-col p-4 mb-20 bg-black rounded-3xl border border-secondary relative">
     <div class="rounded-md flex input-background py-2">
         <div class="w-2/12 flex justify-center">
-            <img src="/contact/user.svg" alt={'phone icon'}/>
+            <img src="/contact/user.svg" alt={'user icon'}/>
         </div>
         <input type="text" name="username" id="username" placeholder="Username" class="w-10/12 rounded input-background outline-none"/>
     </div>
     <div class="rounded-md flex input-background py-2 mt-4">
         <div class="w-2/12 flex justify-center">
-            <img src="/contact/phone.svg" alt={'phone icon'}/>
+            <img src="/contact/phone.svg" alt={'phone icon'} class="h-7"/>
         </div>
         <input type="number" name="phone" id="phone" placeholder="Phone number" class="w-10/12 rounded input-background outline-none"/>
     </div>
     <div class="rounded-md flex input-background py-2 mt-4">
         <div class="w-2/12 flex justify-center">
-            <img src="/contact/email.svg" alt={'phone icon'}/>
+            <img src="/contact/email.svg" alt={'email icon'} class="h-7"/>
         </div>
         <input type="email" name="email" id="email" placeholder="Email address" class="w-10/12 rounded input-background outline-none"/>
     </div>
     <div class="rounded-md flex input-background py-2 mt-4">
         <div class="w-2/12 flex justify-center">
-            <img src="/contact/building.svg" alt={'phone icon'}/>
+            <img src="/contact/building.svg" alt={'building icon'} class="h-7"/>
         </div>
     <input type="text" name="company" id="company" placeholder="Company name" class="w-10/12 rounded input-background outline-none"/>
     </div>
+    <div class="rounded-md flex input-background py-2 mt-4">
+        <div class="w-2/12 flex justify-center">
+            <img src="/contact/message.svg" alt={'message icon'} class="h-7"/>
+        </div>
+    <textarea placeholder="Message*" rows={7} class='input-background w-10/12 outline-none'/>
+    </div>
+    <div class="absolute w-full h-fit right-0 -bottom-20 flex justify-center">
+    <CircleButton className={"bg-[url('/illustrations/Ellipse2.png')] btn-background border-none"} color={''}>Contact us</CircleButton>
 </div>
+</form>
 
 <style>
     .input-background {
         background-color: #1b1b20;
     }
+
+    .btn-background {
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+  }
 </style>

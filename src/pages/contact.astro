@@ -76,8 +76,8 @@ import Form from '../components/contact/Form.astro';
 
 	<div class="mt-20">
 		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue" position={'left'} style="background: transparent">
-			<div class="w-9/12 m-auto lg:grid lg:gap-x-8 lg:grid-cols-2 items-center">
-				<div class="col-span-1 text-left mt-6">
+			<div class="w-9/12 m-auto lg:grid lg:gap-x-8 lg:grid-cols-2 mt-6">
+				<div class="col-span-1 text-left">
 					<h4 class="text-5xl text-left font-medium mb-8" style="line-height: 78px">
 						Tell us how we can<br/>
 						<span class="text-blue">help you</span>
@@ -86,13 +86,26 @@ import Form from '../components/contact/Form.astro';
 						Contact us for information about our technology and services<br/>
 						and let's talk to address your challenges together.
 					</p>
+                    <div class="pt-5 flex gap-3">
+                        <img src="/icons/linkedin.svg" alt="linkedin icon" class="h-5"/>
+                        <img src="/icons/slack.svg" alt="slack icon" class="h-5"/>
+                        <img src="/icons/github.svg" alt="github icon" class="h-5"/>
+                        <img src="/icons/discord.svg" alt="discord icon" class="h-5"/>
+                        <img src="/icons/mokka.svg" alt="mokka icon" class="h-5"/>
+                    </div>
 
-					<div class="mt-20 flex">
-						<a href="mailto:info@mokkastudio.com?subject=Arke - Information">info@mokkastudios.com</a>
+                    <div class="mt-32">
+					<div class="flex">
+						<a href="mailto:sales@arkehub.com?subject=Arke - Information">sales@arkehub.com</a>
 						<img src={`${import.meta.env.BASE_URL}icons/arrow_link.svg`} class="w-3 ml-2" alt="arrow_link" />
 					</div>
+                    <div class="flex">
+						<a href="mailto:info@arkehub.com?subject=Arke - Information">info@arkehub.com</a>
+						<img src={`${import.meta.env.BASE_URL}icons/arrow_link.svg`} class="w-3 ml-2" alt="arrow_link" />
+					</div>
+                </div>
 				</div>
-                <div class="col-span-1">
+                <div class="col-span-1 mt-16 lg:mt-0">
                     <Form />
                 </div>
 				<div>
