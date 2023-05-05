@@ -6,9 +6,11 @@ import CircleButton from "../components/ui/CircleButton.astro";
 import Section from "../components/ui/Section.astro";
 import Feature from "../components/features/Feature/Feature.astro";
 import Form from '../components/contact/Form.astro';
+import Footer from '../layouts/Footer.astro';
 ---
 
 <Layout
+    footer={false}
 	title="Arke | Connect with us"
 	descriptions="Meet our team, contribute on GitHub, engage with our Discord community and keep in touch with us on LinkedIn"
 >
@@ -114,6 +116,7 @@ import Form from '../components/contact/Form.astro';
 			</div>
 		</Section>
 	</div>
+    <Footer className={'mt-0'} />
 </Layout>
 
 <style>
