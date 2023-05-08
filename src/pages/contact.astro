@@ -24,7 +24,7 @@ import Footer from '../layouts/Footer.astro';
 	<Card className="relative support-card-gradient m-auto w-10/12 sm:w-9/12 grid lg:grid-cols-2 mt-20 relative">
 		<div>
 			<a href="https://www.mokkastudios.com/" target="_blank" >
-				<div class="support-card rounded-tl-xl flex align-center p-8 border-r border-b border-card-color">
+				<div class="support-card rounded-tl-xl flex align-center p-8 z-10">
 					<div class="w-14 flex align-center mr-6">
 						<img class="logo m-auto" src={`${import.meta.env.BASE_URL}icons/mokka.svg`} alt="mokka"/>
 					</div>
@@ -35,7 +35,7 @@ import Footer from '../layouts/Footer.astro';
 				</div>
 			</a>
 			<a href="https://arkemishub.github.io/docs" target="_blank">
-				<div class="support-card rounded-bl-xl flex align-center p-8 border-t border-r border-card-color">
+				<div class="support-card rounded-bl-xl flex align-center p-8 z-10">
 					<div class="w-14 flex align-center mr-6">
 						<img class="w-14 logo m-auto" src={`${import.meta.env.BASE_URL}icons/github.svg`} alt="github"/>
 					</div>
@@ -48,7 +48,7 @@ import Footer from '../layouts/Footer.astro';
 		</div>
 		<div>
 			<a href="https://discord.gg/qTd8em5X" target="_blank">
-				<div class="support-card rounded-tr-xl flex flex-row-reverse lg:flex-row align-center p-8 border-b border-l border-card-color">
+				<div class="support-card rounded-tr-xl flex flex-row-reverse lg:flex-row align-center p-8 z-10">
 					<div class="flex-auto text-left lg:text-right">
 						<h3 class="text-xl font-semibold">Discord Community</h3>
 						<p class="text-secondary mt-2">Join our vibrant community and <br/> become a driver of change.</p>
@@ -60,7 +60,7 @@ import Footer from '../layouts/Footer.astro';
 			</a>
 
 			<a href="https://www.linkedin.com/company/arkehub" target="_blank">
-				<div class="support-card rounded-br-xl flex flex-row-reverse lg:flex-row align-center p-8 border-l border-t border-card-color">
+				<div class="support-card rounded-br-xl flex flex-row-reverse lg:flex-row align-center p-8 z-10">
 					<div class="flex-auto text-left lg:text-right">
 						<h3 class="text-xl font-semibold">LinkedIn</h3>
 						<p class="text-secondary mt-2">Follow us to stay updated on <br/> tech and community news.</p>
@@ -71,7 +71,7 @@ import Footer from '../layouts/Footer.astro';
 				</div>
 			</a>
 		</div>
-        <div class="absolute h-full w-full hidden lg:flex items-center justify-center">
+            <div class="absolute z-20 top-1/4 contact-us-btn-container">
         <CircleButton className={"bg-[url('/illustrations/Ellipse2.png')] btn-background border-none"} color={''}>Contact us</CircleButton>
     </div>
 	</Card>
@@ -152,5 +152,9 @@ import Footer from '../layouts/Footer.astro';
 
   }
 
+  .contact-us-btn-container {
+    left: 0;
+    right: 0;
+  }
 
 </style>
