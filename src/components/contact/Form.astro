@@ -28,13 +28,13 @@ import CircleButton from '../../components/ui/CircleButton.astro';
         </div>
     <input type="text" name="company" id="company" placeholder="Company name" class="w-10/12 p-2 rounded input-background outline-none"/>
     </div>
-    <div class="rounded-md flex input-background mt-4">
+    <div class="rounded-md flex input-background mt-4 h-48">
         <div class="w-2/12 flex justify-center pt-2">
             <img src="/contact/message.svg" alt={'message icon'} class="h-7"/>
         </div>
-    <textarea placeholder="Message*" rows={7} class='input-background w-10/12 outline-none p-2'/>
+    <textarea placeholder="Message*" rows={4} class='input-background w-10/12 outline-none p-2 mb-12 lg:mb-16 mr-2 mt-2'/>
     </div>
-    <div class="absolute w-full h-fit right-0 -bottom-20 flex justify-center">
+    <div class="absolute w-full h-fit -bottom-14 lg:-bottom-20 flex justify-center">
     <CircleButton className={"bg-[url('/illustrations/Ellipse2.png')] btn-background border-none"} color={''}>Send message</CircleButton>
 </div>
 </form>
