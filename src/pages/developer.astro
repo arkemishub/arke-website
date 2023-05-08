@@ -98,7 +98,7 @@ const collaborateSection = [
   <br />
   <br />
   <StartNowButton color="green" />
-  <div class="relative mt-48 md:pt-24 md:pb-44">
+  <div class="relative mt-48 md:pt-24 lg:pb-16">
     <RectanglesBackground />
     <h3
       class="text-2xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
@@ -119,9 +119,9 @@ const collaborateSection = [
       The open-source Agile framework that automates repetitive tasks,<br />
       allowing you to focus on creating high-impact, valuable code.
     </h2>
-    <div class="overflow-x-hidden relative">
+    <div class="relative">
       <div
-        class="icon-box__container flex flex-row justify-center md:w-full md:mt-6 lg:mt-12 relative max-sm:animate-primary"
+        class="icon-box__container max-sm:w-[680px] md:gap-0.5 gap-4 flex flex-row justify-center md:w-full md:mt-6 lg:mt-12 relative max-sm:animate-primary"
       >
         {
           programmingIcons.map((icon) => (
@@ -279,13 +279,12 @@ const collaborateSection = [
   }
 
   .icon-box__container {
-    width: 680px;
+    /* width: 680px; */
     margin: 30px auto;
-    gap: 1rem;
+    /* gap: 1rem; */
     padding: 0 1rem;
     padding-top: 1rem;
     padding-bottom: 3.5rem;
-    position: absolute;
   }
 
   .icon-box:not(:first-child) {
