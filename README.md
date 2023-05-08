@@ -2,6 +2,8 @@
 
 [![Deploy on Pages](https://github.com/arkemishub/arke-website/actions/workflows/pages.yml/badge.svg)](https://github.com/arkemishub/arke-website/actions/workflows/pages.yml)
 
+[![Deploy on GHCP](https://github.com/arkemishub/arke-website/actions/workflows/build_deploy.yml/badge.svg)](https://github.com/arkemishub/arke-website/actions/workflows/build_deploy.yml)
+
 ![Screenshot 2023-04-14 alle 17 20 36](https://user-images.githubusercontent.com/81776297/232085841-34c325f8-1506-4bd3-b095-46ea87f8412b.png)
 
 ## 🧞 Environment
