@@ -25,7 +25,7 @@ module.exports = {
       },
     },
     animation: {
-      primary: "primary 30s linear infinite",
+      primary: "primary 60s linear infinite",
     },
   },
   plugins: [],
