@@ -1,0 +1,26 @@
+---
+import { twMerge } from 'tailwind-merge'
+export interface Props {
+    className?: string;
+    title: string;
+}
+
+const { className, title } = Astro.props;
+---
+
+<div class={twMerge("circle", className)}>
+    <p class="absolute">{title}</p>
+</div>
+
+<style>
+.circle {
+    border-radius: 100%;
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+}
+</style>

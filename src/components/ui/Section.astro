@@ -2,17 +2,17 @@
 import { twMerge } from "tailwind-merge";
 export interface Props {
   className: string[];
-  color: "green" | "blue" | "rose" | "orange";
+  color: "green" | "blue" | "rose" | "orange" | "transparent" ;
   position: "left" | "right" | "center"
 }
 
 const { className, color = 'green', style, position = 'center' } = Astro.props;
 ---
 
-<div class="relative overflow-hidden">
+<div class={`relative ${color !== 'transparent' && 'overflow-hidden'}`}>
     <div class={`border-gradient-${position} ${color}`}/>
     <div class={`border-light-${position} light-${color}`}/>
-    <div class={twMerge("section", className)} style={style}>
+    <div class={twMerge(color !== 'transparent' && "section", className)} style={style}>
         <slot />
     </div>
 </div>
