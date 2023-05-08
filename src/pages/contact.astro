@@ -71,7 +71,7 @@ import Footer from '../layouts/Footer.astro';
 				</div>
 			</a>
 		</div>
-            <div class="absolute z-20 top-1/4 contact-us-btn-container">
+            <div class="absolute z-20 top-1/4 contact-us-btn-container rounded-full w-fit hidden lg:block">
         <CircleButton className={"bg-[url('/illustrations/Ellipse2.png')] btn-background border-none"} color={''}>Contact us</CircleButton>
     </div>
 	</Card>
@@ -153,8 +153,8 @@ import Footer from '../layouts/Footer.astro';
   }
 
   .contact-us-btn-container {
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
 </style>
