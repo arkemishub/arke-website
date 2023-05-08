@@ -171,12 +171,12 @@ const openSourceFeatures = [
 			</p>
 			<!--<img src={`${import.meta.env.BASE_URL}img/backend_galaxy.png`} class="w-11/12 mt-12 m-auto" alt="backend" />-->
 
-			<div class="mt-12 px-4 md:px-12 grid gap-x-4 gap-y-4 md:grid-cols-3">
+			<div class="mt-12 px-4 md:px-12 grid gap-x-4 gap-y-4 lg:grid-cols-3 md:grid-cols-2">
 				{backendFeatures.map(item =>
 					<Feature
 						title={item.title}
 						img={item.img}
-						className="flex-col"
+						className="flex-row text-left"
 					>
 						{item.description}
 					</Feature>
