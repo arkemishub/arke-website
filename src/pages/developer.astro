@@ -177,7 +177,7 @@ const collaborateSection = [
           problem-solving and lead the next generation of innovators.
         </h2>
       </div>
-      <div class="overflow-x-scroll mt-6 lg:mt-0">
+      <div class="max-sm:overflow-x-scroll mt-6 lg:mt-0">
         <div class="flex justify-between cards-container lg:ml-8">
           {
             trustCards.map((item) => (
@@ -204,7 +204,7 @@ const collaborateSection = [
     <div
       class="py-20 lg:py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center"
     >
-      <div class="overflow-x-scroll mt-6 lg:mt-0">
+      <div class="max-sm:overflow-x-scroll mt-6 lg:mt-0">
         <div class="flex ml-auto cards-container px-3.5">
           {
             improveCards.map((item) => (
@@ -266,30 +266,38 @@ const collaborateSection = [
       </div>
       <div class="xl:p-20">
         <Cursors />
-        <img src={`${import.meta.env.BASE_URL}img/terminale.png`} alt="terminal" />
+        <img
+          src={`${import.meta.env.BASE_URL}img/terminale.png`}
+          alt="terminal"
+        />
       </div>
     </div>
   </Section>
   <div class="relative">
-        <RectanglesBackground />
-        <h3
-        class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
-        >
-        <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
-        <div>Experience the</div> <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div>
-          <img alt="cursor-box" src={`${import.meta.env.BASE_URL}icons/cursor-box.svg`} class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"/>
-        </div>
-        </h3>
-        <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
-        The open-source Agile framework that automates repetitive tasks,<br />
-        allowing you to focus on creating high-impact, valuable code.
-        </h2>
-        <div class="overflow-x-auto">
-        <div
-            class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
-        >
-        </div>
-        </div>
+    <RectanglesBackground />
+    <h3
+      class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+    >
+      <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
+        <div>Experience the</div>
+        <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div>
+        <img
+          alt="cursor-box"
+          src={`${import.meta.env.BASE_URL}icons/cursor-box.svg`}
+          class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"
+        />
+      </div>
+    </h3>
+    <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
+      The open-source Agile framework that automates repetitive tasks,<br />
+      allowing you to focus on creating high-impact, valuable code.
+    </h2>
+    <div class="overflow-x-auto">
+      <div
+        class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
+      >
+      </div>
+    </div>
   </div>
   <div class="mt-40">
     <StartNowButton id="btnEndCta" color="rose" className="-mt-4" />
