@@ -20,20 +20,29 @@ const features = [
 
 <div class="relative -z-10">
   <svg viewBox="0 0 100 100" width="100" height="100">
-    <defs>
-      <path
-        id="circle"
-        d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path>
-    </defs>
-    <text font-size="7">
+    <path
+      id="circle"
+      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+      fill="none"
+      stroke-width="1"></path>
+    <text font-size="7.05px">
       <textPath
         xlink:href="#circle"
-        style="font-size: 7.05px; letter-spacing: 0.245em"
+        style={{ fontSize: "7.05px", letterSpacing: "0.245em" }}
       >
         {features.join("—")}
       </textPath>
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 50 50"
+        to="360 50 50"
+        dur="100s"
+        repeatCount="indefinite"></animateTransform>
     </text>
   </svg>
+
   <div class="outer-circle m-auto">
     <div class="outer-circle-border md:mt-16 mt-10 w-3/4 h-3/4 m-auto">
       <slot />
@@ -43,15 +52,6 @@ const features = [
 </div>
 
 <style>
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
   svg {
     margin-left: -30%;
     margin-top: -24.5%;
@@ -61,10 +61,6 @@ const features = [
     color: #fff;
     fill: currentColor;
     transform-origin: center;
-    transform: rotate(45deg);
-    -webkit-animation: linear infinite;
-    -webkit-animation-name: rotate;
-    -webkit-animation-duration: 100s;
   }
 
   .outer-circle {
