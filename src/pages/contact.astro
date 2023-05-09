@@ -4,8 +4,7 @@ import GradientBackground from "../components/ui/GradientBackground.astro";
 import Card from "../components/ui/Card.astro";
 import CircleButton from "../components/ui/CircleButton.astro";
 import Section from "../components/ui/Section.astro";
-import Feature from "../components/features/Feature/Feature.astro";
-import Form from '../components/contact/Form.astro';
+import ContactForm from '../components/contact/Form';
 import Footer from '../layouts/Footer.astro';
 ---
 
@@ -21,7 +20,7 @@ import Footer from '../layouts/Footer.astro';
 		Meet our team, contribute on GitHub, engage with our<br/>
 		Discord community and keep in touch with us on LinkedIn.
 	</h2>
-	<Card className="relative support-card-gradient m-auto w-10/12 sm:w-9/12 grid lg:grid-cols-2 mt-20 relative">
+	<Card className="relative support-card-gradient m-auto w-10/12 sm:w-9/12 grid lg:grid-cols-2 mt-20">
 		<div>
 			<a href="https://www.mokkastudios.com/" target="_blank" >
 				<div class="support-card rounded-tl-xl flex align-center p-8 z-10">
@@ -71,14 +70,18 @@ import Footer from '../layouts/Footer.astro';
 				</div>
 			</a>
 		</div>
-            <div class="absolute z-20 top-1/4 contact-us-btn-container rounded-full w-fit hidden lg:block">
-        <CircleButton className={"bg-[url('/illustrations/Ellipse2.png')] btn-background border-none"} color={''}>Contact us</CircleButton>
-    </div>
+		<div class="absolute z-20 top-1/4 contact-us-btn-container rounded-full w-fit hidden lg:block">
+			<CircleButton
+				href="mailto:info@mokkastudios.com?subject=Arke - Information"
+				className={"bg-[url('/illustrations/Ellipse2.png')] btn-background border-none"} color={''}>
+				Contact us
+			</CircleButton>
+    	</div>
 	</Card>
 
 	<div class="mt-20">
 		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue" position={'left'} style="background: transparent">
-			<div class="w-9/12 m-auto lg:grid lg:gap-x-8 lg:grid-cols-2 mt-6">
+			<div class="w-11/12 sm:9/12 m-auto lg:grid lg:gap-x-8 lg:grid-cols-2 mt-6">
 				<div class="col-span-1 text-left">
 					<h4 class="text-5xl text-left font-medium mb-8" style="line-height: 78px">
 						Tell us how we can<br/>
@@ -89,30 +92,36 @@ import Footer from '../layouts/Footer.astro';
 						and let's talk to address your challenges together.
 					</p>
                     <div class="pt-5 flex gap-3">
-                        <img src="/icons/linkedin.svg" alt="linkedin icon" class="h-5"/>
-                        <img src="/icons/slack.svg" alt="slack icon" class="h-5"/>
-                        <img src="/icons/github.svg" alt="github icon" class="h-5"/>
-                        <img src="/icons/discord.svg" alt="discord icon" class="h-5"/>
-                        <img src="/icons/mokka.svg" alt="mokka icon" class="h-5"/>
+						<a href="https://github.com/arkemishub" target="_blank">
+                        	<img src="/icons/github.svg" alt="github icon" class="h-5"/>
+						</a>
+						<a href="https://linkedin.com/company/arkehub" target="_blank">
+                        	<img src="/icons/linkedin.svg" alt="linkedin icon" class="h-5"/>
+						</a>
+						<a href="https://discord.gg/qTd8em5X" target="_blank">
+                        	<img src="/icons/discord.svg" alt="discord icon" class="h-5"/>
+						</a>
+						<a href="https://www.mokkastudios.com" target="_blank">
+                        	<img src="/icons/mokka.svg" alt="mokka icon" class="h-5"/>
+						</a>
                     </div>
 
                     <div class="mt-32">
+					{/*
 					<div class="flex">
 						<a href="mailto:sales@arkehub.com?subject=Arke - Information">sales@arkehub.com</a>
 						<img src={`${import.meta.env.BASE_URL}icons/arrow_link.svg`} class="w-3 ml-2" alt="arrow_link" />
 					</div>
+					*/}
                     <div class="flex">
-						<a href="mailto:info@arkehub.com?subject=Arke - Information">info@arkehub.com</a>
+						<a href="mailto:info@mokkastudios.com?subject=Arke - Information">info@mokkastudios.com</a>
 						<img src={`${import.meta.env.BASE_URL}icons/arrow_link.svg`} class="w-3 ml-2" alt="arrow_link" />
 					</div>
                 </div>
 				</div>
                 <div class="col-span-1 mt-16 lg:mt-0">
-                    <Form />
+                    <ContactForm client:only="react"/>
                 </div>
-				<div>
-
-				</div>
 			</div>
 		</Section>
 	</div>
@@ -143,18 +152,16 @@ import Footer from '../layouts/Footer.astro';
 	}
 
     .border-card-color {
-    border-color:rgba(255, 255, 255, 0.1);
-  }
+      border-color:rgba(255, 255, 255, 0.1);
+    }
 
-  .btn-background {
-    background-repeat: no-repeat;
-    background-size: 100%;
+    .btn-background {
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
 
-  }
-
-  .contact-us-btn-container {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
+    .contact-us-btn-container {
+      left: 50%;
+      transform: translateX(-50%);
+    }
 </style>
