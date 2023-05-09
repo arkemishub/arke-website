@@ -192,16 +192,16 @@ const openSourceFeatures = [
 				Boost your applications with our state-of-the-art frontend<br/>
 				infrastructure to optimize and scale performance.
 			</p>
-			<Card className="w-10/12 m-auto sm:grid sm:grid-cols-12 mt-12">
+			<Card className="w-full m-auto sm:grid sm:grid-cols-12 mt-12">
 				<div class="sm:col-span-7">
-					<img class="w-full" src={`${import.meta.env.BASE_URL}illustrations/placeholder_green.svg`} alt="placeholder">
+					<img class="h-full extensive-frontend-image" src={`${import.meta.env.BASE_URL}illustrations/placeholder_green.svg`} alt="placeholder">
 				</div>
 				<div class="sm:col-span-5 sm:border-l border-card-color">
-					{frontendFeatures.map(item =>
-						<div class="p-8 py-4 text-left">
+					{frontendFeatures.map((item, i) =>
+						<div class={`p-8 py-4 text-left frontend-features-card ${i > 0 && i<3 && 'border-t border-b border-card-color'} ${i===0 && 'pt-8' } ${i===3 && 'pb-8' }`}>
 							<div class="flex">
 								{item.packages.map(packageItem =>
-									<p class="mr-2 border border-[#ffffff20] rounded p-1 px-2 mb-2 w-fit">
+									<p class="mr-2 border border-[#ffffff20] rounded-md p-1 px-2 mb-2 w-fit package-card">
 										{packageItem}
 									</p>
 								)}
@@ -209,7 +209,7 @@ const openSourceFeatures = [
 							<h4 class="font-semibold text-xl">
 								{item.title}
 							</h4>
-							<p class="mt-1 text-secondary">
+							<p class="mt-1">
 								{item.description}
 							</p>
 						</div>
@@ -322,6 +322,30 @@ const openSourceFeatures = [
 	}
 
     .border-card-color {
-    border-color:rgba(255, 255, 255, 0.1);
-  }
+	    border-color:rgba(255, 255, 255, 0.1);
+	}
+
+    .extensive-frontend-image {
+       max-height: 650px;
+	}
+
+    .frontend-features-card {
+		cursor: pointer;
+		transition: 0.3s ease-out 100ms;
+        color: #797D94;
+	}
+
+    .frontend-features-card:hover {
+        background: #2a2b3795;
+        color: hsl(0, 0%, 100%)
+    }
+
+    .package-card {
+        color: #ffffff;
+    }
+
+    .frontend-features-card:hover > .package-card {
+        background: #28292f;
+    }
+
 </style>
