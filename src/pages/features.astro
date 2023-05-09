@@ -198,10 +198,10 @@ const openSourceFeatures = [
 				</div>
 				<div class="sm:col-span-5 sm:border-l border-card-color">
 					{frontendFeatures.map((item, i) =>
-						<div class={`p-8 py-4 text-left ${i > 0 && i<3 && 'border-t border-b border-card-color'} ${i===0 && 'pt-8' } ${i===3 && 'pb-8' }`}>
+						<div class={`p-8 py-4 text-left frontend-features-card ${i > 0 && i<3 && 'border-t border-b border-card-color'} ${i===0 && 'pt-8' } ${i===3 && 'pb-8' }`}>
 							<div class="flex">
 								{item.packages.map(packageItem =>
-									<p class="mr-2 border border-[#ffffff20] rounded-md p-1 px-2 mb-2 w-fit">
+									<p class="mr-2 border border-[#ffffff20] rounded-md p-1 px-2 mb-2 w-fit package-card">
 										{packageItem}
 									</p>
 								)}
@@ -209,7 +209,7 @@ const openSourceFeatures = [
 							<h4 class="font-semibold text-xl">
 								{item.title}
 							</h4>
-							<p class="mt-1 text-secondary">
+							<p class="mt-1">
 								{item.description}
 							</p>
 						</div>
@@ -328,4 +328,24 @@ const openSourceFeatures = [
   .extensive-frontend-image {
     max-height: 650px;
   }
+
+  .frontend-features-card {
+		cursor: pointer;
+		transition: 0.3s ease-out 100ms;
+        color: #797D94;  
+	}
+
+    .frontend-features-card:hover {
+        background: #2a2b3795;
+        color: hsl(0, 0%, 100%)
+    }
+
+    .package-card {
+        color: #ffffff; 
+    }
+
+    .frontend-features-card:hover > .package-card {
+        background: #28292f;
+    }
+
 </style>
