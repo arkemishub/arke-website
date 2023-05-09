@@ -31,7 +31,10 @@ export default function ContactForm() {
     >
       <div className="rounded-md flex input-background">
         <div className="ml-3 flex justify-center">
-          <img src="/contact/user.svg" alt={"user icon"} />
+          <img
+            src={`${import.meta.env.BASE_URL}contact/user.svg`}
+            alt={"user"}
+          />
         </div>
         <input
           type="text"
@@ -46,7 +49,11 @@ export default function ContactForm() {
       </div>
       <div className="rounded-md flex input-background mt-4">
         <div className="ml-3 flex justify-center py-2">
-          <img src="/contact/phone.svg" alt={"phone icon"} className="h-7" />
+          <img
+            src={`${import.meta.env.BASE_URL}contact/phone.svg`}
+            alt={"phone icon"}
+            className="h-7"
+          />
         </div>
         <input
           type="number"
@@ -60,7 +67,11 @@ export default function ContactForm() {
       </div>
       <div className="rounded-md flex input-background mt-4">
         <div className="ml-3 flex justify-center py-2">
-          <img src="/contact/email.svg" alt={"email icon"} className="h-7" />
+          <img
+            src={`${import.meta.env.BASE_URL}contact/email.svg`}
+            alt={"email icon"}
+            className="h-7"
+          />
         </div>
         <input
           type="email"
@@ -76,7 +87,7 @@ export default function ContactForm() {
       <div className="rounded-md flex input-background mt-4">
         <div className="ml-3 flex justify-center py-2">
           <img
-            src="/contact/building.svg"
+            src={`${import.meta.env.BASE_URL}contact/building.svg`}
             alt={"building icon"}
             className="h-7"
           />
@@ -95,7 +106,7 @@ export default function ContactForm() {
       <div className="rounded-md flex input-background mt-4 h-fit">
         <div className="ml-3 flex justify-center pt-2">
           <img
-            src="/contact/message.svg"
+            src={`${import.meta.env.BASE_URL}contact/message.svg`}
             alt={"message icon"}
             className="h-7"
           />
