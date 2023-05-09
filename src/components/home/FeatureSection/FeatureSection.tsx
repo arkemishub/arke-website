@@ -25,25 +25,23 @@ export default function FeatureSection() {
               title="Powerful Elixir core"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_elixir.png`}
+              }features/square/feature_elixir.png`}
             />
             <FeatureCard
               title="Pluggable database"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_database.png`}
+              }features/square/feature_database.png`}
             />
             <FeatureCard
               title="Secure authentication"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_authentication.png`}
+              }features/square/feature_authentication.png`}
             />
             <FeatureCard
               title="Auto-generated REST APIs"
-              img={`${
-                import.meta.env.BASE_URL
-              }/features/square/feature_api.png`}
+              img={`${import.meta.env.BASE_URL}features/square/feature_api.png`}
             />
           </>
         )}
@@ -54,25 +52,25 @@ export default function FeatureSection() {
               title="Swift backend connection"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_swift_connection.png`}
+              }features/square/feature_swift_connection.png`}
             />
             <FeatureCard
               title="Automatic layout builder"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_builder.png`}
+              }features/square/feature_builder.png`}
             />
             <FeatureCard
               title="Customized UI components"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_customizable.png`}
+              }features/square/feature_customizable.png`}
             />
             <FeatureCard
               title="Headless forms & tables"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_headless.png`}
+              }features/square/feature_headless.png`}
             />
           </>
         )}
@@ -83,25 +81,25 @@ export default function FeatureSection() {
               title="Intuitive project management"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_project_management.png`}
+              }features/square/feature_project_management.png`}
             />
             <FeatureCard
               title="Dynamic prototyping"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_prototyping.png`}
+              }features/square/feature_prototyping.png`}
             />
             <FeatureCard
               title="Smart code sync"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_smart_code_sync.png`}
+              }features/square/feature_smart_code_sync.png`}
             />
             <FeatureCard
               title="Add-ons & integrations"
               img={`${
                 import.meta.env.BASE_URL
-              }/features/square/feature_integrations.png`}
+              }features/square/feature_integrations.png`}
             />
           </>
         )}

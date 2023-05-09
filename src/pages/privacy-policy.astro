@@ -14,8 +14,8 @@ import Button from "../components/ui/Button.astro";
 			personal information when you use our website.
 		</h2>
 
-		<div class="text-left mt-8 sm:mt-20">
-			<h3 class="text-3xl font-semibold">Information</h3>
+		<div class="text-left mt-8 sm:mt-24 pt-8 gray-line">
+			<h3 class="text-3xl md:text-4xl lg:text-5xl font-semibold">Information</h3>
 			<h4 class="text-2xl font-semibold mt-8">Information we collect</h4>
 			<p class="mt-8 text-secondary">
 				We collect information you provide to us when you register for an account,
@@ -70,14 +70,14 @@ import Button from "../components/ui/Button.astro";
 				to ensure you are happy with any changes.
 			</p>
 
-			<h3 class="text-3xl font-semibold mt-8">Contact us</h3>
+			<h3 class="text-3xl md:text-4xl lg:text-5xl font-semibold mt-6 pt-8 gray-line">Contact us</h3>
 			<p class="mt-8 text-secondary mb-6">
 				If you have any questions or concerns about this Privacy Policy or our use
 				of your personal information, please contact us at
-				<a href="mailto:info@mokkastudios.com">info@mokkastudios.com</a>.
+				<a href="mailto:info@arkemis.it">info@arkemis.it</a>.
 			</p>
 			<a href={import.meta.env.BASE_URL}>
-				<Button icon={`${import.meta.env.BASE_URL}icons/home.svg`} title="Home"/>
+				<Button icon={`${import.meta.env.BASE_URL}icons/home.svg`} title="home page"/>
 			</a>
 
 		</div>
@@ -91,4 +91,16 @@ import Button from "../components/ui/Button.astro";
 	a:hover {
 		@apply text-green
 	}
+
+    .gray-line {
+        border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 139, 0),
+        rgba(255, 255, 255, 0.167),
+        rgba(0, 0, 139, 0)
+      )
+      1;
+    border-top-width: 1px;
+    border-style: solid;
+    }
 </style>

@@ -9,15 +9,42 @@ import Section from "../components/ui/Section.astro";
 import FooterCta from "../components/ui/FooterCta.astro";
 
 const programmingIcons = [
-  { title: "Elixir icon", img: `${import.meta.env.BASE_URL}developer/icons/elixir.svg` },
-  { title: "JS icon", img: `${import.meta.env.BASE_URL}developer/icons/JS.svg` },
-  { title: "React icon", img: `${import.meta.env.BASE_URL}developer/icons/react.svg` },
-  { title: "Phyton icon", img: `${import.meta.env.BASE_URL}developer/icons/phyton.svg` },
-  { title: "Docker icon", img: `${import.meta.env.BASE_URL}developer/icons/docker.svg` },
-  { title: "Aws icon", img: `${import.meta.env.BASE_URL}developer/icons/aws.svg` },
-  { title: "Gcp icon", img: `${import.meta.env.BASE_URL}developer/icons/cloud.svg` },
-  { title: "Azure icon", img: `${import.meta.env.BASE_URL}developer/icons/azure.svg` },
-  { title: "Next-js icon", img: `${import.meta.env.BASE_URL}developer/icons/next-js.svg` },
+  {
+    title: "Elixir icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/elixir.svg`,
+  },
+  {
+    title: "JS icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/JS.svg`,
+  },
+  {
+    title: "React icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/react.svg`,
+  },
+  {
+    title: "Phyton icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/phyton.svg`,
+  },
+  {
+    title: "Docker icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/docker.svg`,
+  },
+  {
+    title: "Aws icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/aws.svg`,
+  },
+  {
+    title: "Gcp icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/cloud.svg`,
+  },
+  {
+    title: "Azure icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/azure.svg`,
+  },
+  {
+    title: "Next-js icon",
+    img: `${import.meta.env.BASE_URL}developer/icons/next-js.svg`,
+  },
 ];
 
 const trustCards = [
@@ -79,7 +106,6 @@ const collaborateSection = [
       "Access our technical documentation and GitHub repository to enhance your understanding and contribute to a thriving open-source ecosystem.",
   },
 ];
-
 ---
 
 <Layout>
@@ -98,7 +124,7 @@ const collaborateSection = [
   <br />
   <br />
   <StartNowButton color="green" />
-  <div class="relative mt-48 md:pt-24 md:pb-44">
+  <div class="relative mt-48 md:pt-24 lg:pb-16">
     <RectanglesBackground />
     <h3
       class="text-2xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
@@ -119,13 +145,13 @@ const collaborateSection = [
       The open-source Agile framework that automates repetitive tasks,<br />
       allowing you to focus on creating high-impact, valuable code.
     </h2>
-    <div class="overflow-x-hidden relative">
+    <div class="relative w-fit mx-auto">
       <div
-        class="icon-box__container flex flex-row justify-center md:w-full md:mt-6 lg:mt-12 relative max-sm:animate-primary"
+        class="icon-box__container max-sm:w-[680px] md:gap-0.5 gap-4 flex flex-row justify-center md:w-full md:mt-6 lg:mt-12 relative max-sm:animate-primary"
       >
         {
           programmingIcons.map((icon) => (
-            <div class="md:px-5 flex justify-center items-center select-none ">
+            <div class="md:px-5 flex justify-center items-center select-none border-icon max-sm:pr-4">
               <img src={icon.img} alt={icon.title} class="h-14 w-14 " />
             </div>
           ))
@@ -134,8 +160,14 @@ const collaborateSection = [
     </div>
   </div>
 
-  <Section className="w-full lg:px-12 m-auto rounded-none b-0" color="green" position="left">
-    <div class="py-20 lg:py-32 flex flex-col lg:flex-row justify-center lg:items-center">
+  <Section
+    className="w-full lg:px-12 m-auto rounded-none b-0"
+    color="green"
+    position="left"
+  >
+    <div
+      class="py-20 lg:py-32 flex flex-col lg:flex-row justify-center lg:items-center"
+    >
       <div class="text-left pr-4 lg:text-right lg:w-2/6 pl-6">
         <h3 class="title text-3xl md:text-4xl lg:text-5xl font-semibold">
           We <span>trust</span> your skills <br /> and ambitions
@@ -145,12 +177,14 @@ const collaborateSection = [
           problem-solving and lead the next generation of innovators.
         </h2>
       </div>
-      <div class="overflow-x-scroll mt-6 lg:mt-0">
+      <div class="max-sm:overflow-x-scroll mt-6 lg:mt-0">
         <div class="flex justify-between cards-container lg:ml-8">
           {
             trustCards.map((item) => (
               <Card className="p-2 ml-6 mt-4 text-left w-56 h-72">
-                <div><img src={item.img} alt={item.title}/></div>
+                <div>
+                  <img src={item.img} alt={item.title} />
+                </div>
                 <h2 class="text-lg mt-4 font-medium leading-7">{item.title}</h2>
                 <p class="text-secondary text-sm leading-6">
                   {item.description}
@@ -162,11 +196,15 @@ const collaborateSection = [
       </div>
     </div>
   </Section>
-  <Section className="w-full lg:pr-12 m-auto rounded-none b-0" color="blue" position="right">
+  <Section
+    className="w-full lg:pr-12 m-auto rounded-none b-0"
+    color="blue"
+    position="right"
+  >
     <div
       class="py-20 lg:py-32 flex flex-col-reverse lg:flex-row justify-center lg:items-center"
     >
-      <div class="overflow-x-scroll mt-6 lg:mt-0">
+      <div class="max-sm:overflow-x-scroll mt-6 lg:mt-0">
         <div class="flex ml-auto cards-container px-3.5">
           {
             improveCards.map((item) => (
@@ -228,30 +266,38 @@ const collaborateSection = [
       </div>
       <div class="xl:p-20">
         <Cursors />
-        <img src={`${import.meta.env.BASE_URL}/img/terminale.png`} alt="terminal" />
+        <img
+          src={`${import.meta.env.BASE_URL}img/terminale.png`}
+          alt="terminal"
+        />
       </div>
     </div>
   </Section>
   <div class="relative">
-        <RectanglesBackground />
-        <h3
-        class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
-        >
-        <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
-        <div>Experience the</div> <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div>
-          <img alt="cursor-box" src={`${import.meta.env.BASE_URL}/icons/cursor-box.svg`} class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"/>
-        </div>
-        </h3>
-        <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
-        The open-source Agile framework that automates repetitive tasks,<br />
-        allowing you to focus on creating high-impact, valuable code.
-        </h2>
-        <div class="overflow-x-auto">
-        <div
-            class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
-        >
-        </div>
-        </div>
+    <RectanglesBackground />
+    <h3
+      class="text-3xl md:text-4xl lg:text-5xl font-semibold h-24 flex flex-col sm:flex-row justify-center items-center"
+    >
+      <div class="w-fit relative p-1 sm:p-4 md:p-6 flex flex-col sm:flex-row">
+        <div>Experience the</div>
+        <div class="sm:pl-3 subtitle-3"><span>open-source</span> power</div>
+        <img
+          alt="cursor-box"
+          src={`${import.meta.env.BASE_URL}icons/cursor-box.svg`}
+          class="absolute top-0 right-4 h-6 sm:right-0 sm:top-2 md:top-3 md:h-8"
+        />
+      </div>
+    </h3>
+    <h2 class="px-12 text-sm lg:text-2xl mt-6 lg:mt-12 text-secondary">
+      The open-source Agile framework that automates repetitive tasks,<br />
+      allowing you to focus on creating high-impact, valuable code.
+    </h2>
+    <div class="overflow-x-auto">
+      <div
+        class="icon-box__container flex flex-row justify-center w-full md:mt-6 lg:mt-12"
+      >
+      </div>
+    </div>
   </div>
   <div class="mt-40">
     <StartNowButton id="btnEndCta" color="rose" className="-mt-4" />
@@ -279,17 +325,26 @@ const collaborateSection = [
   }
 
   .icon-box__container {
-    width: 680px;
     margin: 30px auto;
-    gap: 1rem;
     padding: 0 1rem;
     padding-top: 1rem;
     padding-bottom: 3.5rem;
-    position: absolute;
   }
 
   .icon-box:not(:first-child) {
     border-left-width: 1px;
+    border-left-style: solid;
+    border-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 139, 0),
+        rgba(255, 255, 255, 0.167),
+        rgba(0, 0, 139, 0)
+      )
+      1;
+  }
+
+  .border-icon:not(:last-child) {
+    border-right-width: 1px;
     border-left-style: solid;
     border-image: linear-gradient(
         to bottom,
@@ -314,5 +369,4 @@ const collaborateSection = [
           rgba(255, 255, 255, 0.2)
         );
   }
-
 </style>
