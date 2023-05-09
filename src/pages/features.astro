@@ -146,6 +146,7 @@ const openSourceFeatures = [
 	title="Arke | The unified framework to shape next-gen applications"
 	descriptions="Swiftly create high-performing and scalable applications by automatically managing the work behind the scenes"
 >
+<div class="h-screen">
 	<GradientBackground />
 	<FeaturesAnimatedBackground />
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 animate__animated animate__fadeIn">
@@ -158,7 +159,8 @@ const openSourceFeatures = [
 	<br/>
 	<br/>
 	<StartNowButton color="green" />
-	<div class="mt-80">
+</div>
+	<div>
 		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue">
 			<h4 class="text-5xl font-medium">
 				High-performing backend
@@ -169,12 +171,12 @@ const openSourceFeatures = [
 			</p>
 			<!--<img src={`${import.meta.env.BASE_URL}img/backend_galaxy.png`} class="w-11/12 mt-12 m-auto" alt="backend" />-->
 
-			<div class="mt-12 px-4 md:px-12 grid gap-x-4 gap-y-4 md:grid-cols-3">
+			<div class="mt-12 px-4 md:px-12 grid gap-x-4 gap-y-4 lg:grid-cols-3 md:grid-cols-2">
 				{backendFeatures.map(item =>
 					<Feature
 						title={item.title}
 						img={item.img}
-						className="flex-col"
+						className="flex-row text-left"
 					>
 						{item.description}
 					</Feature>
@@ -194,7 +196,7 @@ const openSourceFeatures = [
 				<div class="sm:col-span-7">
 					<img class="w-full" src={`${import.meta.env.BASE_URL}illustrations/placeholder_green.svg`} alt="placeholder">
 				</div>
-				<div class="sm:col-span-5 sm:border-l">
+				<div class="sm:col-span-5 sm:border-l border-card-color">
 					{frontendFeatures.map(item =>
 						<div class="p-8 py-4 text-left">
 							<div class="flex">
@@ -318,4 +320,8 @@ const openSourceFeatures = [
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+
+    .border-card-color {
+    border-color:rgba(255, 255, 255, 0.1);
+  }
 </style>
