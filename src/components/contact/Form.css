@@ -1,0 +1,37 @@
+.btn-circle {
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(33px);
+    text-transform: uppercase;
+    transition: background-color 1.2s ease-out 100ms;
+}
+.btn-hover:hover{
+    transition: background-color 1.2s ease-out 100ms;
+}
+
+.input-background {
+    background-color: #1d1e25;
+}
+
+.btn-background {
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-background {
+    background: #0a0b12;
+    filter: drop-shadow(0px 0px 70px rgba(255,195,192,0.02)) drop-shadow(0px 0px 70px rgba(120,151,231,0.12)) drop-shadow(0px 0px 90px rgba(120,231,197, 0.12));
+}

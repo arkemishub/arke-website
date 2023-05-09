@@ -61,26 +61,34 @@ const { className } = Astro.props;
       </div>
       <div class="col-span-2 mt-12 lg:pl-12 lg:mt-0">
         <div class="grid grid-cols-4 gap-x-1">
-          <img
-            class="w-5 logo m-auto"
-            src={`${import.meta.env.BASE_URL}icons/github.svg`}
-            alt="github"
-          />
-          <img
-            class="w-5 logo m-auto"
-            src={`${import.meta.env.BASE_URL}icons/linkedin.svg`}
-            alt="linkedin"
-          />
-          <img
-            class="w-5 logo m-auto"
-            src={`${import.meta.env.BASE_URL}icons/discord.svg`}
-            alt="discord"
-          />
-          <img
-            class="w-5 logo m-auto"
-            src={`${import.meta.env.BASE_URL}icons/mokka.svg`}
-            alt="mokka"
-          />
+          <a href="https://github.com/arkemishub" target="_blank">
+            <img
+              class="w-5 logo m-auto"
+              src={`${import.meta.env.BASE_URL}icons/github.svg`}
+              alt="github"
+            />
+          </a>
+          <a href="https://linkedin.com/company/arkehub" target="_blank">
+            <img
+              class="w-5 logo m-auto"
+              src={`${import.meta.env.BASE_URL}icons/linkedin.svg`}
+              alt="linkedin"
+            />
+          </a>
+          <a href="https://discord.gg/qTd8em5X" target="_blank">
+            <img
+              class="w-5 logo m-auto"
+              src={`${import.meta.env.BASE_URL}icons/discord.svg`}
+              alt="discord"
+            />
+          </a>
+          <a href="https://www.mokkastudios.com" target="_blank">
+            <img
+              class="w-5 logo m-auto"
+              src={`${import.meta.env.BASE_URL}icons/mokka.svg`}
+              alt="mokka"
+            />
+          </a>
         </div>
       </div>
     </div>
