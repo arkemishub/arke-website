@@ -259,8 +259,10 @@ import Circle from "../components/ui/Circle.astro";
 
 <Section className="z-10 pb-10 w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
     <h1 class="big-one z-30">one</h1>
-    <div class="bg-[url('illustrations/greenSemicircle.png')] final-background h-full w-full absolute z-20 pb-36" />
-    <div class="absolute h-full w-full z-40 top-40 md:top-56 lg:top-56 bg-[url('illustrations/blueSemicircle.png')] final-background2 flex flex-col items-center"><h2 class="text-3xl md:text-4xl lg:text-6xl text-center font-medium pt-8 md:pt-12 leading-6">Month</h2><p>to develop</p></div>
+    <img src={`${import.meta.env.BASE_URL}illustrations/greenSemicircle.png`} alt="circles background" class="absolute">
+    <div class="absolute h-full w-full z-40 top-40 md:top-56 lg:top-56 flex flex-col items-center relative"><h2 class="text-3xl md:text-4xl lg:text-6xl text-center font-medium pt-8 md:pt-12 leading-6 z-40">Month</h2><p>to develop</p>
+        <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class=" absolute -top-64">
+    </div>
 </Section>
 <div class="footer-container">
 <Footer className="mt-0 z-50" />
