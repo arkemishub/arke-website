@@ -6,7 +6,9 @@ import Button from "../components/ui/Button.astro";
 import Footer from "../layouts/Footer.astro";
 ---
 
-<Layout footer={false}>
+<Layout
+    noindex={false}
+    footer={false}>
   <GradientBackground />
   <h1
     class="title text-4xl md:text-5xl lg:text-7xl font-medium text-center mt-12 md:mt-40"
