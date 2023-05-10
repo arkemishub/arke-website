@@ -9,7 +9,8 @@ import Circle from "../components/ui/Circle.astro";
 
 <Layout footer={false}>
 	<GradientBackground />
-    <Section className="flex flex-col items-center bg-[url('illustrations/shpere.png')] container-shpere pb-32" color={'transparent'}>
+    <Section className="flex flex-col items-center container-shpere pb-32 relative" color={'transparent'}>
+        <img src={`${import.meta.env.BASE_URL}illustrations/shpere.png`} alt="shpere background" class="absolute lg:-bottom-72 md:-bottom-48 sm:-bottom-36 -bottom-0">
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-20 px-4">
 		The ultimate framework to<br/>
 		<span>level-up</span> your business method
