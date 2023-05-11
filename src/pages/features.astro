@@ -271,7 +271,7 @@ const openSourceFeatures = [
 				for limitless growth potential.
 			</p>
 			<div class="w-10/12 m-auto mt-12 grid gap-x-4 sm:grid-cols-2">
-				{techStackFeatures.map(item =>
+				<!-- {techStackFeatures.map(item =>
 					<Card className="p-8 m-auto mt-4 text-left">
 						<img src={item.img} class="h-24" alt={item.altImg}/>
 						<h2 class="text-xl text-secondary mt-4 font-semibold py-4">{item.title}</h2>
@@ -279,7 +279,35 @@ const openSourceFeatures = [
 							{item.description}
 						</p>
 					</Card>
-				)}
+				)} -->
+                <Card className="p-8 m-auto mt-4 text-left flexible-tech-card">
+                    <img src={ `${import.meta.env.BASE_URL}illustrations/sdk.png`} class="h-24" alt={'sdk'}/>
+                    <h2 class="text-xl text-secondary mt-4 font-semibold py-4">Multi-language SDKs</h2>
+                    <p class="text-secondary">
+                        Connect your favorite programming language with our backend<br/> for a tailored experience.
+                    </p>
+                </Card>
+                <Card className="p-8 m-auto mt-4 text-left flexible-tech-card">
+                    <img src={ `${import.meta.env.BASE_URL}illustrations/technology_indipendency.png`} class="h-24" alt={'technology_indipendency'}/>
+                    <h2 class="text-xl text-secondary mt-4 font-semibold py-4">Technology independency</h2>
+                    <p class="text-secondary">
+                        Switch when you want the technologies you use without any<br/> compatibility issues.
+                    </p>
+                </Card>
+                <Card className="p-8 m-auto mt-4 text-left flexible-tech-card">
+                    <img src={  `${import.meta.env.BASE_URL}illustrations/universal_deployment.png`} class="h-24" alt={'universal_deployment'}/>
+                    <h2 class="text-xl text-secondary mt-4 font-semibold py-4">Universal deployment</h2>
+                    <p class="text-secondary">
+                        Deploy on Docker, Kubernetes, AWS, Google, Azure or any other <br/> cloud provider.
+                    </p>
+                </Card>
+                <Card className="p-8 m-auto mt-4 text-left flexible-tech-card">
+                    <img src={ `${import.meta.env.BASE_URL}illustrations/limitless_scaling.png`} class="h-24" alt={'limitless_scaling'}/>
+                    <h2 class="text-xl text-secondary mt-4 font-semibold py-4">Limitless scaling</h2>
+                    <p class="text-secondary">
+                        Take advantage of Elixir's low-latency core to scale your product <br/> when needed.
+                    </p>
+                </Card>
 			</div>
 		</Section>
 
@@ -383,6 +411,16 @@ const openSourceFeatures = [
 
     .frontend-features-card:hover > .package-card {
         background: #28292f;
+    }
+
+    .flexible-tech-card{
+        border-width: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .flexible-tech-card:hover{
+        border-width: 1px;
+        border-color: rgba(255, 255, 255, 0.316)
     }
 
 </style>
