@@ -227,8 +227,9 @@ const openSourceFeatures = [
 				your ideas without writing a single line of code.
 			</p>
 			<img src={`${import.meta.env.BASE_URL}console/arke_console2.png`} class="mx-auto mt-20 w-9/12" alt="arke_console" />
-			<Card className="p-8 m-auto mt-4 w-10/12 -mt-24 md:-mt-44 lg:-mt-72 grid gap-x-4 sm:grid-cols-2">
-				{consoleFeatures.map(item =>
+			<Card className="p-8 m-auto mt-4 w-10/12 -mt-24 md:-mt-44 lg:-mt-72 grid sm:grid-cols-2">
+				{consoleFeatures.map((item,i) =>
+                <div class={`${i === 0 && 'border-b border-r' || i === 1 && 'border-b' || i === 2 && 'border-r'} border-card-color pb-4 pt-4`}>
 					<Feature
 						title={item.title}
 						img={item.img}
@@ -236,6 +237,7 @@ const openSourceFeatures = [
 					>
 						{item.description}
 					</Feature>
+                </div>
 				)}
 			</Card>
 		</Section>
