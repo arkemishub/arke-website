@@ -299,9 +299,7 @@ const openSourceFeatures = [
 								<h2 class="font-semibold text-md sm:text-xl">
 									{item.title}
 								</h2>
-								<p class="mt-2 text-md text-secondary">
-									{item.description}
-								</p>
+								<p set:html={replaceWithBr(item.description)} class="mt-2 text-md text-secondary"/>
 							</div>
 						</li>
 					)}
