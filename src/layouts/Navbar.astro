@@ -11,6 +11,14 @@ export interface Props {
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 const { subBar = false } = Astro.props;
+
+const subbarItems = [
+    {title: 'High-performing backend', id: 'high-performing-backend'},
+    {title: 'Extensive-frontend libraries', id: 'extensive-frontend-libraries'},
+    {title: 'No-code console', id: 'no-code-console'},
+    {title: 'Flexible tech stack', id: 'flexible-tech-stack'},
+    {title: 'Open-source culture', id: 'open-source-culture'}
+    ]; 
 ---
 
 <script>
@@ -36,7 +44,9 @@ const { subBar = false } = Astro.props;
 
 </script>
 
-<nav class={twMerge(subBar ? "rounded-tr-xl rounded-tl-xl sm:rounded-tr-3xl sm:rounded-tl-3xl" : "rounded-xl sm:rounded-3xl", "top-4 md:top-8 my-2 mx-4 sm:mx-2 md:mx-12 md:my-2 px-2 sm:px-4 py-2 sm:py-3")}>
+
+<nav class={twMerge("rounded-xl sm:rounded-3xl top-4 md:top-8 my-2 mx-4 sm:mx-2 md:mx-12 md:my-2 px-2 sm:px-4", subBar ? "pt-2 sm:pt-3" : "py-2 sm:py-3")}>
+    <div class={twMerge("flex flex-row", subBar && "border-b pb-3 border-color")}>
 	<div class="flex items-center flex-auto">
 		<a class={currentPath === "" ? "active" : ""} href={`${import.meta.env.BASE_URL}`}>
 			<img src={`${import.meta.env.BASE_URL}logos/arke_logo.svg`} class="w-20 md:w-28 ml-2" alt="arke_logo" />
@@ -55,6 +65,19 @@ const { subBar = false } = Astro.props;
 			<Button icon={`${import.meta.env.BASE_URL}icons/github.svg`} title="Join us"/>
 		</a>
 	</div>
+</div>
+    {
+        subBar && <div class='flex flex-row overflow-x-scroll'>
+            {
+                subbarItems.map(item => (
+                <div class="px-3 flex justify-center sub-bar-border">
+            <div class="px-2 py-3 my-3 w-60  rounded-xl flex justify-center sub-bar-link"><a href={`#${item.id}`}>{item.title}</a></div>
+        </div>
+                ))
+            }
+    </div>
+    }
+
 </nav>
 
 <Card id="menu"
@@ -67,6 +90,7 @@ const { subBar = false } = Astro.props;
 	nav {
 		z-index: 9999;
 		display: flex;
+        flex-direction: column; 
 		position: sticky;
 		background: rgba(255,255,255,0.03);
 		backdrop-filter: blur(33px);
@@ -82,4 +106,32 @@ const { subBar = false } = Astro.props;
 	.menu {
 		gap: 32px
 	}
+
+    .border-color {
+	    border-color:rgba(255, 255, 255, 0.1);
+	}
+
+    .sub-bar-border:not(:last-child) {
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 139, 0),
+        rgba(255, 255, 255, 0.167),
+        rgba(0, 0, 139, 0)
+      )
+      1;
+    }
+
+    .sub-bar-link{
+        transition: 0.3s ease-in-out; 
+        border: 1px solid transparent;
+    }
+
+    .sub-bar-link:hover {
+        color: #ffffff; 
+        background-color: rgba(255,255,255, 0.1);
+        border: 1px solid rgba(255,255,255, 0.15); 
+    }
+
 </style>
