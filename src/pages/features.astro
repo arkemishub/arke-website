@@ -256,10 +256,11 @@ const openSourceFeatures = [
 			</p>
 			<div class="w-10/12 m-auto mt-12 grid gap-x-4 sm:grid-cols-2">
 				{techStackFeatures.map(item =>
-					<Card className="p-8 m-auto mt-4 text-left">
+					<Card className="p-8 m-auto mt-4 text-left relative border-none">
 						<img src={item.img} class="h-24" alt={item.altImg}/>
 						<h2 class="text-xl text-secondary mt-4 font-semibold py-4">{item.title}</h2>
 						<p set:html={replaceWithBr(item.description)} class="text-secondary" />
+                        <div class="absolute w-full h-full top-0 left-0 flexible-tech-card" />
 					</Card>
 				)}
 			</div>
@@ -315,16 +316,16 @@ const openSourceFeatures = [
 </Layout>
 
 <style>
-	.title > span {
+.title > span {
 		background: linear-gradient(90deg, #78E7C5, #9DFFAD);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
 
-    .border-card-color {
+.border-card-color {
 	    border-color:rgba(255, 255, 255, 0.1);
 	}
-    .border-fade-to-black {
+.border-fade-to-black {
   position: relative;
 }
 .border-fade-to-black::before {
@@ -364,13 +365,18 @@ const openSourceFeatures = [
     }
 
     .flexible-tech-card{
-        border-width: 0;
         transition: 0.3s ease-in-out;
+        border: 1px solid transparent;
     }
 
     .flexible-tech-card:hover{
         border-width: 1px;
-        border-color: rgba(255, 255, 255, 0.316)
+        border-image: linear-gradient(
+        30deg,
+        transparent,
+        #534059
+      )
+      1;
     }
 
 </style>
