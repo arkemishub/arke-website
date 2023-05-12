@@ -2,11 +2,15 @@
 import Button from "../components/ui/Button.astro";
 import Card from "../components/ui/Card.astro";
 import NavbarMenu from "./NavbarMenu.astro";
+import {twMerge} from "tailwind-merge";
+
 export interface Props {
+    subBar: boolean;
 }
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
+const { subBar = false } = Astro.props;
 ---
 
 <script>
@@ -32,7 +36,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
 </script>
 
-<nav class="rounded-xl sm:rounded-3xl top-4 md:top-8 my-2 mx-4 sm:mx-2 md:mx-12 md:my-2 px-2 sm:px-4 py-2 sm:py-3">
+<nav class={twMerge(subBar ? "rounded-tr-xl rounded-tl-xl sm:rounded-tr-3xl sm:rounded-tl-3xl" : "rounded-xl sm:rounded-3xl", "top-4 md:top-8 my-2 mx-4 sm:mx-2 md:mx-12 md:my-2 px-2 sm:px-4 py-2 sm:py-3")}>
 	<div class="flex items-center flex-auto">
 		<a class={currentPath === "" ? "active" : ""} href={`${import.meta.env.BASE_URL}`}>
 			<img src={`${import.meta.env.BASE_URL}logos/arke_logo.svg`} class="w-20 md:w-28 ml-2" alt="arke_logo" />
