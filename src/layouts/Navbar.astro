@@ -71,7 +71,7 @@ const subbarItems = [
             {
                 subbarItems.map(item => (
                 <div class="px-3 flex justify-center sub-bar-border">
-            <div class="px-2 py-3 my-3 w-60  rounded-xl flex justify-center sub-bar-link"><a href={`#${item.id}`}>{item.title}</a></div>
+            <div class="px-2 py-3 my-3 w-60  rounded-xl flex justify-center sub-bar-link"><a class="select-none" href={`#${item.id}`}>{item.title}</a></div>
         </div>
                 ))
             }
@@ -126,6 +126,7 @@ const subbarItems = [
     .sub-bar-link{
         transition: 0.3s ease-in-out; 
         border: 1px solid transparent;
+        cursor: pointer;
     }
 
     .sub-bar-link:hover {
