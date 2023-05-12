@@ -10,6 +10,10 @@ import WorkflowStep from '../components/home/WorkflowStep/WorkflowStep.astro';
 import WorkflowFeature from '../components/home/WorkflowFeature/WorkflowFeature.astro';
 import StartNowButton from '../components/home/StartNowButton/StartNowButton.astro';
 import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
+import LottieAnimation from '../components/ui/LottieAnimation';
+import WorkflowWorkspaceAnimation from "../animatons/workflow_workspace_animation.json";
+import WorkflowDesignAndDevelopAnimation from "../animatons/workflow_design_and_develop.json";
+import WorkflowUpgradeAndScaleAnimation from "../animatons/workflow_upgrade_and_scale.json";
 ---
 
 <script>
@@ -80,7 +84,10 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 				description="Simplify your project management with our intuitive console, designed for smooth and fast control."
 			/>
 		</div>
-		<img class="w-full mt-24" src={`${import.meta.env.BASE_URL}workflow/workflow_workspace.png`} alt="workspace"/>
+		<div>
+			<div id="workflow_workspace_animation"/>
+			<LottieAnimation animation={WorkflowWorkspaceAnimation} client:load/>
+		</div>
 	</div>
 
 	<!-- BUILD  -->
@@ -100,7 +107,10 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 	</Card>
 	<div class="mt-20 w-10/12 m-auto grid gap-x-32 lg:grid-cols-2 items-center">
 		<GradientCircle animate={true} color="blue"/>
-		<img class="w-full mt-24" src={`${import.meta.env.BASE_URL}workflow/workflow_design_and_develop.svg`} alt="design and develop"/>
+		<div>
+			<div id="workflow_design_and_develop"/>
+			<LottieAnimation animation={WorkflowDesignAndDevelopAnimation} client:load/>
+		</div>
 		<div>
 			<WorkflowFeature
 				title="Effortless design"
@@ -153,7 +163,10 @@ import VerticalLine from '../components/home/VerticalLine/VerticalLine.astro';
 				description="Unleash the full potential of your product with our limitless scalability, driven by the high-performing Elixir core."
 			/>
 		</div>
-		<img class="w-full mt-24" src={`${import.meta.env.BASE_URL}workflow/workflow_upgrade_and_scale.svg`} alt="upgrade and scale"/>
+		<div>
+			<div id="workflow_upgrade_and_scale"/>
+			<LottieAnimation animation={WorkflowUpgradeAndScaleAnimation} client:load/>
+		</div>
 	</div>
 
 	<!--
