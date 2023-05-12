@@ -7,10 +7,10 @@ export interface Props {
 	description: string;
 	noindex?: boolean;
 	footer?: boolean;
-    navbar?: boolean; 
+    subBar?: boolean; 
 }
 
-const { title, description, footer= true, navbar= true, noindex = false } = Astro.props;
+const { title, description, footer= true, subBar= false, noindex = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ const { title, description, footer= true, navbar= true, noindex = false } = Astr
 						  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 		<div class="relative overflow-clip -mt-2">
-		{navbar && <Navbar />}
+		<Navbar subBar={subBar}/>
 			<main>
 				<slot />
 			</main>
