@@ -8,6 +8,10 @@ import Feature from "../components/features/Feature/Feature.astro";
 import Card from "../components/ui/Card.astro";
 import FooterCta from "../components/ui/FooterCta.astro";
 
+function replaceWithBr(sentence : string) {
+  return sentence.replace(/\n/g, "<br />")
+}
+
 const backendFeatures = [
 	{
 		title: 'Powerful Elixir core',
@@ -68,22 +72,22 @@ const consoleFeatures = [
 	{
 		title: 'Intuitive project management',
 		img: `${import.meta.env.BASE_URL}features/square/feature_project_management.png`,
-		description: 'Create and modify your entities, parameters, and relations with guided, skill-free workflows.'
+		description: 'Create and modify your entities, parameters, and \n relations with guided, skill-free workflows.'
 	},
 	{
 		title: 'Dynamic prototyping',
 		img: `${import.meta.env.BASE_URL}features/square/feature_prototyping.png`,
-		description: 'Accelerate your CRUD operations and iterate Agile for lightning-fast prototyping.'
+		description: 'Accelerate your CRUD operations and iterate Agile \n for lightning-fast prototyping.'
 	},
 	{
 		title: 'Smart code sync',
 		img: `${import.meta.env.BASE_URL}features/square/feature_smart_code_sync.png`,
-		description: 'Enjoy effortless code updates aligned with your console decisions.'
+		description: 'Enjoy effortless code updates aligned with your \n console decisions.'
 	},
 	{
 		title: 'Add-ons & Integrations',
 		img: `${import.meta.env.BASE_URL}features/square/feature_integrations.png`,
-		description: 'Expand your console experience with tailored add-ons and integrations.'
+		description: 'Expand your console experience with tailored \n add-ons and integrations.'
 	},
 ]
 
@@ -92,25 +96,25 @@ const techStackFeatures = [
 		title: 'Multi-language SDKs',
 		img: `${import.meta.env.BASE_URL}illustrations/sdk.png`,
 		altImg: 'sdk',
-		description: 'Connect your favorite programming language with our backend for a tailored experience.'
+		description: 'Connect your favorite programming language with our backend \n for a tailored experience.'
 	},
 	{
 		title: 'Technology independency',
 		img: `${import.meta.env.BASE_URL}illustrations/technology_indipendency.png`,
 		altImg: 'technology_indipendency',
-		description: 'Switch when you want the technologies you use without any compatibility issues.'
+		description: 'Switch when you want the technologies you use without any \n compatibility issues.'
 	},
 	{
 		title: 'Universal deployment',
 		img: `${import.meta.env.BASE_URL}illustrations/universal_deployment.png`,
 		altImg: 'universal_deployment',
-		description: 'Deploy on Docker, Kubernetes, AWS, Google, Azure or any other cloud provider.'
+		description: 'Deploy on Docker, Kubernetes, AWS, Google, Azure or any other \n cloud provider.'
 	},
 	{
 		title: 'Limitless scaling',
 		img: `${import.meta.env.BASE_URL}illustrations/limitless_scaling.png`,
 		altImg: 'limitless_scaling',
-		description: 'Take advantage of Elixir\'s low-latency core to scale your product when needed.'
+		description: 'Take advantage of Elixir\'s low-latency core to scale your product \n when needed.'
 	},
 ]
 
@@ -119,25 +123,25 @@ const openSourceFeatures = [
 		title: 'Smoothly onboarding',
 		img: `${import.meta.env.BASE_URL}features/square/feature_onboarding.png`,
 		altImg: 'smoothly_onboarding',
-		description: 'Begin your journey with Arke to shape the future of coding and become a driver of innovation.'
+		description: 'Begin your journey with Arke to shape the future of \n coding and become a driver of innovation.'
 	},
 	{
 		title: 'Ever-evolving technology',
 		img: `${import.meta.env.BASE_URL}features/square/feature_evolving_technology.png`,
 		altImg: 'evolving_technology',
-		description: 'Join our team and GitHub community to change the direction of software development.'
+		description: 'Join our team and GitHub community to change \n the direction of software development.'
 	},
 	{
 		title: 'Complete documentation',
 		img: `${import.meta.env.BASE_URL}features/square/feature_documentation.png`,
 		altImg: 'complete_documentation',
-		description: 'Build a solid foundation and master all the secrets of Arke following the technical documentation.'
+		description: 'Build a solid foundation and master all the secrets \n of Arke following the technical documentation.'
 	},
 	{
 		title: 'Friendly environment',
 		img: `${import.meta.env.BASE_URL}features/square/feature_friendly_environment.png`,
 		altImg: 'friendly_environment',
-		description: 'Stay up-to-date, share your doubts and learn everyday from our vibrant Discord community.'
+		description: 'Stay up-to-date, share your doubts and learn \n everyday from our vibrant Discord community.'
 	},
 ]
 ---
@@ -228,37 +232,17 @@ const openSourceFeatures = [
 			</p>
 			<img src={`${import.meta.env.BASE_URL}console/arke_console2.png`} class="mx-auto mt-20 w-9/12" alt="arke_console" />
 			<Card className="p-8 m-auto mt-4 w-10/12 -mt-24 md:-mt-44 lg:-mt-72 grid sm:grid-cols-2 border-none border-fade-to-black">
-				<!-- {consoleFeatures.map((item,i) =>
-                <div class={`${i === 0 && 'border-b border-r' || i === 1 && 'border-b' || i === 2 && 'border-r'} border-card-color pb-4 pt-4`}>
+				{consoleFeatures.map((item,i) =>
+                <div class={`${i === 0 && 'sm:border-b sm:border-r' || i === 1 && 'sm:border-b' || i === 2 && 'sm:border-r'} border-card-color pb-4 pt-4`}>
 					<Feature
 						title={item.title}
 						img={item.img}
 						className="flex-col text-center"
 					>
-						{item.description}
+						<p set:html={replaceWithBr(item.description)} class="text-secondary mt-2"/>
 					</Feature>
                 </div>
-				)} -->
-                <div class="border-card-color border-b border-r pb-4 pt-4">
-                <Feature title="Intuitive project management" img={`${import.meta.env.BASE_URL}features/square/feature_project_management.png`}>
-                    Create and modify your entities, parameters, and relations<br/> with guided, skill-free workflows.
-                </Feature>
-            </div>
-            <div class="border-card-color border-b pb-4 pt-4">
-                <Feature title="Dynamic prototyping" img={`${import.meta.env.BASE_URL}features/square/feature_prototyping.png`}>
-                    Accelerate your CRUD operations and iterate Agile<br/> for lightning-fast prototyping.
-                </Feature>
-                </div>
-                <div class="border-card-color border-r pb-4 pt-4">
-                <Feature title="Smart code sync" img={`${import.meta.env.BASE_URL}features/square/feature_smart_code_sync.png`}>
-                    Enjoy effortless code updates aligned with your<br/>console decisions.
-                </Feature>
-            </div>
-            <div class="border-card-color pb-4 pt-4">
-                <Feature title="Add-ons & Integrations" img={`${import.meta.env.BASE_URL}features/square/feature_integrations.png`}>
-                    Expand your console experience with tailored<br/> add-ons and integrations.
-                </Feature>
-            </div>
+				)}
 			</Card>
 		</Section>
 
@@ -271,43 +255,13 @@ const openSourceFeatures = [
 				for limitless growth potential.
 			</p>
 			<div class="w-10/12 m-auto mt-12 grid gap-x-4 sm:grid-cols-2">
-				<!-- {techStackFeatures.map(item =>
+				{techStackFeatures.map(item =>
 					<Card className="p-8 m-auto mt-4 text-left">
 						<img src={item.img} class="h-24" alt={item.altImg}/>
 						<h2 class="text-xl text-secondary mt-4 font-semibold py-4">{item.title}</h2>
-						<p class="text-secondary">
-							{item.description}
-						</p>
+						<p set:html={replaceWithBr(item.description)} class="text-secondary" />
 					</Card>
-				)} -->
-                <Card className="p-8 m-auto mt-4 text-left flexible-tech-card">
-                    <img src={ `${import.meta.env.BASE_URL}illustrations/sdk.png`} class="h-24" alt={'sdk'}/>
-                    <h2 class="text-xl text-secondary mt-4 font-semibold py-4">Multi-language SDKs</h2>
-                    <p class="text-secondary">
-                        Connect your favorite programming language with our backend<br/> for a tailored experience.
-                    </p>
-                </Card>
-                <Card className="p-8 m-auto mt-4 text-left flexible-tech-card">
-                    <img src={ `${import.meta.env.BASE_URL}illustrations/technology_indipendency.png`} class="h-24" alt={'technology_indipendency'}/>
-                    <h2 class="text-xl text-secondary mt-4 font-semibold py-4">Technology independency</h2>
-                    <p class="text-secondary">
-                        Switch when you want the technologies you use without any<br/> compatibility issues.
-                    </p>
-                </Card>
-                <Card className="p-8 m-auto mt-4 text-left flexible-tech-card">
-                    <img src={  `${import.meta.env.BASE_URL}illustrations/universal_deployment.png`} class="h-24" alt={'universal_deployment'}/>
-                    <h2 class="text-xl text-secondary mt-4 font-semibold py-4">Universal deployment</h2>
-                    <p class="text-secondary">
-                        Deploy on Docker, Kubernetes, AWS, Google, Azure or any other <br/> cloud provider.
-                    </p>
-                </Card>
-                <Card className="p-8 m-auto mt-4 text-left flexible-tech-card">
-                    <img src={ `${import.meta.env.BASE_URL}illustrations/limitless_scaling.png`} class="h-24" alt={'limitless_scaling'}/>
-                    <h2 class="text-xl text-secondary mt-4 font-semibold py-4">Limitless scaling</h2>
-                    <p class="text-secondary">
-                        Take advantage of Elixir's low-latency core to scale your product <br/> when needed.
-                    </p>
-                </Card>
+				)}
 			</div>
 		</Section>
 
@@ -321,16 +275,14 @@ const openSourceFeatures = [
 			</p>
 
 			<div class="w-full sm:grid sm:grid-cols-3 mt-12">
-				<div>
+				<div class="flex flex-col ">
 				{openSourceFeatures.slice(0,2).map(item =>
 					<li class="flex-row-reverse text-left sm:flex-row sm:text-right sm:text-right w-full flex items-center px-4 sm:px-0 py-2 mb-4">
-						<div>
+						<div class="w-10/12">
 							<h2 class="font-semibold text-md sm:text-xl">
 								{item.title}
 							</h2>
-							<p class="mt-2 text-md text-secondary">
-								{item.description}
-							</p>
+							<p set:html={replaceWithBr(item.description)} class="mt-2 text-md text-secondary" />
 						</div>
 						<img class="w-14 mr-4 sm:ml-4" src={item.img} alt={item.altImg}/>
 					</li>
@@ -343,7 +295,7 @@ const openSourceFeatures = [
 					{openSourceFeatures.slice(2,4).map(item =>
 						<li class="text-left w-full flex items-center px-4 py-2 mb-4">
 							<img class="w-14 mr-4" src={item.img} alt={item.altImg}/>
-							<div>
+							<div class="w-10/12">
 								<h2 class="font-semibold text-md sm:text-xl">
 									{item.title}
 								</h2>
