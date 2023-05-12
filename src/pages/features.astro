@@ -367,16 +367,18 @@ const openSourceFeatures = [
     .flexible-tech-card{
         transition: 0.3s ease-in-out;
         border: 1px solid transparent;
+        border-radius: 16px;
     }
 
     .flexible-tech-card:hover{
-        border-width: 1px;
-        border-image: linear-gradient(
-        30deg,
-        transparent,
-        #534059
-      )
-      1;
+      border-radius: 16px; /*1*/
+      border: 1px solid transparent; /*2*/
+      background: linear-gradient(30deg,transparent,#443247) border-box; /*3*/
+      -webkit-mask: /*4*/
+     linear-gradient(#fff 0 0) padding-box, 
+     linear-gradient(#fff 0 0);
+     -webkit-mask-composite: xor; /*5'*/
+     mask-composite: exclude; /*5*/
     }
 
 </style>
