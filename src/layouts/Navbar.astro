@@ -67,7 +67,7 @@ const subbarItems = [
 	</div>
 </div>
     {
-        subBar && <div class='flex flex-row overflow-x-scroll'>
+        subBar && <div class='sub-bar-container'>
             {
                 subbarItems.map(item => (
                 <div class="px-3 flex justify-center sub-bar-border">
@@ -133,6 +133,20 @@ const subbarItems = [
         color: #ffffff; 
         background-color: rgba(255,255,255, 0.1);
         border: 1px solid rgba(255,255,255, 0.15); 
+    }
+
+    @media (max-width: 639px){
+        .sub-bar-container {
+        display: none;
+    }
+    }
+
+    @media (min-width: 640px){
+        .sub-bar-container {
+        display: flex;
+        flex-direction: row; 
+        overflow-x: scroll;
+    }
     }
 
 </style>
