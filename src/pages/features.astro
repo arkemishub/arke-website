@@ -16,32 +16,32 @@ const backendFeatures = [
 	{
 		title: 'Powerful Elixir core',
 		img: `${import.meta.env.BASE_URL}features/square/feature_elixir.png`,
-		description: 'Develop next-gen applications with the dynamic, scalable and fault-tolerant Elixir core.'
+		description: 'Develop next-gen applications with the dynamic, \n scalable and fault-tolerant Elixir core.'
 	},
 	{
 		title: 'Simple storage',
 		img: `${import.meta.env.BASE_URL}features/square/feature_storage.png`,
-		description: 'Store and protect your media with flexible file, folder and bucket management.'
+		description: 'Store and protect your media with flexible file, \n folder and bucket management.'
 	},
 	{
 		title: 'Secure Authentication',
 		img: `${import.meta.env.BASE_URL}features/square/feature_authentication.png`,
-		description: 'Make your apps safe with the JWT Standard and the refresh & verify token management.'
+		description: 'Make your apps safe with the JWT Standard and \n the refresh & verify token management.'
 	},
 	{
 		title: 'Pluggable database',
 		img: `${import.meta.env.BASE_URL}features/square/feature_database.png`,
-		description: 'You can either go for the PostgreSQL database we provide or choose one that meets your needs.'
+		description: 'You can either go for the PostgreSQL database we \n provide or choose one that meets your needs.'
 	},
 	{
 		title: 'Auto-generated REST APIs',
 		img: `${import.meta.env.BASE_URL}features/square/feature_api.png`,
-		description: 'Automatically interface with the database and use our search, sort and CRUD features.'
+		description: 'Automatically interface with the database and use \n our search, sort and CRUD features.'
 	},
 	{
 		title: 'Multi-tenant architecture',
 		img: `${import.meta.env.BASE_URL}features/square/feature_multitenant.png`,
-		description: 'Share infrastructure & resources among multiple users making scaling and maintenance easier.'
+		description: 'Share infrastructure & resources among multiple \n users making scaling and maintenance easier.'
 	},
 ]
 
@@ -183,7 +183,7 @@ const openSourceFeatures = [
 						img={item.img}
 						className="flex-row text-left"
 					>
-						{item.description}
+						<p set:html={replaceWithBr(item.description)} class={'mt-1 text-secondary text-sm'}/>
 					</Feature>
 				)}
 			</div>
