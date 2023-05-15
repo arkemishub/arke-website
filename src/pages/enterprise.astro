@@ -12,8 +12,7 @@ import Circle from "../components/ui/Circle.astro";
     description="Optimize digital processes in an integrated, scalable and efficient ecosystem that fosters quality, creativity and innovation"
     footer={false}>
 	<GradientBackground />
-    <Section className="flex flex-col items-center container-shpere pb-32 relative" color={'transparent'}>
-        <img src={`${import.meta.env.BASE_URL}illustrations/shpere.png`} alt="shpere background" class="absolute lg:-bottom-72 md:-bottom-48 sm:-bottom-36 -bottom-0">
+    <Section className={`flex flex-col items-center container-shpere pb-32 relative bg-[url('${import.meta.env.BASE_URL}illustrations/shpere.png')] shpere-background`} color={'transparent'}>
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-20 px-4">
 		The ultimate framework to<br/>
 		<span>level-up</span> your business method
@@ -51,11 +50,11 @@ import Circle from "../components/ui/Circle.astro";
     </Section>
 
   <Section
-    className="w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1 lg:pt-40 sm:pt-32 pt-28 flex flex-col items-center"
+    className={`w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1 lg:pt-40 sm:pt-32 pt-28 flex flex-col items-center bg-[url('illustrations/circles.png')] circles-background`}
     color={"transparent"}
   >
   <div class=" absolute top-0 flex justify-center items-center lg:w-4/5 w-full" />
-  <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="absolute -top-80 md:-top-56 lg:w-6/12 md:w-6/12">
+  <!-- <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="absolute -top-80 md:-top-56 lg:w-6/12 md:w-6/12"> -->
   <div>
     <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold flex flex-col sm:flex-row justify-center">
       <div>Fast & Flexible</div> <div class="sm:pl-2 md:pl-3">iterations</div>
@@ -467,5 +466,14 @@ import Circle from "../components/ui/Circle.astro";
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  }
+
+  .shpere-background {
+    background-position-x: center;
+    background-size: auto; 
+  }
+
+  .circles-background {
+    background-repeat: no-repeat; 
   }
 </style>
