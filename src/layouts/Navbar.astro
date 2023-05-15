@@ -71,7 +71,9 @@ const subbarItems = [
             {
                 subbarItems.map(item => (
                 <div class="px-3 flex justify-center sub-bar-border w-fit lg:w-full">
+                    <div class="sub-bar-item-light">
             <div class="px-2 py-3 my-3 w-60 rounded-xl flex justify-center sub-bar-link"><a class="select-none" href={`#${item.id}`}>{item.title}</a></div>
+            </div>
         </div>
                 ))
             }
@@ -129,7 +131,25 @@ const subbarItems = [
         cursor: pointer;
     }
 
-    .sub-bar-link:hover {
+
+    .sub-bar-item-light{
+        border-bottom: 1px solid transparent;
+        transition: 0.3s ease-in-out; 
+    }
+
+    .sub-bar-item-light:hover{
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-image: linear-gradient(
+        to left,
+        rgba(0, 0, 139, 0),
+        rgba(255, 255, 255),
+        rgba(0, 0, 139, 0)
+      )
+      1;
+    } 
+
+    .sub-bar-item-light:hover >  .sub-bar-link {
         color: #ffffff; 
         background-color: rgba(255,255,255, 0.1);
         border: 1px solid rgba(255,255,255, 0.15); 
