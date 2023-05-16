@@ -13,7 +13,9 @@ import Circle from "../components/ui/Circle.astro";
     footer={false}>
 	<GradientBackground />
     <Section className={`flex flex-col items-center pb-32 relative shpere-background`} color={'transparent'}>
-        <img src={`${import.meta.env.BASE_URL}illustrations/shpere.png`} alt='' class='absolute container-shpere' />
+        <div class='absolute flex justify-center container-shpere'>
+        <img src={`${import.meta.env.BASE_URL}illustrations/shpere.png`} alt='' class='shpere' />
+    </div>
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-20 px-4">
 		The ultimate framework to<br/>
 		<span>level-up</span> your business method
@@ -442,29 +444,79 @@ import Circle from "../components/ui/Circle.astro";
     background-repeat: no-repeat; 
   }
 
-  .container-shpere {
-        min-width: 900px; 
-        bottom: -200px;
+  .shpere {
+        min-width: 1000px; 
+        height: 1000px;
+        position: absolute;
+        bottom: -150px;
     }
 
-  @media screen and (min-width: 1023px){
     .container-shpere {
         min-width: 1400px; 
-        bottom: -420px;
+        height: 730px;
+        overflow-y: hidden; 
     }
+  @media screen and (min-width: 1023px){
+    .shpere {
+        min-width: 1400px; 
+        height: 1400px;
+        position: absolute;
+        bottom: -430px;
+    }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 730px;
+        overflow-y: hidden; 
+    }
+
   }
 
   @media screen and (min-width: 767px) and (max-width: 1022px){
-    .container-shpere {
-        min-width: 1300px; 
-        bottom: -380px;
+    .shpere {
+        min-width: 1200px; 
+        height: 1200px;
+        position: absolute;
+        bottom: -300px;
     }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 670px;
+        overflow-y: hidden; 
+    }
+
   }
 
   @media screen and (min-width: 639px) and (max-width: 766px){
-    .container-shpere {
+    .shpere {
         min-width: 1000px; 
-        bottom: -260px;
+        height: 1000px;
+        position: absolute;
+        bottom: -250px;
     }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 560px;
+        overflow-y: hidden; 
+    }
+
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 520px){
+    .shpere {
+        min-width: 1000px; 
+        height: 1000px;
+        position: absolute;
+        bottom: -250px;
+    }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 730px;
+        overflow-y: hidden; 
+    }
+
   }
 </style>
