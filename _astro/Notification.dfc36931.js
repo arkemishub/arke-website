@@ -1,1 +1,0 @@
-import"./index.6418cf75.js";import{k as t}from"./react-toastify.esm.1656a404.js";import{j as r}from"./jsx-runtime.bdf83a34.js";function a(e){return r.jsx(t,{theme:"dark",position:"top-right",autoClose:4e3,hideProgressBar:!1,newestOnTop:!0,closeOnClick:!0,rtl:!1,pauseOnFocusLoss:!0,draggable:!0,pauseOnHover:!0,limit:5,...e})}export{a as default};
