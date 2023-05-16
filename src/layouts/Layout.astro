@@ -7,9 +7,10 @@ export interface Props {
 	description: string;
 	noindex?: boolean;
 	footer?: boolean;
+    subBar?: boolean; 
 }
 
-const { title, description, footer= true, noindex = false } = Astro.props;
+const { title, description, footer= true, subBar= false, noindex = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -40,7 +41,7 @@ const { title, description, footer= true, noindex = false } = Astro.props;
 						  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 		<div class="relative overflow-clip -mt-2">
-		<Navbar />
+		<Navbar subBar={subBar}/>
 			<main>
 				<slot />
 			</main>
@@ -62,6 +63,7 @@ const { title, description, footer= true, noindex = false } = Astro.props;
 	html {
 		font-family: GeneralSans, sans-serif;
 		background: #0A0B12;
+        scroll-behavior: smooth;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

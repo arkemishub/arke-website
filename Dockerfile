@@ -12,7 +12,7 @@ RUN \
 
 COPY . .
 RUN pnpm install --no-frozen-lockfile
-RUN npm run build
+RUN npm run build -- --mode custom
 
 FROM nginx:stable AS runtime
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
