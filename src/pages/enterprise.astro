@@ -442,14 +442,29 @@ import Circle from "../components/ui/Circle.astro";
     background-repeat: no-repeat; 
   }
 
-  .container-shpere{
-    min-width: 1400px; 
-  }
+  .container-shpere {
+        min-width: 900px; 
+        bottom: -200px;
+    }
 
-
-  @media and (min-width: '1023px'){
+  @media screen and (min-width: 1023px){
     .container-shpere {
         min-width: 1400px; 
+        bottom: -420px;
+    }
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1022px){
+    .container-shpere {
+        min-width: 1300px; 
+        bottom: -380px;
+    }
+  }
+
+  @media screen and (min-width: 639px) and (max-width: 766px){
+    .container-shpere {
+        min-width: 1000px; 
+        bottom: -260px;
     }
   }
 </style>
