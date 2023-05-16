@@ -56,9 +56,10 @@ import Circle from "../components/ui/Circle.astro";
     className={`w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1 lg:pt-40 sm:pt-32 pt-28 flex flex-col items-center`}
     color={"transparent"}
   >
-  <div class="absolute flex justify-center container-circles" />
-  <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="circles">
-  <div>
+
+    <div class="container-circles2 top-0">
+        <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="circles2">
+        </div>
     <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold flex flex-col sm:flex-row justify-center">
       <div>Fast & Flexible</div> <div class="sm:pl-2 md:pl-3">iterations</div>
     </h3>
@@ -456,12 +457,11 @@ import Circle from "../components/ui/Circle.astro";
         position: absolute;
         bottom: 430px;
         overflow-y: hidden;
+        border: 1px solid yellow;
     }
 
     .container-circles {
         position: absolute;
-        display: flex;
-        justify-content: center; 
         min-width: 1400px; 
         height: 600px;
         overflow-y: hidden; 
@@ -470,9 +470,9 @@ import Circle from "../components/ui/Circle.astro";
     }
 
     .circles2 {
+        position: absolute;
         min-width: 700px; 
         height: 700px;
-        position: absolute;
         bottom: 250px;
     }
 
@@ -590,5 +590,5 @@ import Circle from "../components/ui/Circle.astro";
         height: 600px;
     }
 
-  }
+  } 
 </style>
