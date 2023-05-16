@@ -1,4 +1,4 @@
-FROM node:lts AS runtime
+FROM node:16.20-slim AS build
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
@@ -11,14 +11,9 @@ RUN \
   fi
 
 COPY . .
-
 RUN pnpm install --no-frozen-lockfile
-<<<<<<< HEAD
-RUN pnpm build
-=======
-RUN PUBLIC_OUTPUT=server pnpm build
->>>>>>> 271b860072dee1e0d31ce3e894f9eaabe7d25d2f
+RUN npm run build -- --mode custom
 
-ENV PORT=3000
-EXPOSE 3000
-CMD node ./dist/server/entry.mjs
+FROM nginx:stable AS runtime
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /app/dist /usr/share/nginx/html
