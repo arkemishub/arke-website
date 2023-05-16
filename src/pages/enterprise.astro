@@ -262,11 +262,15 @@ import Circle from "../components/ui/Circle.astro";
     <div class=" h-60 lg:pt-64 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-72" />
 </Section>
 
-<Section className="z-10 pb-10 w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
+<Section className="z-10 pb-8 md:pb-24 w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
     <h1 class="big-one z-30">one</h1>
+    <div class="z-50 absolute top-44 md:top-56">
+    <h2 class="text-3xl md:text-4xl lg:text-6xl text-center font-medium">Month</h2><p>to develop</p>
+    </div>
     <img src={`${import.meta.env.BASE_URL}illustrations/greenSemicircle.png`} alt="circles background" class="absolute">
-    <div class="absolute h-full w-full z-40 top-40 md:top-56 lg:top-56 flex flex-col items-center relative"><h2 class="text-3xl md:text-4xl lg:text-6xl text-center font-medium pt-8 md:pt-12 leading-6 z-40">Month</h2><p>to develop</p>
-        <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class=" absolute -top-64">
+    <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class="absolute top-40 z-40">
+    <div class="absolute h-full w-full z-40 top-40 md:top-56 lg:top-56 flex flex-col items-center relative">
+        <!-- <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class=" absolute -top-64"> -->
     </div>
 </Section>
 <div class="footer-container">
@@ -418,7 +422,7 @@ import Circle from "../components/ui/Circle.astro";
   }
 
   .footer-container{
-    background-color: #100c14;
+    background: linear-gradient(180deg, #0a0b12, #100c14 )
   }
 
   .big-one {
