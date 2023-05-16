@@ -18,7 +18,7 @@ const subbarItems = [
     {title: 'No-code console', id: 'no-code-console'},
     {title: 'Flexible tech stack', id: 'flexible-tech-stack'},
     {title: 'Open-source culture', id: 'open-source-culture'}
-    ]; 
+    ];
 ---
 
 <script>
@@ -72,9 +72,11 @@ const subbarItems = [
                 subbarItems.map(item => (
                 <div class="px-3 flex justify-center sub-bar-border w-fit lg:w-full">
                     <div class="sub-bar-item-light">
-            <div class="px-2 py-3 my-3 w-60 rounded-xl flex justify-center sub-bar-link"><a class="select-none" href={`#${item.id}`}>{item.title}</a></div>
-            </div>
-        </div>
+						<a class="select-none px-2 py-3 my-3 w-60 rounded-xl flex justify-center sub-bar-link" href={`#${item.id}`}>
+								{item.title}
+						</a>
+					</div>
+				</div>
                 ))
             }
     </div>
@@ -92,7 +94,7 @@ const subbarItems = [
 	nav {
 		z-index: 9999;
 		display: flex;
-        flex-direction: column; 
+        flex-direction: column;
 		position: sticky;
 		background: rgba(255,255,255,0.03);
 		backdrop-filter: blur(33px);
@@ -126,7 +128,7 @@ const subbarItems = [
     }
 
     .sub-bar-link{
-        transition: 0.3s ease-in-out; 
+        transition: 0.3s ease-in-out;
         border: 1px solid transparent;
         cursor: pointer;
     }
@@ -134,7 +136,7 @@ const subbarItems = [
 
     .sub-bar-item-light{
         border-bottom: 1px solid transparent;
-        transition: 0.3s ease-in-out; 
+        transition: 0.3s ease-in-out;
     }
 
     .sub-bar-item-light:hover{
@@ -147,12 +149,12 @@ const subbarItems = [
         rgba(0, 0, 139, 0)
       )
       1;
-    } 
+    }
 
     .sub-bar-item-light:hover >  .sub-bar-link {
-        color: #ffffff; 
+        color: #ffffff;
         background-color: rgba(255,255,255, 0.1);
-        border: 1px solid rgba(255,255,255, 0.15); 
+        border: 1px solid rgba(255,255,255, 0.15);
     }
 
     @media (max-width: 639px){
@@ -164,7 +166,7 @@ const subbarItems = [
     @media (min-width: 640px){
         .sub-bar-container {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         overflow-x: scroll;
     }
     }
