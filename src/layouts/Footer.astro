@@ -97,10 +97,12 @@ const { className } = Astro.props;
       <p class="text-sm text-secondary">
         Copyright © {new Date().getFullYear()} Arkemis S.r.l. All rights reserved.
       </p>
-      <p class="flex items-center text-sm text-secondary mt-2 sm:mt-0">
-        Powered By
-        <img src={`${import.meta.env.BASE_URL}icons/mokka.svg`} alt="mokka icon" class="h-8 ml-2"/>
-      </p>
+      <a href="https://www.mokkastudios.com" target="_blank">
+        <p class="flex items-center text-sm text-secondary mt-2 sm:mt-0">
+          Powered By
+          <img src={`${import.meta.env.BASE_URL}icons/mokka.svg`} alt="mokka icon" class="h-8 ml-2"/>
+        </p>
+      </a>
     </div>
   </footer>
 
