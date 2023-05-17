@@ -8,36 +8,40 @@ import Feature from "../components/features/Feature/Feature.astro";
 import Card from "../components/ui/Card.astro";
 import FooterCta from "../components/ui/FooterCta.astro";
 
+function replaceWithBr(sentence : string) {
+  return sentence.replace(/\n/g, "<br />")
+}
+
 const backendFeatures = [
 	{
 		title: 'Powerful Elixir core',
 		img: `${import.meta.env.BASE_URL}features/square/feature_elixir.png`,
-		description: 'Develop next-gen applications with the dynamic, scalable and fault-tolerant Elixir core.'
+		description: 'Develop next-gen applications with the dynamic, \n scalable and fault-tolerant Elixir core.'
 	},
 	{
 		title: 'Simple storage',
 		img: `${import.meta.env.BASE_URL}features/square/feature_storage.png`,
-		description: 'Store and protect your media with flexible file, folder and bucket management.'
+		description: 'Store and protect your media with flexible file, \n folder and bucket management.'
 	},
 	{
 		title: 'Secure Authentication',
 		img: `${import.meta.env.BASE_URL}features/square/feature_authentication.png`,
-		description: 'Make your apps safe with the JWT Standard and the refresh & verify token management.'
+		description: 'Make your apps safe with the JWT Standard and \n the refresh & verify token management.'
 	},
 	{
 		title: 'Pluggable database',
 		img: `${import.meta.env.BASE_URL}features/square/feature_database.png`,
-		description: 'You can either go for the PostgreSQL database we provide or choose one that meets your needs.'
+		description: 'You can either go for the PostgreSQL database we \n provide or choose one that meets your needs.'
 	},
 	{
 		title: 'Auto-generated REST APIs',
 		img: `${import.meta.env.BASE_URL}features/square/feature_api.png`,
-		description: 'Automatically interface with the database and use our search, sort and CRUD features.'
+		description: 'Automatically interface with the database and use \n our search, sort and CRUD features.'
 	},
 	{
 		title: 'Multi-tenant architecture',
 		img: `${import.meta.env.BASE_URL}features/square/feature_multitenant.png`,
-		description: 'Share infrastructure & resources among multiple users making scaling and maintenance easier.'
+		description: 'Share infrastructure & resources among multiple \n users making scaling and maintenance easier.'
 	},
 ]
 
@@ -68,22 +72,22 @@ const consoleFeatures = [
 	{
 		title: 'Intuitive project management',
 		img: `${import.meta.env.BASE_URL}features/square/feature_project_management.png`,
-		description: 'Create and modify your entities, parameters, and relations with guided, skill-free workflows.'
+		description: 'Create and modify your entities, parameters, and \n relations with guided, skill-free workflows.'
 	},
 	{
 		title: 'Dynamic prototyping',
 		img: `${import.meta.env.BASE_URL}features/square/feature_prototyping.png`,
-		description: 'Accelerate your CRUD operations and iterate Agile for lightning-fast prototyping.'
+		description: 'Accelerate your CRUD operations and iterate Agile \n for lightning-fast prototyping.'
 	},
 	{
 		title: 'Smart code sync',
 		img: `${import.meta.env.BASE_URL}features/square/feature_smart_code_sync.png`,
-		description: 'Enjoy effortless code updates aligned with your console decisions.'
+		description: 'Enjoy effortless code updates aligned with your \n console decisions.'
 	},
 	{
 		title: 'Add-ons & Integrations',
 		img: `${import.meta.env.BASE_URL}features/square/feature_integrations.png`,
-		description: 'Expand your console experience with tailored add-ons and integrations.'
+		description: 'Expand your console experience with tailored \n add-ons and integrations.'
 	},
 ]
 
@@ -92,25 +96,25 @@ const techStackFeatures = [
 		title: 'Multi-language SDKs',
 		img: `${import.meta.env.BASE_URL}illustrations/sdk.png`,
 		altImg: 'sdk',
-		description: 'Connect your favorite programming language with our backend for a tailored experience.'
+		description: 'Connect your favorite programming language with our backend \n for a tailored experience.'
 	},
 	{
 		title: 'Technology independency',
 		img: `${import.meta.env.BASE_URL}illustrations/technology_indipendency.png`,
 		altImg: 'technology_indipendency',
-		description: 'Switch when you want the technologies you use without any compatibility issues.'
+		description: 'Switch when you want the technologies you use without any \n compatibility issues.'
 	},
 	{
 		title: 'Universal deployment',
 		img: `${import.meta.env.BASE_URL}illustrations/universal_deployment.png`,
 		altImg: 'universal_deployment',
-		description: 'Deploy on Docker, Kubernetes, AWS, Google, Azure or any other cloud provider.'
+		description: 'Deploy on Docker, Kubernetes, AWS, Google, Azure or any other \n cloud provider.'
 	},
 	{
 		title: 'Limitless scaling',
 		img: `${import.meta.env.BASE_URL}illustrations/limitless_scaling.png`,
 		altImg: 'limitless_scaling',
-		description: 'Take advantage of Elixir\'s low-latency core to scale your product when needed.'
+		description: 'Take advantage of Elixir\'s low-latency core to scale your product \n when needed.'
 	},
 ]
 
@@ -119,25 +123,25 @@ const openSourceFeatures = [
 		title: 'Smoothly onboarding',
 		img: `${import.meta.env.BASE_URL}features/square/feature_onboarding.png`,
 		altImg: 'smoothly_onboarding',
-		description: 'Begin your journey with Arke to shape the future of coding and become a driver of innovation.'
+		description: 'Begin your journey with Arke to shape the future of \n coding and become a driver of innovation.'
 	},
 	{
 		title: 'Ever-evolving technology',
 		img: `${import.meta.env.BASE_URL}features/square/feature_evolving_technology.png`,
 		altImg: 'evolving_technology',
-		description: 'Join our team and GitHub community to shape the future of software development.'
+		description: 'Join our team and GitHub community to change \n the direction of software development.'
 	},
 	{
 		title: 'Complete documentation',
 		img: `${import.meta.env.BASE_URL}features/square/feature_documentation.png`,
 		altImg: 'complete_documentation',
-		description: 'Build a solid foundation and master all the secrets of Arke following the technical documentation.'
+		description: 'Build a solid foundation and master all the secrets \n of Arke following the technical documentation.'
 	},
 	{
 		title: 'Friendly environment',
 		img: `${import.meta.env.BASE_URL}features/square/feature_friendly_environment.png`,
 		altImg: 'friendly_environment',
-		description: 'Stay up-to-date, share your doubts and learn everyday from our vibrant Discord community.'
+		description: 'Stay up-to-date, share your doubts and learn \n everyday from our vibrant Discord community.'
 	},
 ]
 ---
@@ -145,11 +149,12 @@ const openSourceFeatures = [
 <Layout
 	title="Arke | The unified framework to shape next-gen applications"
 	description="Swiftly create high-performing and scalable applications by automatically managing the work behind the scenes"
+    subBar={true}
 >
-<div class="h-screen">
+<div class="pb-20 lg:pb-0 lg:h-screen">
 	<GradientBackground />
 	<FeaturesAnimatedBackground />
-	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 animate__animated animate__fadeIn">
+	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-24 animate__animated animate__fadeIn">
 		The unified framework to shape<br/>
 		<span>next-gen</span> applications</h1>
 	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary animate__animated animate__fadeIn">
@@ -160,8 +165,8 @@ const openSourceFeatures = [
 	<br/>
 	<StartNowButton color="green" />
 </div>
-	<div>
-		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue">
+	<div id="high-performing-backend" class="scroll-section">
+		<Section className="w-full px-12 pb-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue">
 			<h4 class="text-5xl font-medium">
 				High-performing backend
 			</h4>
@@ -178,12 +183,13 @@ const openSourceFeatures = [
 						img={item.img}
 						className="flex-row text-left"
 					>
-						{item.description}
+						<p set:html={replaceWithBr(item.description)} class={'mt-1 text-secondary text-sm'}/>
 					</Feature>
 				)}
 			</div>
 		</Section>
 
+        <div id="extensive-frontend-libraries" class="scroll-section">
 		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="green">
 			<h4 class="text-5xl font-medium">
 				Extensive frontend libraries
@@ -217,7 +223,9 @@ const openSourceFeatures = [
 				</div>
 			</Card>
 		</Section>
+    </div>
 
+    <div id="no-code-console" class="scroll-section">
 		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="orange">
 			<h4 class="text-5xl font-medium">
 				No-code console
@@ -226,20 +234,24 @@ const openSourceFeatures = [
 				Harness the power of our user-friendly console to test and develop<br/>
 				your ideas without writing a single line of code.
 			</p>
-			<img src={`${import.meta.env.BASE_URL}console/arke_console.png`} class="mx-auto mt-20 w-9/12" alt="arke_console" />
-			<Card className="p-8 m-auto mt-4 w-10/12 -mt-4 sm:-mt-32 grid gap-x-4 sm:grid-cols-2">
-				{consoleFeatures.map(item =>
+			<img src={`${import.meta.env.BASE_URL}console/arke_console2.png`} class="mx-auto mt-20 w-9/12" alt="arke_console" />
+			<Card className="p-8 m-auto mt-4 w-10/12 -mt-24 md:-mt-44 lg:-mt-72 grid sm:grid-cols-2 border-none border-fade-to-black">
+				{consoleFeatures.map((item,i) =>
+                <div class={`${i === 0 && 'sm:border-b sm:border-r' || i === 1 && 'sm:border-b' || i === 2 && 'sm:border-r'} border-card-color pb-4 pt-4`}>
 					<Feature
 						title={item.title}
 						img={item.img}
 						className="flex-col text-center"
 					>
-						{item.description}
+						<p set:html={replaceWithBr(item.description)} class="text-secondary mt-2"/>
 					</Feature>
+                </div>
 				)}
 			</Card>
 		</Section>
+    </div>
 
+    <div id="flexible-tech-stack" class="scroll-section">
 		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="rose">
 			<h4 class="text-5xl font-medium">
 				Flexible tech stack
@@ -250,17 +262,18 @@ const openSourceFeatures = [
 			</p>
 			<div class="w-10/12 m-auto mt-12 grid gap-x-4 sm:grid-cols-2">
 				{techStackFeatures.map(item =>
-					<Card className="p-8 m-auto mt-4 text-left">
+					<Card className="p-8 m-auto mt-4 text-left relative border-none">
 						<img src={item.img} class="h-24" alt={item.altImg}/>
-						<h2 class="text-xl mt-4 font-semibold">{item.title}</h2>
-						<p class="text-secondary">
-							{item.description}
-						</p>
+						<h2 class="text-xl text-secondary mt-4 font-semibold py-4">{item.title}</h2>
+						<p set:html={replaceWithBr(item.description)} class="text-secondary" />
+                        <div class="absolute w-full h-full top-0 left-0 flexible-tech-card" />
 					</Card>
 				)}
 			</div>
 		</Section>
+    </div>
 
+    <div id="open-source-culture" class="scroll-section">
 		<Section className="w-full py-12 px-4 sm:p-12 m-auto rounded-none b-0" color="blue">
 			<h4 class="text-5xl font-medium">
 				Open-source culture
@@ -271,16 +284,14 @@ const openSourceFeatures = [
 			</p>
 
 			<div class="w-full sm:grid sm:grid-cols-3 mt-12">
-				<div>
+				<div class="flex flex-col ">
 				{openSourceFeatures.slice(0,2).map(item =>
 					<li class="flex-row-reverse text-left sm:flex-row sm:text-right sm:text-right w-full flex items-center px-4 sm:px-0 py-2 mb-4">
-						<div>
+						<div class="w-10/12">
 							<h2 class="font-semibold text-md sm:text-xl">
 								{item.title}
 							</h2>
-							<p class="mt-2 text-md text-secondary">
-								{item.description}
-							</p>
+							<p set:html={replaceWithBr(item.description)} class="mt-2 text-md text-secondary" />
 						</div>
 						<img class="w-14 mr-4 sm:ml-4" src={item.img} alt={item.altImg}/>
 					</li>
@@ -293,19 +304,18 @@ const openSourceFeatures = [
 					{openSourceFeatures.slice(2,4).map(item =>
 						<li class="text-left w-full flex items-center px-4 py-2 mb-4">
 							<img class="w-14 mr-4" src={item.img} alt={item.altImg}/>
-							<div>
+							<div class="w-10/12">
 								<h2 class="font-semibold text-md sm:text-xl">
 									{item.title}
 								</h2>
-								<p class="mt-2 text-md text-secondary">
-									{item.description}
-								</p>
+								<p set:html={replaceWithBr(item.description)} class="mt-2 text-md text-secondary"/>
 							</div>
 						</li>
 					)}
 				</div>
 			</div>
 		</Section>
+    </div>
 
 		<div class="mt-40">
 			<StartNowButton color="green" className="-mt-4" />
@@ -315,16 +325,32 @@ const openSourceFeatures = [
 </Layout>
 
 <style>
-	.title > span {
+
+.title > span {
 		background: linear-gradient(90deg, #78E7C5, #9DFFAD);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
 
-    .border-card-color {
+.border-card-color {
 	    border-color:rgba(255, 255, 255, 0.1);
 	}
-
+.border-fade-to-black {
+  position: relative;
+}
+.border-fade-to-black::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px; 
+  padding: 1px; 
+  background:linear-gradient(180deg,rgba(255, 255, 255, 0.208),rgba(0, 0, 0, 0)); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
     .extensive-frontend-image {
        max-height: 650px;
 	}
@@ -346,6 +372,27 @@ const openSourceFeatures = [
 
     .frontend-features-card:hover > .package-card {
         background: #28292f;
+    }
+
+    .flexible-tech-card{
+        transition: 0.3s ease-in-out;
+        border: 1px solid transparent;
+        border-radius: 16px;
+    }
+
+    .flexible-tech-card:hover{
+      border-radius: 16px; 
+      border: 1.5px solid transparent;
+      background: linear-gradient(30deg,transparent,#443247) border-box; 
+      -webkit-mask: 
+      linear-gradient(#fff 0 0) padding-box, 
+      linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; 
+      mask-composite: exclude; 
+    }
+
+    .scroll-section{
+        scroll-margin-top: 185px;
     }
 
 </style>
