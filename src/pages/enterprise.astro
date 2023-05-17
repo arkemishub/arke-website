@@ -12,7 +12,10 @@ import Circle from "../components/ui/Circle.astro";
     description="Optimize digital processes in an integrated, scalable and efficient ecosystem that fosters quality, creativity and innovation"
     footer={false}>
 	<GradientBackground />
-    <Section className="flex flex-col items-center bg-[url('illustrations/shpere.png')] container-shpere pb-32" color={'transparent'}>
+    <Section className={`flex flex-col items-center pb-32 relative shpere-background`} color={'transparent'}>
+        <div class='absolute flex justify-center container-shpere'>
+        <img src={`${import.meta.env.BASE_URL}illustrations/shpere.png`} alt='' class='shpere' />
+    </div>
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-20 px-4">
 		The ultimate framework to<br/>
 		<span>level-up</span> your business method
@@ -50,11 +53,13 @@ import Circle from "../components/ui/Circle.astro";
     </Section>
 
   <Section
-    className="w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1 lg:pt-40 sm:pt-32 pt-28 flex flex-col items-center"
+    className={`w-full h-full lg:px-12 m-auto rounded-none b-0 -z-1 lg:pt-40 sm:pt-32 pt-28 flex flex-col items-center`}
     color={"transparent"}
   >
-  <div class=" absolute top-0 flex justify-center items-center lg:w-4/5 w-full pb-96 bg-[url('illustrations/circles.png')] container-circles" />
-  <div>
+
+    <div class="container-circles top-0">
+        <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="circles">
+        </div>
     <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold flex flex-col sm:flex-row justify-center">
       <div>Fast & Flexible</div> <div class="sm:pl-2 md:pl-3">iterations</div>
     </h3>
@@ -176,9 +181,7 @@ import Circle from "../components/ui/Circle.astro";
                 </Card>
             </div>
             <div class="lg:w-3/6">
-                <Card>
-                    <p>???</p>
-                </Card>
+                <Card/>
             </div>
         </div>
     </div>
@@ -189,7 +192,9 @@ import Circle from "../components/ui/Circle.astro";
     <div class="prototype-circle-background p-3 rounded-full flex justify-center items-center w-fit absolute lg:-top-20 -top-16">
         <Circle title="expand" className={' rose-gradient text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
         </div>
-    <div class="absolute top-0 flex justify-center items-center lg:w-4/5 w-full pb-96 bg-[url('illustrations/circles.png')] container-circles" />
+        <div class="container-circles">
+        <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="circles">
+        </div>
     <div class="md:mt-32 mt-24">
         <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold">
          Transparent & Continuous communication
@@ -251,14 +256,24 @@ import Circle from "../components/ui/Circle.astro";
 </Section>
 
 <Section className={'relative flex flex-col items-center'} color={'transparent'}>
-    <Circle title="start the change" className={"text-white w-28 h-28 border border-black lg:h-40 lg:w-40 uppercase flex justify-center items-center bg-[url('illustrations/Ellipse.png')] ellipse-background rounded-full z-20 absolute -top-14 lg:-top-20"} />
-    <div class=" h-60 lg:pt-64 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-72" />
+    <a href="/contact" class="absolute">
+    <Circle title="start the change" className={"text-white w-28 h-28 border border-black lg:h-40 lg:w-40 uppercase flex justify-center items-center bg-[url('illustrations/Ellipse.png')] ellipse-background rounded-full z-20 -top-14 lg:-top-20"} />
+    </a>
+    <div class=" h-60 w-full flex justify-center absolute -top-96">
+        <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt='' class="absolute bottom-circles"/>
+    </div>
 </Section>
 
-<Section className="z-10 pb-10 w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
+<Section className="z-10 pb-8  w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
     <h1 class="big-one z-30">one</h1>
-    <div class="bg-[url('illustrations/greenSemicircle.png')] final-background h-full w-full absolute z-20 pb-36" />
-    <div class="absolute h-full w-full z-40 top-40 md:top-56 lg:top-56 bg-[url('illustrations/blueSemicircle.png')] final-background2 flex flex-col items-center"><h2 class="text-3xl md:text-4xl lg:text-6xl text-center font-medium pt-8 md:pt-12 leading-6">Month</h2><p>to develop</p></div>
+    <div class="z-50 absolute top-60">
+    <h2 class="text-5xl lg:text-6xl text-center font-medium">Month</h2><p>to develop</p>
+    </div>
+    <img src={`${import.meta.env.BASE_URL}illustrations/greenSemicircle.png`} alt="circles background" class="absolute semicircle-background">
+    <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class="absolute top-52 z-40">
+    <div class="absolute h-full w-full z-40 top-40 md:top-56 lg:top-56 flex flex-col items-center relative">
+        <!-- <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class=" absolute -top-64"> -->
+    </div>
 </Section>
 <div class="footer-container">
 <Footer className="mt-0 z-50" />
@@ -401,7 +416,7 @@ import Circle from "../components/ui/Circle.astro";
 
 
   .big-one {
-    font-size: 240px;
+    font-size: 100px;
     font-weight: bolder;
     background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
     -webkit-background-clip: text;
@@ -409,59 +424,182 @@ import Circle from "../components/ui/Circle.astro";
   }
 
   .footer-container{
-    background-color: #100c14;
-  }
-
-  @media screen and (min-width: 1024px){
-    .container-shpere {
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: -140px;
-    background-size: auto;
-  }
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1024px){
-    .container-shpere {
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: -230px;
-    background-size: auto;
-  }
-  }
-
-  @media screen and (min-width: 640px) and (max-width: 767px){
-    .container-shpere {
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: -270px;
-    background-size: auto;
+    background: linear-gradient(180deg, #0a0b12, #100c14 )
   }
 
   .big-one {
-    font-size: 170px;
+    font-size: 230px;
     font-weight: bolder;
     background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  }
-
-  @media screen and (max-width: 640px){
-    .container-shpere {
-    background-repeat: no-repeat;
+  .shpere-background {
     background-position-x: center;
-    background-position-y: -185px;
-    background-size: auto;
+    background-size: auto; 
   }
 
-  .big-one {
-    font-size: 170px;
-    font-weight: bolder;
-    background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .circles-background {
+    background-repeat: no-repeat; 
   }
+
+  .shpere {
+        min-width: 1000px; 
+        height: 1000px;
+        position: absolute;
+        bottom: -150px;
+    }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 730px;
+        overflow-y: hidden; 
+    }
+
+    .circles {
+        position: absolute;
+        min-width: 700px; 
+        height: 700px;
+        bottom: 250px;
+    }
+
+    .container-circles {
+        position: absolute;
+        display: flex;
+        justify-content: center; 
+        min-width: 1400px; 
+        height: 600px;
+        overflow-y: hidden; 
+    }
+
+    .semicircle-background{
+        min-width: 700px;
+    }
+
+    .bottom-circles{
+        width: 500px;
+        min-width: 500px;
+        top: 130px; 
+    }
+
+    @media screen and (min-width: 1440px){
+        .semicircle-background{
+            width: 100%
+        }
+    }
+
+  @media screen and (min-width: 1023px){
+    .shpere {
+        min-width: 1400px; 
+        height: 1400px;
+        position: absolute;
+        bottom: -430px;
+    }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 730px;
+    }
+
+    .circles {
+        min-width: 1000px; 
+        height: 1000px;
+        position: absolute;
+        bottom: 120px;
+    }
+
+    .container-circles {
+        min-width: 1400px; 
+        height: 600px;
+    }
+
+    .bottom-circles{
+        width: 1000px;
+        min-width: 1000px;
+        top: -80px
+    }
+
   }
+
+  @media screen and (min-width: 767px) and (max-width: 1022px){
+    .shpere {
+        min-width: 1200px; 
+        height: 1200px;
+        position: absolute;
+        bottom: -300px;
+    }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 670px;
+    }
+
+    .circles {
+        min-width: 700px; 
+        height: 700px;
+        position: absolute;
+        bottom: 250px;
+    }
+
+    .container-circles {
+        min-width: 1400px; 
+        height: 600px;
+    }
+
+  }
+
+  @media screen and (min-width: 639px) and (max-width: 766px){
+    .shpere {
+        min-width: 1000px; 
+        height: 1000px;
+        position: absolute;
+        bottom: -250px;
+    }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 560px;
+    }
+
+    .circles {
+        min-width: 700px; 
+        height: 700px;
+        position: absolute;
+        bottom: 250px;
+    }
+
+    .container-circles {
+        min-width: 1400px; 
+        height: 600px;
+    }
+
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 520px){
+    .shpere {
+        min-width: 1000px; 
+        height: 1000px;
+        position: absolute;
+        bottom: -250px;
+    }
+
+    .container-shpere {
+        min-width: 1400px; 
+        height: 730px;
+    }
+
+    .circles {
+        min-width: 700px; 
+        height: 700px;
+        position: absolute;
+        bottom: 250px;
+    }
+
+    .container-circles {
+        min-width: 1400px; 
+        height: 600px;
+    }
+
+  } 
 </style>
