@@ -57,8 +57,8 @@ import Circle from "../components/ui/Circle.astro";
     color={"transparent"}
   >
 
-    <div class="container-circles2 top-0">
-        <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="circles2">
+    <div class="container-circles top-0">
+        <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="circles">
         </div>
     <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold flex flex-col sm:flex-row justify-center">
       <div>Fast & Flexible</div> <div class="sm:pl-2 md:pl-3">iterations</div>
@@ -194,8 +194,8 @@ import Circle from "../components/ui/Circle.astro";
     <div class="prototype-circle-background p-3 rounded-full flex justify-center items-center w-fit absolute lg:-top-20 -top-16">
         <Circle title="expand" className={' rose-gradient text-black w-28 h-28 border lg:h-40 lg:w-40 uppercase flex justify-center items-center rounded-full z-10'} />
         </div>
-        <div class="container-circles2">
-        <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="circles2">
+        <div class="container-circles">
+        <img src={`${import.meta.env.BASE_URL}illustrations/circles.png`} alt="circles background" class="circles">
         </div>
     <div class="md:mt-32 mt-24">
         <h3 class="title text-2xl md:text-4xl lg:text-5xl font-semibold">
@@ -262,13 +262,13 @@ import Circle from "../components/ui/Circle.astro";
     <div class=" h-60 lg:pt-64 pt-60 pb-80 bg-[url('illustrations/circles.png')] circles-background lg:w-3/6 w-full absolute -top-72" />
 </Section>
 
-<Section className="z-10 pb-8 md:pb-24 w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
+<Section className="z-10 pb-8  w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
     <h1 class="big-one z-30">one</h1>
-    <div class="z-50 absolute top-44 md:top-56">
-    <h2 class="text-3xl md:text-4xl lg:text-6xl text-center font-medium">Month</h2><p>to develop</p>
+    <div class="z-50 absolute top-60">
+    <h2 class="text-5xl lg:text-6xl text-center font-medium">Month</h2><p>to develop</p>
     </div>
-    <img src={`${import.meta.env.BASE_URL}illustrations/greenSemicircle.png`} alt="circles background" class="absolute">
-    <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class="absolute top-40 z-40">
+    <img src={`${import.meta.env.BASE_URL}illustrations/greenSemicircle.png`} alt="circles background" class="absolute semicircle-background">
+    <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class="absolute top-52 z-40">
     <div class="absolute h-full w-full z-40 top-40 md:top-56 lg:top-56 flex flex-col items-center relative">
         <!-- <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class=" absolute -top-64"> -->
     </div>
@@ -414,7 +414,7 @@ import Circle from "../components/ui/Circle.astro";
 
 
   .big-one {
-    font-size: 240px;
+    font-size: 100px;
     font-weight: bolder;
     background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
     -webkit-background-clip: text;
@@ -426,7 +426,7 @@ import Circle from "../components/ui/Circle.astro";
   }
 
   .big-one {
-    font-size: 170px;
+    font-size: 230px;
     font-weight: bolder;
     background: linear-gradient(150deg, #c0eaff,#9ddeff, #1551ea);
     -webkit-background-clip: text;
@@ -456,31 +456,13 @@ import Circle from "../components/ui/Circle.astro";
     }
 
     .circles {
-        min-width: 1000px; 
-        height: 1000px;
-        position: absolute;
-        bottom: 430px;
-        overflow-y: hidden;
-        border: 1px solid yellow;
-    }
-
-    .container-circles {
-        position: absolute;
-        min-width: 1400px; 
-        height: 600px;
-        overflow-y: hidden; 
-        border: 1px solid magenta;
-        bottom: 350px;
-    }
-
-    .circles2 {
         position: absolute;
         min-width: 700px; 
         height: 700px;
         bottom: 250px;
     }
 
-    .container-circles2 {
+    .container-circles {
         position: absolute;
         display: flex;
         justify-content: center; 
@@ -488,6 +470,17 @@ import Circle from "../components/ui/Circle.astro";
         height: 600px;
         overflow-y: hidden; 
     }
+
+    .semicircle-background{
+        min-width: 700px;
+    }
+
+    @media screen and (min-width: 1440px){
+        .semicircle-background{
+            width: 100%
+        }
+    }
+
   @media screen and (min-width: 1023px){
     .shpere {
         min-width: 1400px; 
@@ -501,14 +494,14 @@ import Circle from "../components/ui/Circle.astro";
         height: 730px;
     }
 
-    .circles2 {
+    .circles {
         min-width: 1000px; 
         height: 1000px;
         position: absolute;
         bottom: 120px;
     }
 
-    .container-circles2 {
+    .container-circles {
         min-width: 1400px; 
         height: 600px;
     }
@@ -528,14 +521,14 @@ import Circle from "../components/ui/Circle.astro";
         height: 670px;
     }
 
-    .circles2 {
+    .circles {
         min-width: 700px; 
         height: 700px;
         position: absolute;
         bottom: 250px;
     }
 
-    .container-circles2 {
+    .container-circles {
         min-width: 1400px; 
         height: 600px;
     }
@@ -555,14 +548,14 @@ import Circle from "../components/ui/Circle.astro";
         height: 560px;
     }
 
-    .circles2 {
+    .circles {
         min-width: 700px; 
         height: 700px;
         position: absolute;
         bottom: 250px;
     }
 
-    .container-circles2 {
+    .container-circles {
         min-width: 1400px; 
         height: 600px;
     }
@@ -582,14 +575,14 @@ import Circle from "../components/ui/Circle.astro";
         height: 730px;
     }
 
-    .circles2 {
+    .circles {
         min-width: 700px; 
         height: 700px;
         position: absolute;
         bottom: 250px;
     }
 
-    .container-circles2 {
+    .container-circles {
         min-width: 1400px; 
         height: 600px;
     }
