@@ -12,9 +12,9 @@ import Circle from "../components/ui/Circle.astro";
     description="Optimize digital processes in an integrated, scalable and efficient ecosystem that fosters quality, creativity and innovation"
     footer={false}>
 	<GradientBackground />
-    <Section className={`flex flex-col items-center pb-32 relative shpere-background`} color={'transparent'}>
-        <div class='absolute flex justify-center container-shpere'>
-        <img src={`${import.meta.env.BASE_URL}illustrations/shpere.png`} alt='' class='shpere' />
+    <Section className={`flex flex-col items-center pb-32 relative sphere-background`} color={'transparent'}>
+        <div class='absolute flex justify-center container-sphere'>
+        <img src={`${import.meta.env.BASE_URL}illustrations/sphere.png`} alt='' class='sphere' />
     </div>
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-20 px-4">
 		The ultimate framework to<br/>
@@ -264,15 +264,15 @@ import Circle from "../components/ui/Circle.astro";
     </div>
 </Section>
 
-<Section className="z-10 pb-8  w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
+<Section className="z-10 pb-8 w-screen relative flex flex-col items-center final-section footer-container" color={'transparent'}>
     <h1 class="big-one z-30">one</h1>
     <div class="z-50 absolute top-60">
     <h2 class="text-5xl lg:text-6xl text-center font-medium">Month</h2><p>to develop</p>
     </div>
-    <img src={`${import.meta.env.BASE_URL}illustrations/greenSemicircle.png`} alt="circles background" class="absolute semicircle-background">
-    <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class="absolute top-52 z-40">
-    <div class="absolute h-full w-full z-40 top-40 md:top-56 lg:top-56 flex flex-col items-center relative">
-        <!-- <img src={`${import.meta.env.BASE_URL}illustrations/blueSemicircle.png`} alt="circles background" class=" absolute -top-64"> -->
+    <img src={`${import.meta.env.BASE_URL}illustrations/green_semicircle.png`} alt="circles background" class="absolute semicircle-background">
+    <img src={`${import.meta.env.BASE_URL}illustrations/blue_semicircle.png`} alt="circles background" class="absolute top-52 z-40">
+    <div class="h-full w-full z-40 top-40 md:top-56 lg:top-56 flex flex-col items-center relative">
+        <!-- <img src={`${import.meta.env.BASE_URL}illustrations/blue_semicircle.png`} alt="circles background" class=" absolute -top-64"> -->
     </div>
 </Section>
 <div class="footer-container">
@@ -435,31 +435,31 @@ import Circle from "../components/ui/Circle.astro";
     -webkit-text-fill-color: transparent;
   }
 
-  .shpere-background {
+  .sphere-background {
     background-position-x: center;
-    background-size: auto; 
+    background-size: auto;
   }
 
   .circles-background {
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
   }
 
-  .shpere {
-        min-width: 1000px; 
+  .sphere {
+        min-width: 1000px;
         height: 1000px;
         position: absolute;
         bottom: -150px;
     }
 
-    .container-shpere {
-        min-width: 1400px; 
+    .container-sphere {
+        min-width: 1400px;
         height: 730px;
-        overflow-y: hidden; 
+        overflow-y: hidden;
     }
 
     .circles {
         position: absolute;
-        min-width: 700px; 
+        min-width: 700px;
         height: 700px;
         bottom: 250px;
     }
@@ -467,10 +467,10 @@ import Circle from "../components/ui/Circle.astro";
     .container-circles {
         position: absolute;
         display: flex;
-        justify-content: center; 
-        min-width: 1400px; 
+        justify-content: center;
+        min-width: 1400px;
         height: 600px;
-        overflow-y: hidden; 
+        overflow-y: hidden;
     }
 
     .semicircle-background{
@@ -480,7 +480,7 @@ import Circle from "../components/ui/Circle.astro";
     .bottom-circles{
         width: 500px;
         min-width: 500px;
-        top: 130px; 
+        top: 130px;
     }
 
     @media screen and (min-width: 1440px){
@@ -490,27 +490,27 @@ import Circle from "../components/ui/Circle.astro";
     }
 
   @media screen and (min-width: 1023px){
-    .shpere {
-        min-width: 1400px; 
+    .sphere {
+        min-width: 1400px;
         height: 1400px;
         position: absolute;
         bottom: -430px;
     }
 
-    .container-shpere {
-        min-width: 1400px; 
+    .container-sphere {
+        min-width: 1400px;
         height: 730px;
     }
 
     .circles {
-        min-width: 1000px; 
+        min-width: 1000px;
         height: 1000px;
         position: absolute;
         bottom: 120px;
     }
 
     .container-circles {
-        min-width: 1400px; 
+        min-width: 1400px;
         height: 600px;
     }
 
@@ -523,83 +523,83 @@ import Circle from "../components/ui/Circle.astro";
   }
 
   @media screen and (min-width: 767px) and (max-width: 1022px){
-    .shpere {
-        min-width: 1200px; 
+    .sphere {
+        min-width: 1200px;
         height: 1200px;
         position: absolute;
         bottom: -300px;
     }
 
-    .container-shpere {
-        min-width: 1400px; 
+    .container-sphere {
+        min-width: 1400px;
         height: 670px;
     }
 
     .circles {
-        min-width: 700px; 
+        min-width: 700px;
         height: 700px;
         position: absolute;
         bottom: 250px;
     }
 
     .container-circles {
-        min-width: 1400px; 
+        min-width: 1400px;
         height: 600px;
     }
 
   }
 
   @media screen and (min-width: 639px) and (max-width: 766px){
-    .shpere {
-        min-width: 1000px; 
+    .sphere {
+        min-width: 1000px;
         height: 1000px;
         position: absolute;
         bottom: -250px;
     }
 
-    .container-shpere {
-        min-width: 1400px; 
+    .container-sphere {
+        min-width: 1400px;
         height: 560px;
     }
 
     .circles {
-        min-width: 700px; 
+        min-width: 700px;
         height: 700px;
         position: absolute;
         bottom: 250px;
     }
 
     .container-circles {
-        min-width: 1400px; 
+        min-width: 1400px;
         height: 600px;
     }
 
   }
 
   @media screen and (min-width: 300px) and (max-width: 520px){
-    .shpere {
-        min-width: 1000px; 
+    .sphere {
+        min-width: 1000px;
         height: 1000px;
         position: absolute;
         bottom: -250px;
     }
 
-    .container-shpere {
-        min-width: 1400px; 
+    .container-sphere {
+        min-width: 1400px;
         height: 730px;
     }
 
     .circles {
-        min-width: 700px; 
+        min-width: 700px;
         height: 700px;
         position: absolute;
         bottom: 250px;
     }
 
     .container-circles {
-        min-width: 1400px; 
+        min-width: 1400px;
         height: 600px;
     }
 
-  } 
+  }
 </style>
