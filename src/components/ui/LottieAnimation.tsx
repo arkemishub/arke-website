@@ -5,7 +5,7 @@ interface Props {
   animation: any;
 }
 
-const App = (props: Props) => {
+const LottieAnimation = (props: Props) => {
   const { animation } = props;
 
   const options = {
@@ -18,4 +18,4 @@ const App = (props: Props) => {
   return <>{View}</>;
 };
 
-export default App;
+export default LottieAnimation;

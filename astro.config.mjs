@@ -20,6 +20,6 @@ export default defineConfig({
   integrations: [tailwind(), react(), sitemap()],
   output: PUBLIC_OUTPUT ?? 'static',
   adapter: node({
-    mode: "standalone"
+    mode: "standalone",
   })
 });
