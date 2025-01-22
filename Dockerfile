@@ -1,4 +1,4 @@
-FROM node:16.20-slim AS build
+FROM node:18-alpine AS build
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager

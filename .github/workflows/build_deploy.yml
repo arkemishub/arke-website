@@ -6,9 +6,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -16,14 +13,39 @@ jobs:
     name: Deploy on GHCP
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Check out the repo
+        uses: actions/checkout@v4
 
-      - name: Build & push Docker image 🐳
-        uses: mr-smithers-excellent/docker-build-push@v5
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          image: arke-website
-          tags: latest
+          images: ghcr.io/${{ github.repository }}
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+        with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }},"ghcr.io/arkemishub/arke-website:latest"
+          labels: ${{ steps.meta.outputs.labels }}
+
+      # Get the GKE credentials, so we can deploy to the cluster
+      - uses: google-github-actions/get-gke-credentials@v0.7.0
+        with:
+          cluster_name: ${{ secrets.ARKEMISLAB_GKE_CLUSTER_NAME }}
+          location: ${{ secrets.ARKEMISLAB_GKE_ZONE }}
+          credentials: ${{ secrets.ARKEMISLAB_GKE_SA_KEY }}
+
+      # Deploy the Docker image to the GKE cluster
+      - name: Deploy
+        run: |-
+          kubectl rollout restart deployment ${{ secrets.DEPLOYMENT }} -n ${{ secrets.NAMESPACE }}
+      

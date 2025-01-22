@@ -16,23 +16,21 @@ import WorkflowDesignAndDevelopAnimation from "../animatons/workflow_design_and_
 import WorkflowUpgradeAndScaleAnimation from "../animatons/workflow_upgrade_and_scale.json";
 ---
 
-<script>
+<Layout
+	title="Arke | The BAAS solution to accelerate your development"
+	description="Design your project from a ready-to-use foundation. Speed up your development with our dedicated Console. Customize your code to suit your unique needs"
+>
+	<script>
 		const btnStartCta = document.getElementById('btnStartCta');
 		const btnEndCta = document.getElementById('btnEndCta');
 		const vLine = document.getElementById('vline');
 		const btnStartCtaTopPosition = btnStartCta.offsetTop;
 		const btnEndCtaTopPosition = btnEndCta.offsetTop;
 		vLine.style.height = `${btnEndCtaTopPosition - btnStartCtaTopPosition}px`;
-</script>
-
-<Layout
-	title="Arke | The Low-Code Framework to accelerate your development"
-	description="Design your project from a ready-to-use foundation. Speed up your development with our dedicated Console. Customize your code to suit your unique needs"
->
+	</script>
 	<GradientBackground />
 	<h1 class="title text-4xl md:text-5xl lg:text-7xl text-center font-medium mt-12 md:mt-40 animate__animated animate__fadeIn">
-		The Low-Code Framework<br/> to
-		<span>accelerate</span>
+		The BAAS solution to <span>accelerate</span><br/>
 		your development</h1>
 	<h2 class="px-12 text-sm lg:text-2xl mt-12 text-secondary animate__animated animate__fadeIn">
 		Design your project from a ready-to-use foundation. Speed up your development<br/>
@@ -101,7 +99,7 @@ import WorkflowUpgradeAndScaleAnimation from "../animatons/workflow_upgrade_and_
 			<span class="text-blue">your idea</span>
 		</h3>
 		<p class="mt-4 text-lg text-secondary">
-			Enhance your development experience simplifiying design,
+			Enhance your development experience simplifiying and
 			accelerating prototyping and customizing your code.
 		</p>
 	</Card>
